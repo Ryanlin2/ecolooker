@@ -3,34 +3,10 @@ version: 0.2
 phases:
   install:
     commands:
-      - python -m pip install --upgrade pip
-      - python -m pip install build awscli
-
-  pre_build:
-    commands:
-      - echo "Building IMF wheel for commit $CODEBUILD_RESOLVED_SOURCE_VERSION"
-      - cd lambda/imf
-      - rm -rf dist build *.egg-info
+      - python -m pip install --upgrade pip build awscli
 
   build:
     commands:
+      - cd lambda/imf
       - python -m build --wheel
-      - ls -lah dist/
-
-  post_build:
-    commands:
-      - WHEEL_FILE=$(ls dist/*.whl | head -n 1)
-      - test -n "$WHEEL_FILE"
-      - WHEEL_NAME=$(basename "$WHEEL_FILE")
-      - S3_BUCKET="ecolooker-artifacts"
-      - WHEEL_PREFIX="imf"
-      - AWS_REGION="us-east-2"
-      - S3_PATH="s3://${S3_BUCKET}/${WHEEL_PREFIX}/${CODEBUILD_RESOLVED_SOURCE_VERSION}/${WHEEL_NAME}"
-      - echo "Uploading $WHEEL_FILE to $S3_PATH"
-      - aws s3 cp "$WHEEL_FILE" "$S3_PATH" --region "$AWS_REGION"
-
-artifacts:
-  files:
-    - dist/*.whl
-    - wheel_s3_path.txt
-  discard-paths: yes
+      - aws s3 cp dist/*.whl s3://ecolooker-artifacts/imf/ --region us-east-2
