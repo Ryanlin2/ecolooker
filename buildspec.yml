@@ -22,6 +22,9 @@ phases:
       - WHEEL_FILE=$(ls dist/*.whl | head -n 1)
       - test -n "$WHEEL_FILE"
       - WHEEL_NAME=$(basename "$WHEEL_FILE")
+      - S3_BUCKET="ecolooker-artifacts"
+      - WHEEL_PREFIX="imf"
+      - AWS_REGION="us-east-2"
       - S3_PATH="s3://${S3_BUCKET}/${WHEEL_PREFIX}/${CODEBUILD_RESOLVED_SOURCE_VERSION}/${WHEEL_NAME}"
       - echo "Uploading $WHEEL_FILE to $S3_PATH"
       - aws s3 cp "$WHEEL_FILE" "$S3_PATH" --region "$AWS_REGION"
@@ -29,6 +32,6 @@ phases:
 
 artifacts:
   files:
-    - lambda/imf/dist/*.whl
-    - lambda/imf/wheel_s3_path.txt
+    - dist/*.whl
+    - wheel_s3_path.txt
   discard-paths: yes
