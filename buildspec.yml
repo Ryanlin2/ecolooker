@@ -28,7 +28,6 @@ phases:
       - S3_PATH="s3://${S3_BUCKET}/${WHEEL_PREFIX}/${CODEBUILD_RESOLVED_SOURCE_VERSION}/${WHEEL_NAME}"
       - echo "Uploading $WHEEL_FILE to $S3_PATH"
       - aws s3 cp "$WHEEL_FILE" "$S3_PATH" --region "$AWS_REGION"
-      - echo "$S3_PATH" > wheel_s3_path.txt
 
 artifacts:
   files:
