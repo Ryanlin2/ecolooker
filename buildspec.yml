@@ -19,7 +19,7 @@ phases:
 
   post_build:
     commands:
-      - WHEEL_FILE=$(ls lambda/imf/dist/*.whl | head -n 1)
+      - WHEEL_FILE=$(ls dist/*.whl | head -n 1)
       - test -n "$WHEEL_FILE"
       - WHEEL_NAME=$(basename "$WHEEL_FILE")
       - S3_PATH="s3://${S3_BUCKET}/${WHEEL_PREFIX}/${CODEBUILD_RESOLVED_SOURCE_VERSION}/${WHEEL_NAME}"
@@ -30,5 +30,5 @@ phases:
 artifacts:
   files:
     - lambda/imf/dist/*.whl
-    - wheel_s3_path.txt
+    - lambda/imf/wheel_s3_path.txt
   discard-paths: yes
