@@ -2,11 +2,20 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      python: 3.11
     commands:
-      - python -m pip install --upgrade pip build awscli
+      - python --version
+      - python -m pip --version
+      - python -m pip install --upgrade pip setuptools wheel build awscli
 
   build:
     commands:
+      - pwd
+      - ls -la
       - cd lambda/imf
+      - pwd
+      - ls -la
       - python -m build --wheel
+      - ls -la dist
       - aws s3 cp dist/*.whl s3://ecolooker-artifacts/imf/ --region us-east-2
