@@ -28,11 +28,11 @@ python -m pip install \
   --target "$BUILD_DIR/python/lib/$PYTHON_VERSION/site-packages"
 
 echo "Verifying installed package contents..."
-find "$BUILD_DIR/python" -maxdepth 5 -type f | sort
+find "$BUILD_DIR/python/lib/$PYTHON_VERSION/site-packages" -maxdepth 3 -type f | sort
 
 echo "Testing import from layer path..."
 PYTHONPATH="$BUILD_DIR/python/lib/$PYTHON_VERSION/site-packages" \
-python -c "from get_raw_imf_json import get_raw_imf_json; print('Import OK:', get_raw_imf_json)"
+python -c "from imf.get_raw_imf_json import get_raw_imf_json; print('Import OK:', get_raw_imf_json)"
 
 echo "Creating layer ZIP..."
 cd "$BUILD_DIR"
