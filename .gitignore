@@ -13,3 +13,10 @@ __pycache__/
 
 # Archives / packaged artifacts
 *.zip
+
+# macOS system files
+.DS_Store
+**/.DS_Store
+
+# Jupyter notebooks
+.ipynb_checkpoints/
