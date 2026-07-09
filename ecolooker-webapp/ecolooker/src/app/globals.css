@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+/* ===== Ecolooker theme: Robinhood-style data intelligence ===== */
+:root {
+  --background: #0a0a0b;
+  --surface: #121215;
+  --surface-2: #1a1a1f;
+  --border: #26262c;
+  --foreground: #f5f6f7;
+  --muted: #8b8d94;
+  --signal: #00c805;
+  --signal-dim: #00c80522;
+  --danger: #ff4d4d;
+  --danger-dim: #ff4d4d22;
+  --accent: #5b8cff;
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-signal: var(--signal);
+  --color-danger: var(--danger);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* { border-color: var(--border); }
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tnum { font-variant-numeric: tabular-nums; font-family: var(--font-mono), monospace; }
+
+.live-dot { width: 7px; height: 7px; border-radius: 999px; background: var(--signal); animation: pulse 2s infinite; }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--signal-dim); }
+  70% { box-shadow: 0 0 0 8px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
