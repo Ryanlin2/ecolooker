@@ -1,19 +1,24 @@
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
 
-/* ===== Ecolooker theme: Robinhood-style data intelligence ===== */
+/* ===== Ecolooker theme: light surf data intelligence ===== */
 :root {
-  --background: #0a0a0b;
-  --surface: #121215;
-  --surface-2: #1a1a1f;
-  --border: #26262c;
-  --foreground: #f5f6f7;
-  --muted: #8b8d94;
-  --signal: #00c805;
-  --signal-dim: #00c80522;
-  --danger: #ff4d4d;
-  --danger-dim: #ff4d4d22;
-  --accent: #5b8cff;
+  --background: #f4fbfb;
+  --surface: #ffffff;
+  --surface-2: #e8f7f6;
+  --border: #c9e7e4;
+
+  --foreground: #123033;
+  --muted: #6d8588;
+
+  --signal: #00a896;
+  --signal-dim: #00a89622;
+
+  --danger: #ef476f;
+  --danger-dim: #ef476f22;
+
+  --accent: #118ab2;
+
   --radius: 0.75rem;
 }
 
