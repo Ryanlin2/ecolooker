@@ -20,3 +20,5 @@ __pycache__/
 
 # Jupyter notebooks
 .ipynb_checkpoints/
+
+*complaints.csv
