@@ -7,21 +7,13 @@ export type ReportMeta = {
 
 export const reports: ReportMeta[] = [
   {
-    slug: "cfpb complaints",
+    slug: "cfpb-complaints",
     title: "Consumer Financial Protection Bureau",
     subtitle: "Live dashboard of financial services complaints.",
     date: "Jul 2026",
     tags: ["Complaints", "Indicator"],
-    hero: { label: "Net Compalints YTD", value: 470092, change: +8452 },
-  },
-  {
-    slug: "grid-carbon",
-    title: "Grid Carbon Intensity Watch",
-    subtitle: "Real-time decarbonization pace across regional grids.",
-    date: "Jul 2026",
-    tags: ["Energy", "Live"],
-    hero: { label: "gCO₂/kWh", value: 312, change: -4.1 },
-  },
+    hero: { label: "Net Compalaints YTD", value: 470092, change: 8452 },
+  }
 ];
 
 export const getReport = (slug: string) => reports.find((r) => r.slug === slug);
