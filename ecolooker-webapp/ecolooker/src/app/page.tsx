@@ -1,45 +1,97 @@
 import Link from "next/link";
 import { reports } from "@/lib/reports";
+import { getSiteData } from "@/lib/get-site-data";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowUpRight, ArrowDownRight } from "lucide-react";
+import {
+  ArrowUpRight,
+  ArrowDownRight,
+} from "lucide-react";
 import { fmtNum } from "@/lib/utils";
 
-export default function Home() {
+export default async function Home() {
+  const siteData = await getSiteData();
+
   return (
     <div>
       <section className="mb-10">
-        <p className="text-xs uppercase tracking-[0.2em] text-signal">Economic Data Intelligence</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-signal">
+          Economic Data Intelligence
+        </p>
+
         <h1 className="mt-2 max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">
-          Ecolooker 
+          Ecolooker
         </h1>
+
         <p className="mt-3 max-w-xl text-muted">
-        Know the data available, think to you your own discretion
+          Know the available data and interpret it at your own discretion.
         </p>
       </section>
 
-      <h2 className="mb-4 text-sm uppercase tracking-wide text-muted">Report Catalog</h2>
-      
+      <section className="mb-10">
+        <h2 className="mb-4 text-sm uppercase tracking-wide text-muted">
+          API Response Test
+        </h2>
+
+        <Card>
+          <CardContent className="pt-5">
+            <pre className="max-h-[500px] overflow-auto whitespace-pre-wrap break-words text-sm">
+              {JSON.stringify(siteData, null, 2)}
+            </pre>
+          </CardContent>
+        </Card>
+      </section>
+
+      <h2 className="mb-4 text-sm uppercase tracking-wide text-muted">
+        Report Catalog
+      </h2>
+
       <div className="grid gap-4 md:grid-cols-2">
-        {reports.map((r) => {
-          const up = r.hero.change >= 0;
+        {reports.map((report) => {
+          const up = report.hero.change >= 0;
+
           return (
-            <Link key={r.slug} href={`/reports/${r.slug}`}>
+            <Link
+              key={report.slug}
+              href={`/reports/${report.slug}`}
+            >
               <Card className="transition hover:border-accent">
                 <CardContent className="pt-5">
                   <div className="flex flex-wrap gap-2">
-                    {r.tags.map((t) => <Badge key={t} tone="accent">{t}</Badge>)}
+                    {report.tags.map((tag) => (
+                      <Badge key={tag} tone="accent">
+                        {tag}
+                      </Badge>
+                    ))}
                   </div>
-                  <h3 className="mt-3 text-lg font-semibold">{r.title}</h3>
-                  <p className="mt-1 text-sm text-muted">{r.subtitle}</p>
+
+                  <h3 className="mt-3 text-lg font-semibold">
+                    {report.title}
+                  </h3>
+
+                  <p className="mt-1 text-sm text-muted">
+                    {report.subtitle}
+                  </p>
+
                   <div className="mt-4 flex items-end justify-between">
                     <div>
-                      <p className="text-xs text-muted">{r.hero.label}</p>
-                      <p className="tnum text-2xl font-semibold">{fmtNum(r.hero.value)}</p>
+                      <p className="text-xs text-muted">
+                        {report.hero.label}
+                      </p>
+
+                      <p className="tnum text-2xl font-semibold">
+                        {fmtNum(report.hero.value)}
+                      </p>
                     </div>
+
                     <Badge tone={up ? "up" : "down"}>
-                      {up ? <ArrowUpRight size={12} /> : <ArrowDownRight size={12} />}
-                      {fmtNum(Math.abs(r.hero.change))}
+                      {up ? (
+                        <ArrowUpRight size={12} />
+                      ) : (
+                        <ArrowDownRight size={12} />
+                      )}
+
+                      {fmtNum(Math.abs(report.hero.change))}
                     </Badge>
                   </div>
                 </CardContent>
@@ -51,3 +103,4 @@ export default function Home() {
     </div>
   );
 }
+
