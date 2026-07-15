@@ -38,7 +38,7 @@ export default function Home() {
                     </div>
                     <Badge tone={up ? "up" : "down"}>
                       {up ? <ArrowUpRight size={12} /> : <ArrowDownRight size={12} />}
-                      {fmtNum(Math.abs(r.hero.change))}%
+                      {fmtNum(Math.abs(r.hero.change))}
                     </Badge>
                   </div>
                 </CardContent>

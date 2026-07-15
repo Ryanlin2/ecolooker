@@ -7,12 +7,12 @@ export type ReportMeta = {
 
 export const reports: ReportMeta[] = [
   {
-    slug: "urban-air-2026",
-    title: "Urban Air Quality Signals — Q2 2026",
-    subtitle: "Where particulate trends are improving, and the three cities bucking the pattern.",
+    slug: "cfpb complaints",
+    title: "Consumer Financial Protection Bureau",
+    subtitle: "Live dashboard of financial services complaints.",
     date: "Jul 2026",
-    tags: ["Air", "Cities", "Analysis"],
-    hero: { label: "Median AQI", value: 47, change: -6.2 },
+    tags: ["Complaints", "Indicator"],
+    hero: { label: "Net Compalints YTD", value: 470092, change: +8452 },
   },
   {
     slug: "grid-carbon",
