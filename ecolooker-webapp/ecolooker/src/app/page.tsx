@@ -1,17 +1,13 @@
+// src/app/page.tsx
+
 import Link from "next/link";
 import { reports } from "@/lib/reports";
-import { getSiteData } from "@/lib/get-site-data";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  ArrowUpRight,
-  ArrowDownRight,
-} from "lucide-react";
+import { ArrowUpRight, ArrowDownRight } from "lucide-react";
 import { fmtNum } from "@/lib/utils";
 
-export default async function Home() {
-  const siteData = await getSiteData();
-
+export default function Home() {
   return (
     <div>
       <section className="mb-10">
@@ -28,20 +24,6 @@ export default async function Home() {
         </p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="mb-4 text-sm uppercase tracking-wide text-muted">
-          API Response Test
-        </h2>
-
-        <Card>
-          <CardContent className="pt-5">
-            <pre className="max-h-[500px] overflow-auto whitespace-pre-wrap break-words text-sm">
-              {JSON.stringify(siteData, null, 2)}
-            </pre>
-          </CardContent>
-        </Card>
-      </section>
-
       <h2 className="mb-4 text-sm uppercase tracking-wide text-muted">
         Report Catalog
       </h2>
@@ -51,10 +33,7 @@ export default async function Home() {
           const up = report.hero.change >= 0;
 
           return (
-            <Link
-              key={report.slug}
-              href={`/reports/${report.slug}`}
-            >
+            <Link key={report.slug} href={`/reports/${report.slug}`}>
               <Card className="transition hover:border-accent">
                 <CardContent className="pt-5">
                   <div className="flex flex-wrap gap-2">
@@ -65,19 +44,13 @@ export default async function Home() {
                     ))}
                   </div>
 
-                  <h3 className="mt-3 text-lg font-semibold">
-                    {report.title}
-                  </h3>
+                  <h3 className="mt-3 text-lg font-semibold">{report.title}</h3>
 
-                  <p className="mt-1 text-sm text-muted">
-                    {report.subtitle}
-                  </p>
+                  <p className="mt-1 text-sm text-muted">{report.subtitle}</p>
 
                   <div className="mt-4 flex items-end justify-between">
                     <div>
-                      <p className="text-xs text-muted">
-                        {report.hero.label}
-                      </p>
+                      <p className="text-xs text-muted">{report.hero.label}</p>
 
                       <p className="tnum text-2xl font-semibold">
                         {fmtNum(report.hero.value)}
@@ -103,4 +76,3 @@ export default async function Home() {
     </div>
   );
 }
-

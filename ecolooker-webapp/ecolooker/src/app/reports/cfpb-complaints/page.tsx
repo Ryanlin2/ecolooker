@@ -2,11 +2,12 @@
 
 import type { Metadata } from "next";
 
+import { getSiteData } from "@/lib/get-site-data";
+import { BarGraph } from "@/components/blocks/BarGraph";
 import { DataTable } from "@/components/blocks/DataTable";
 import { InsightCallout } from "@/components/blocks/InsightCallout";
 import { MetricCard } from "@/components/blocks/MetricCard";
 import { ReportHeader } from "@/components/blocks/ReportHeader";
-import { TrendChart } from "@/components/blocks/TrendChart";
 
 export const metadata: Metadata = {
   title: "Consumer Financial Protection Bureau",
@@ -15,18 +16,8 @@ export const metadata: Metadata = {
 
 /**
  * Seed data for UI development only.
- * Replace these values with CFPB API or database data before publication.
+ * The product-level breakdown is not yet available from the API.
  */
-const trendData = [
-  { label: "Jan", value: 51_240 },
-  { label: "Feb", value: 54_900 },
-  { label: "Mar", value: 59_150 },
-  { label: "Apr", value: 63_400 },
-  { label: "May", value: 66_910 },
-  { label: "Jun", value: 71_300 },
-  { label: "Jul", value: 73_192 },
-];
-
 const productRows = [
   {
     product: "Credit reporting",
@@ -79,7 +70,24 @@ const productRows = [
   },
 ];
 
-export default function CfpbComplaintsPage() {
+export default async function CfpbComplaintsPage() {
+  const { count, rows } = await getSiteData();
+
+  const sorted = [...rows].sort((a, b) => a.complaintYear - b.complaintYear);
+
+  const chartData = sorted.map((row) => ({
+    label: String(row.complaintYear),
+    value: row.netComplaints,
+  }));
+
+  const latest = sorted.at(-1);
+  const prior = sorted.at(-2);
+
+  const yoyChange =
+    latest && prior ? latest.netComplaints - prior.netComplaints : 0;
+
+  const total = sorted.reduce((sum, row) => sum + row.netComplaints, 0);
+
   return (
     <article className="space-y-12">
       <ReportHeader
@@ -90,14 +98,12 @@ export default function CfpbComplaintsPage() {
       />
 
       <div className="rounded-lg border border-dashed px-4 py-3 text-sm text-muted">
-        This dashboard currently uses seed data for development and layout
-        testing. Values should not be treated as official CFPB statistics.
+        Annual complaint totals are live from the CFPB API. The product-level
+        breakdown below remains seed data and should not be treated as official
+        CFPB statistics.
       </div>
 
-      <section
-        aria-labelledby="key-metrics-heading"
-        className="space-y-4"
-      >
+      <section aria-labelledby="key-metrics-heading" className="space-y-4">
         <h2
           id="key-metrics-heading"
           className="text-sm uppercase tracking-wide text-muted"
@@ -107,16 +113,18 @@ export default function CfpbComplaintsPage() {
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <MetricCard
-            label="Complaints YTD"
-            value={470_092}
-            change={8_452}
+            label={`Complaints ${latest?.complaintYear ?? ""}`}
+            value={latest?.netComplaints ?? 0}
+            change={yoyChange}
           />
 
           <MetricCard
-            label="Latest month"
-            value={73_192}
-            change={1_892}
+            label="All years combined"
+            value={total}
+            change={0}
           />
+
+          <MetricCard label="Years covered" value={count} change={0} />
 
           <MetricCard
             label="Timely response rate"
@@ -124,26 +132,20 @@ export default function CfpbComplaintsPage() {
             change={0.7}
             unit="%"
           />
-
-          <MetricCard
-            label="Consumer relief"
-            value={12.8}
-            change={1.4}
-            unit="M"
-          />
         </div>
       </section>
 
-      <TrendChart
-        title="Monthly complaint volume"
-        description="Consumer complaints received during the current reporting year."
-        data={trendData}
+      <BarGraph
+        title="Net complaints by year"
+        description="Annual complaint totals reported to the CFPB."
+        data={chartData}
       />
 
       <InsightCallout title="Primary signal">
-        Complaint volume has increased for seven consecutive months. Credit
-        reporting remains the largest category and accounts for almost half of
-        all complaints in this demonstration dataset.
+        Annual complaint volume has grown by several orders of magnitude across
+        the reporting period. Credit reporting remains the largest category and
+        accounts for almost half of all complaints in the product breakdown
+        below.
       </InsightCallout>
 
       <section className="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(18rem,1fr)]">
@@ -153,17 +155,18 @@ export default function CfpbComplaintsPage() {
           </h2>
 
           <p className="leading-7 text-muted">
-            Total complaint volume reached 470,092 during the year-to-date
-            period. Monthly submissions increased from 51,240 in January to
-            73,192 in July, representing growth of approximately 43 percent
-            across the period.
+            The dataset spans {count} reporting years, from{" "}
+            {sorted.at(0)?.complaintYear} to {latest?.complaintYear}. Annual
+            volume rose from{" "}
+            {sorted.at(0)?.netComplaints.toLocaleString()} to{" "}
+            {latest?.netComplaints.toLocaleString()} across that period.
           </p>
 
           <p className="leading-7 text-muted">
             Credit reporting generated the largest number of complaints,
             followed by debt collection and credit cards. Together, those
             categories represent more than four-fifths of complaints in the
-            seed dataset.
+            product breakdown.
           </p>
 
           <p className="leading-7 text-muted">
@@ -179,41 +182,36 @@ export default function CfpbComplaintsPage() {
 
           <dl className="mt-4 space-y-4 text-sm">
             <div>
-              <dt className="text-muted">Intended source</dt>
-              <dd className="mt-1">
-                CFPB Consumer Complaint Database
-              </dd>
+              <dt className="text-muted">Source</dt>
+              <dd className="mt-1">CFPB Consumer Complaint Database</dd>
             </div>
 
             <div>
-              <dt className="text-muted">Current data status</dt>
+              <dt className="text-muted">Annual totals</dt>
+              <dd className="mt-1">Live</dd>
+            </div>
+
+            <div>
+              <dt className="text-muted">Product breakdown</dt>
               <dd className="mt-1">Seed data</dd>
             </div>
 
             <div>
               <dt className="text-muted">Reporting period</dt>
-              <dd className="mt-1">January–July 2026</dd>
+              <dd className="mt-1">
+                {sorted.at(0)?.complaintYear}–{latest?.complaintYear}
+              </dd>
             </div>
 
             <div>
               <dt className="text-muted">Update frequency</dt>
-              <dd className="mt-1">Monthly</dd>
-            </div>
-
-            <div>
-              <dt className="text-muted">Last updated</dt>
-              <dd className="mt-1">
-                <time dateTime="2026-07-01">July 2026</time>
-              </dd>
+              <dd className="mt-1">Per deployment</dd>
             </div>
           </dl>
         </aside>
       </section>
 
-      <section
-        aria-labelledby="product-breakdown-heading"
-        className="space-y-4"
-      >
+      <section aria-labelledby="product-breakdown-heading" className="space-y-4">
         <div>
           <h2
             id="product-breakdown-heading"
@@ -231,48 +229,29 @@ export default function CfpbComplaintsPage() {
         <DataTable
           title="Product-level complaint indicators"
           columns={[
-            {
-              key: "product",
-              label: "Product",
-            },
-            {
-              key: "complaints",
-              label: "Complaints",
-            },
-            {
-              key: "share",
-              label: "Share (%)",
-            },
-            {
-              key: "change",
-              label: "YoY change (%)",
-            },
-            {
-              key: "timelyResponse",
-              label: "Timely response (%)",
-            },
+            { key: "product", label: "Product" },
+            { key: "complaints", label: "Complaints" },
+            { key: "share", label: "Share (%)" },
+            { key: "change", label: "YoY change (%)" },
+            { key: "timelyResponse", label: "Timely response (%)" },
           ]}
           rows={productRows}
         />
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold tracking-tight">
-          Methodology
-        </h2>
+        <h2 className="text-2xl font-semibold tracking-tight">Methodology</h2>
 
         <p className="leading-7 text-muted">
-          The values displayed on this page are synthetic seed data created to
-          test the report interface. They illustrate the intended structure of
-          complaint volumes, product shares, annual changes, and company
-          response rates.
+          Annual complaint totals are retrieved from the CFPB Consumer Complaint
+          Database and cached at build time. The product-level values below are
+          synthetic seed data created to test the report interface.
         </p>
 
         <p className="leading-7 text-muted">
-          In production, the application should retrieve records from the CFPB
-          Consumer Complaint Database, normalize product names, remove duplicate
-          records, and aggregate complaints by submission date and product
-          category. Percentage changes should be calculated against an
+          In production, the product breakdown should normalize product names,
+          remove duplicate records, and aggregate complaints by submission date
+          and category. Percentage changes should be calculated against an
           equivalent prior-year reporting period.
         </p>
 
