@@ -9,16 +9,17 @@ export default function Home() {
   return (
     <div>
       <section className="mb-10">
-        <p className="text-xs uppercase tracking-[0.2em] text-signal">Environmental Data Intelligence</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-signal">Economic Data Intelligence</p>
         <h1 className="mt-2 max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">
-          Signals from the planet, read like a market.
+          Ecolooker 
         </h1>
         <p className="mt-3 max-w-xl text-muted">
-          Analysis reports, insights, and live dashboards on the environmental metrics that move.
+        Know the data available, think to you your own discretion
         </p>
       </section>
 
-      <h2 className="mb-4 text-sm uppercase tracking-wide text-muted">Latest reports</h2>
+      <h2 className="mb-4 text-sm uppercase tracking-wide text-muted">Report Catalog</h2>
+      
       <div className="grid gap-4 md:grid-cols-2">
         {reports.map((r) => {
           const up = r.hero.change >= 0;
