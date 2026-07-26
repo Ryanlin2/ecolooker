@@ -9,9 +9,9 @@ and upserts it into an Apache Iceberg table registered in the Glue Data Catalog.
 Why a full re-pull every run?
 -----------------------------
 The CFPB refreshes the database daily, but it MUTATES EXISTING ROWS IN PLACE:
-`company_response_to_consumer`, `timely_response`, `consumer_disputed` and
-`company_public_response` are all backfilled days or weeks after the complaint was
-first received. A date-window incremental load would silently miss those updates.
+`company_response_to_consumer`, `timely_response` and `company_public_response`
+are all backfilled days or weeks after the complaint was first received. A
+date-window incremental load would silently miss those updates.
 
 So: pull the whole file, compute a content hash per row, and MERGE. The hash makes
 the merge cheap in practice — unchanged rows produce no write, so Iceberg only
@@ -26,8 +26,12 @@ company_response_to_consumer outcome-bucketing, and strict validation of
 complaint_id / date_received / date_sent_to_company / timely_response — any
 value outside the expected shape raises and fails the job rather than being
 silently dropped or nulled, since a bad row would otherwise land unnoticed in
-the merge target. consumer_disputed has no closed-set spec, so it keeps a
-permissive Yes/No -> boolean mapping with blanks as NULL.
+the merge target.
+
+COLUMN_MAP must track the live file's column set and order exactly (see the
+comment above it) — CFPB's documented schema also lists "Consumer consent
+provided?" and "Consumer disputed?", but neither appears in the current bulk
+CSV export.
 
 Required job parameters
 -----------------------
@@ -229,6 +233,13 @@ def land_raw_csv() -> None:
 # ---------------------------------------------------------------------------
 
 # Header names exactly as they appear in the CFPB dump -> our snake_case columns.
+#
+# This must match the live file's column set and order exactly: read_raw()
+# applies RAW_SCHEMA positionally (header=true only skips the header line, it
+# does not map by name), so an extra or missing entry here silently shifts
+# every later column into the wrong field. CFPB's documented schema also lists
+# "Consumer consent provided?" and "Consumer disputed?", but neither appears
+# in the current bulk CSV export — both were dropped from COLUMN_MAP to match.
 COLUMN_MAP = {
     "Date received": "date_received",
     "Product": "product",
@@ -241,12 +252,10 @@ COLUMN_MAP = {
     "State": "state",
     "ZIP code": "zip_code",
     "Tags": "tags",
-    "Consumer consent provided?": "consumer_consent_provided",
     "Submitted via": "submitted_via",
     "Date sent to company": "date_sent_to_company",
     "Company response to consumer": "company_response_to_consumer",
     "Timely response?": "timely_response",
-    "Consumer disputed?": "consumer_disputed",
     "Complaint ID": "complaint_id",
 }
 
@@ -602,9 +611,9 @@ def group_company_response(df: DataFrame) -> DataFrame:
 def boolify_timely_response(df: DataFrame) -> DataFrame:
     """Yes/No -> boolean, raising on any other non-null value.
 
-    Unlike consumer_disputed below, this column has a closed set of valid
-    values per the CFPB field spec, so an unexpected value means the source
-    format drifted and deserves a loud failure rather than a silent NULL.
+    This column has a closed set of valid values per the CFPB field spec, so
+    an unexpected value means the source format drifted and deserves a loud
+    failure rather than a silent NULL.
     """
     is_bad = ~F.col(TIMELY_RESPONSE_COL).isin(list(TIMELY_RESPONSE_MAP))
     invalid_values = _distinct_bad_values(df, TIMELY_RESPONSE_COL, is_bad)
@@ -639,15 +648,6 @@ def transform(df: DataFrame) -> DataFrame:
     )
 
     shaped = boolify_timely_response(shaped)
-
-    # consumer_disputed has no closed-set spec in the notebook, so it keeps the
-    # permissive Yes/No -> boolean mapping with blanks preserved as NULL.
-    shaped = shaped.withColumn(
-        "consumer_disputed_flag",
-        F.when(F.col("consumer_disputed") == "Yes", F.lit(True))
-        .when(F.col("consumer_disputed") == "No", F.lit(False))
-        .otherwise(F.lit(None).cast("boolean")),
-    )
 
     shaped = shaped.withColumn("has_narrative", F.col("consumer_complaint_narrative").isNotNull())
 
