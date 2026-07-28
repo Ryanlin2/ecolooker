@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   description: "Dashboard of consumer financial services complaints.",
 };
 
+export const dynamic = "force-dynamic";
+
 /**
  * Seed data for UI development only.
  * The product-level breakdown is not yet available from the API.
