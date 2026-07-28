@@ -4,6 +4,7 @@ import Link from "next/link";
 import { reports } from "@/lib/reports";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { TypewriterText } from "@/components/ui/typewriter-text";
 import { ArrowUpRight, ArrowDownRight } from "lucide-react";
 import { fmtNum } from "@/lib/utils";
 
@@ -19,8 +20,8 @@ export default function Home() {
           Ecolooker
         </h1>
 
-        <p className="mt-3 max-w-xl text-muted">
-          Know the available data and interpret it at your own discretion.
+        <p className="mt-3 max-w-xl font-mono text-sm text-muted sm:text-base">
+          <TypewriterText text="Mission objective: Catalog and analyze heterogenous datasets detailing global economic mechanisms at different scales." />
         </p>
       </section>
 
