@@ -133,7 +133,7 @@ RAW_PREFIX = args["raw_prefix"].strip("/")
 WAREHOUSE = args["warehouse"].rstrip("/")
 DATABASE = args["catalog_database"]
 TABLE = args["table_name"]
-FQTN = f"{CATALOG}.{DATABASE}.{TABLE}"
+FQTN = f"{CATALOG}.`{DATABASE}`.{TABLE}"
 SOURCE_URL = args["source_url"]
 FORCE_DOWNLOAD = args["force_download"].lower() == "true"
 MERGE_WINDOW_DAYS = int(args["merge_window_days"]) if args["merge_window_days"] else None
@@ -757,16 +757,16 @@ def maintenance() -> None:
     try:
         spark.sql(
             f"CALL {CATALOG}.system.rewrite_data_files("
-            f"table => '{DATABASE}.{TABLE}', "
+            f"table => '`{DATABASE}`.{TABLE}', "
             f"options => map('min-input-files', '10', 'target-file-size-bytes', '268435456'))"
         )
         expire_before = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d %H:%M:%S")
         spark.sql(
             f"CALL {CATALOG}.system.expire_snapshots("
-            f"table => '{DATABASE}.{TABLE}', older_than => TIMESTAMP '{expire_before}', retain_last => 5)"
+            f"table => '`{DATABASE}`.{TABLE}', older_than => TIMESTAMP '{expire_before}', retain_last => 5)"
         )
         spark.sql(
-            f"CALL {CATALOG}.system.remove_orphan_files(table => '{DATABASE}.{TABLE}')"
+            f"CALL {CATALOG}.system.remove_orphan_files(table => '`{DATABASE}`.{TABLE}')"
         )
     except Exception as exc:  # maintenance failure must not fail the load
         log.warning("Table maintenance skipped: %s", exc)
