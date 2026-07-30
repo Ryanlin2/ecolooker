@@ -2,107 +2,94 @@
 
 import type { Metadata } from "next";
 
-import { getSiteData } from "@/lib/get-site-data";
 import { BarGraph } from "@/components/blocks/BarGraph";
 import { DataTable } from "@/components/blocks/DataTable";
+import { Heatmap } from "@/components/blocks/Heatmap";
 import { InsightCallout } from "@/components/blocks/InsightCallout";
 import { MetricCard } from "@/components/blocks/MetricCard";
+import { MultiTrendChart } from "@/components/blocks/MultiTrendChart";
 import { ReportHeader } from "@/components/blocks/ReportHeader";
+import { Badge } from "@/components/ui/badge";
+import { fmtNum } from "@/lib/utils";
+import {
+  fastestGrowingIssues,
+  geoStateAnomalies,
+  issueConcentration,
+  productIssueHeatmap,
+  productMix,
+  seasonality,
+  seasonalityLabel,
+  volumeAnomalies,
+  volumeDaily,
+} from "@/lib/cfpb-seed-data";
 
 export const metadata: Metadata = {
   title: "Consumer Financial Protection Bureau",
-  description: "Dashboard of consumer financial services complaints.",
+  description: "Complaint trends and anomaly detection dashboard.",
 };
 
-export const dynamic = "force-dynamic";
+function formatDay(iso: string) {
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+  });
+}
 
-/**
- * Seed data for UI development only.
- * The product-level breakdown is not yet available from the API.
- */
-const productRows = [
-  {
-    product: "Credit reporting",
-    complaints: 210_450,
-    share: 44.8,
-    change: 8.4,
-    timelyResponse: 97.6,
-  },
-  {
-    product: "Debt collection",
-    complaints: 94_120,
-    share: 20.0,
-    change: -2.1,
-    timelyResponse: 96.2,
-  },
-  {
-    product: "Credit cards",
-    complaints: 81_430,
-    share: 17.3,
-    change: 4.7,
-    timelyResponse: 98.4,
-  },
-  {
-    product: "Mortgages",
-    complaints: 36_870,
-    share: 7.8,
-    change: 1.9,
-    timelyResponse: 99.1,
-  },
-  {
-    product: "Checking and savings",
-    complaints: 28_940,
-    share: 6.2,
-    change: 6.3,
-    timelyResponse: 98.8,
-  },
-  {
-    product: "Student loans",
-    complaints: 11_582,
-    share: 2.5,
-    change: -3.6,
-    timelyResponse: 95.7,
-  },
-  {
-    product: "Vehicle loans",
-    complaints: 6_700,
-    share: 1.4,
-    change: 2.8,
-    timelyResponse: 97.9,
-  },
-];
+function formatMonth(iso: string) {
+  return new Date(`${iso}-01T00:00:00Z`).toLocaleDateString("en-US", {
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
 
-export default async function CfpbComplaintsPage() {
-  const { count, rows } = await getSiteData();
+function hhiTone(hhi: number): { label: string; tone: "up" | "down" | "neutral" } {
+  if (hhi >= 2500) return { label: "High concentration", tone: "down" };
+  if (hhi >= 1500) return { label: "Moderate concentration", tone: "neutral" };
+  return { label: "Low concentration", tone: "up" };
+}
 
-  const sorted = [...rows].sort((a, b) => a.complaintYear - b.complaintYear);
+export default function CfpbComplaintsPage() {
+  const latest = volumeDaily.at(-1)!;
 
-  const chartData = sorted.map((row) => ({
-    label: String(row.complaintYear),
-    value: row.netComplaints,
+  const trendData = volumeDaily.map((d) => ({
+    label: formatDay(d.dayReceived),
+    complaints: d.complaints,
+    avg7d: d.avg7d,
+    avg30d: d.avg30d,
   }));
 
-  const latest = sorted.at(-1);
-  const prior = sorted.at(-2);
+  const seasonalityChart = seasonality.map((s) => ({
+    label: seasonalityLabel(s.dow),
+    value: Math.round(s.avgComplaints),
+  }));
 
-  const yoyChange =
-    latest && prior ? latest.netComplaints - prior.netComplaints : 0;
+  const topAnomaly = [...volumeAnomalies].sort((a, b) => b.zScore - a.zScore)[0];
+  const topSpikeState = [...geoStateAnomalies]
+    .filter((s) => s.isSpike)
+    .sort((a, b) => b.zScore - a.zScore)[0];
 
-  const total = sorted.reduce((sum, row) => sum + row.netComplaints, 0);
+  const heatmapCells = productIssueHeatmap.map((row) => ({
+    row: row.product,
+    column: row.issue,
+    value: row.pctOfProduct,
+    label: row.pctOfProduct.toFixed(1),
+  }));
 
   return (
     <article className="space-y-12">
       <ReportHeader
         title="Consumer Financial Protection Bureau"
-        subtitle="Dashboard of consumer financial services complaints."
+        subtitle="Daily complaint volume, seasonality, product mix shifts, and anomaly detection across CFPB consumer complaint data."
         date="Jul 2026"
-        tags={["Complaints", "Consumer Finance", "Indicator"]}
+        tags={["Complaints", "Anomaly Detection", "Consumer Finance"]}
       />
 
       <div className="rounded-lg border border-dashed px-4 py-3 text-sm text-muted">
-        Annual complaint totals are live from the CFPB API. The product-level
-        breakdown below remains seed data and should not be treated as official
-        CFPB statistics.
+        The live CFPB Complaint Analytics endpoint is currently unavailable.
+        Every metric below is generated seed data that mirrors the production
+        response schema and should not be treated as official CFPB statistics.
       </div>
 
       <section aria-labelledby="key-metrics-heading" className="space-y-4">
@@ -110,134 +97,263 @@ export default async function CfpbComplaintsPage() {
           id="key-metrics-heading"
           className="text-sm uppercase tracking-wide text-muted"
         >
-          Key metrics
+          Key metrics — {formatDay(latest.dayReceived)}
         </h2>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <MetricCard
-            label={`Complaints ${latest?.complaintYear ?? ""}`}
-            value={latest?.netComplaints ?? 0}
-            change={yoyChange}
+            label="Complaints received"
+            value={latest.complaints}
+            change={latest.dodChange}
           />
 
-          <MetricCard
-            label="All years combined"
-            value={total}
-            change={0}
-          />
+          <MetricCard label="7-day average" value={latest.avg7d} />
 
-          <MetricCard label="Years covered" value={count} change={0} />
+          <MetricCard label="30-day average" value={latest.avg30d} />
 
           <MetricCard
-            label="Timely response rate"
-            value={98.1}
-            change={0.7}
-            unit="%"
+            label="Week-over-week"
+            value={latest.wowChange}
+            change={latest.wowPctChange}
           />
         </div>
       </section>
 
-      <BarGraph
-        title="Net complaints by year"
-        description="Annual complaint totals reported to the CFPB."
-        data={chartData}
+      <MultiTrendChart
+        title="Daily complaint volume vs. rolling averages"
+        description="Complaints received per day against trailing 7-day and 30-day baselines."
+        data={trendData}
+        series={[
+          { key: "complaints", label: "Daily complaints" },
+          { key: "avg7d", label: "7-day avg" },
+          { key: "avg30d", label: "30-day avg", dashed: true },
+        ]}
       />
 
       <InsightCallout title="Primary signal">
-        Annual complaint volume has grown by several orders of magnitude across
-        the reporting period. Credit reporting remains the largest category and
-        accounts for almost half of all complaints in the product breakdown
-        below.
+        Daily complaint volume is running {latest.wowPctChange > 0 ? "up" : "down"}{" "}
+        {fmtNum(Math.abs(latest.wowPctChange))}% week-over-week, with{" "}
+        {latest.complaints.toLocaleString()} complaints received on{" "}
+        {formatDay(latest.dayReceived)} against a 30-day baseline of{" "}
+        {fmtNum(latest.avg30d)}. The sharpest anomaly this period is{" "}
+        {topAnomaly.product} — {topAnomaly.issue.toLowerCase()} — on{" "}
+        {formatDay(topAnomaly.dayReceived)} (z-score {fmtNum(topAnomaly.zScore)}
+        ), and {topSpikeState?.state} shows the largest geographic spike at{" "}
+        {fmtNum(topSpikeState?.zScore ?? 0)} standard deviations above baseline.
       </InsightCallout>
 
-      <section className="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(18rem,1fr)]">
-        <div className="space-y-5">
-          <h2 className="text-2xl font-semibold tracking-tight">
-            What the data shows
-          </h2>
-
-          <p className="leading-7 text-muted">
-            The dataset spans {count} reporting years, from{" "}
-            {sorted.at(0)?.complaintYear} to {latest?.complaintYear}. Annual
-            volume rose from{" "}
-            {sorted.at(0)?.netComplaints.toLocaleString()} to{" "}
-            {latest?.netComplaints.toLocaleString()} across that period.
-          </p>
-
-          <p className="leading-7 text-muted">
-            Credit reporting generated the largest number of complaints,
-            followed by debt collection and credit cards. Together, those
-            categories represent more than four-fifths of complaints in the
-            product breakdown.
-          </p>
-
-          <p className="leading-7 text-muted">
-            Company response performance remained high overall, although
-            response rates varied by product. Student-loan and debt-collection
-            complaints recorded the lowest timely-response rates among the
-            displayed categories.
-          </p>
-        </div>
-
-        <aside className="h-fit rounded-xl border bg-surface p-5 lg:sticky lg:top-8">
-          <h2 className="font-semibold">About this report</h2>
-
-          <dl className="mt-4 space-y-4 text-sm">
-            <div>
-              <dt className="text-muted">Source</dt>
-              <dd className="mt-1">CFPB Consumer Complaint Database</dd>
-            </div>
-
-            <div>
-              <dt className="text-muted">Annual totals</dt>
-              <dd className="mt-1">Live</dd>
-            </div>
-
-            <div>
-              <dt className="text-muted">Product breakdown</dt>
-              <dd className="mt-1">Seed data</dd>
-            </div>
-
-            <div>
-              <dt className="text-muted">Reporting period</dt>
-              <dd className="mt-1">
-                {sorted.at(0)?.complaintYear}–{latest?.complaintYear}
-              </dd>
-            </div>
-
-            <div>
-              <dt className="text-muted">Update frequency</dt>
-              <dd className="mt-1">Per deployment</dd>
-            </div>
-          </dl>
-        </aside>
-      </section>
-
-      <section aria-labelledby="product-breakdown-heading" className="space-y-4">
+      <section aria-labelledby="anomalies-heading" className="space-y-4">
         <div>
           <h2
-            id="product-breakdown-heading"
+            id="anomalies-heading"
             className="text-2xl font-semibold tracking-tight"
           >
-            Complaints by product
+            Detected volume anomalies
           </h2>
-
           <p className="mt-2 text-sm text-muted">
-            Year-to-date volume, category share, annual change, and company
-            response performance.
+            Product/issue-day combinations where complaint volume exceeded 3
+            standard deviations above its trailing baseline.
           </p>
         </div>
 
         <DataTable
-          title="Product-level complaint indicators"
+          title="Anomalous complaint spikes"
+          columns={[
+            { key: "dayReceived", label: "Day", format: (v) => formatDay(String(v)) },
+            { key: "product", label: "Product" },
+            { key: "issue", label: "Issue" },
+            { key: "complaints", label: "Complaints", align: "right" },
+            { key: "baselineAvg", label: "Baseline avg", align: "right" },
+            {
+              key: "zScore",
+              label: "Z-score",
+              align: "right",
+              format: (v) => (
+                <Badge tone="down">{fmtNum(Number(v))}σ</Badge>
+              ),
+            },
+          ]}
+          rows={volumeAnomalies.map((row) => ({
+            dayReceived: row.dayReceived,
+            product: row.product,
+            issue: row.issue,
+            complaints: row.complaints,
+            baselineAvg: row.baselineAvg,
+            zScore: row.zScore,
+          }))}
+        />
+      </section>
+
+      <section className="grid gap-8 lg:grid-cols-2">
+        <BarGraph
+          title="Average complaints by day of week"
+          description={`Trailing seasonality for month ${seasonality[0]?.monthOfYear} (${seasonality[0]?.daysObserved} days observed).`}
+          data={seasonalityChart}
+        />
+
+        <div className="space-y-4">
+          <h2 className="text-lg font-semibold tracking-tight">
+            State-level anomalies
+          </h2>
+
+          <DataTable
+            title="Geographic complaint spikes"
+            description={formatMonth(geoStateAnomalies[0]?.monthReceived ?? "2026-07")}
+            columns={[
+              { key: "state", label: "State" },
+              { key: "complaints", label: "Complaints", align: "right" },
+              { key: "baselineAvg", label: "Baseline avg", align: "right" },
+              {
+                key: "zScore",
+                label: "Z-score",
+                align: "right",
+                format: (v, row) => (
+                  <Badge tone={row.isSpike ? "down" : "neutral"}>
+                    {fmtNum(Number(v))}σ
+                  </Badge>
+                ),
+              },
+            ]}
+            rows={geoStateAnomalies.map((row) => ({
+              ...row,
+              isSpike: row.isSpike ? 1 : 0,
+            }))}
+          />
+        </div>
+      </section>
+
+      <section aria-labelledby="product-mix-heading" className="space-y-4">
+        <div>
+          <h2
+            id="product-mix-heading"
+            className="text-2xl font-semibold tracking-tight"
+          >
+            Complaints by product
+          </h2>
+          <p className="mt-2 text-sm text-muted">
+            {formatMonth(productMix[0]?.monthReceived ?? "2026-07")} volume,
+            category share, and month-over-month share change.
+          </p>
+        </div>
+
+        <DataTable
+          title="Product mix"
           columns={[
             { key: "product", label: "Product" },
-            { key: "complaints", label: "Complaints" },
-            { key: "share", label: "Share (%)" },
-            { key: "change", label: "YoY change (%)" },
-            { key: "timelyResponse", label: "Timely response (%)" },
+            { key: "subProduct", label: "Sub-product" },
+            { key: "complaints", label: "Complaints", align: "right" },
+            {
+              key: "sharePct",
+              label: "Share (%)",
+              align: "right",
+              format: (v) => `${fmtNum(Number(v))}%`,
+            },
+            {
+              key: "sharePctChangeMom",
+              label: "Δ share (pts, MoM)",
+              align: "right",
+              format: (v) => (
+                <Badge tone={Number(v) >= 0 ? "up" : "down"}>
+                  {Number(v) >= 0 ? "+" : ""}
+                  {fmtNum(Number(v))}
+                </Badge>
+              ),
+            },
           ]}
-          rows={productRows}
+          rows={productMix}
+        />
+      </section>
+
+      <section aria-labelledby="growth-heading" className="space-y-4">
+        <div>
+          <h2
+            id="growth-heading"
+            className="text-2xl font-semibold tracking-tight"
+          >
+            Fastest-growing issues
+          </h2>
+          <p className="mt-2 text-sm text-muted">
+            Sub-issues with the largest month-over-month growth in complaint
+            volume, ranked by growth rate.
+          </p>
+        </div>
+
+        <DataTable
+          title="Top movers"
+          columns={[
+            { key: "growthRank", label: "Rank", align: "center" },
+            { key: "issue", label: "Issue" },
+            { key: "subIssue", label: "Sub-issue" },
+            { key: "complaints", label: "Complaints", align: "right" },
+            { key: "prevComplaints", label: "Prior month", align: "right" },
+            {
+              key: "momGrowthPct",
+              label: "MoM growth",
+              align: "right",
+              format: (v) => (
+                <Badge tone="up">+{fmtNum(Number(v))}%</Badge>
+              ),
+            },
+          ]}
+          rows={fastestGrowingIssues}
+        />
+      </section>
+
+      <section aria-labelledby="heatmap-heading" className="space-y-4">
+        <div>
+          <h2
+            id="heatmap-heading"
+            className="text-2xl font-semibold tracking-tight"
+          >
+            Product × issue breakdown
+          </h2>
+          <p className="mt-2 text-sm text-muted">
+            Share of each product&apos;s complaints attributable to its
+            leading issues this month.
+          </p>
+        </div>
+
+        <Heatmap
+          title="Issue share by product"
+          description={formatMonth(productIssueHeatmap[0]?.monthReceived ?? "2026-07")}
+          data={heatmapCells}
+        />
+      </section>
+
+      <section aria-labelledby="concentration-heading" className="space-y-4">
+        <div>
+          <h2
+            id="concentration-heading"
+            className="text-2xl font-semibold tracking-tight"
+          >
+            Issue concentration (HHI)
+          </h2>
+          <p className="mt-2 text-sm text-muted">
+            Herfindahl-Hirschman Index of issue concentration within each
+            product. Higher values indicate complaints are concentrated in
+            fewer issue types.
+          </p>
+        </div>
+
+        <DataTable
+          title="Concentration by product"
+          columns={[
+            { key: "product", label: "Product" },
+            { key: "hhi", label: "HHI", align: "right" },
+            {
+              key: "concentration",
+              label: "Concentration",
+              align: "right",
+              format: (v) => {
+                const { label, tone } = hhiTone(Number(v));
+                return <Badge tone={tone}>{label}</Badge>;
+              },
+            },
+          ]}
+          rows={issueConcentration.map((row) => ({
+            ...row,
+            concentration: row.hhi,
+          }))}
         />
       </section>
 
@@ -245,22 +361,27 @@ export default async function CfpbComplaintsPage() {
         <h2 className="text-2xl font-semibold tracking-tight">Methodology</h2>
 
         <p className="leading-7 text-muted">
-          Annual complaint totals are retrieved from the CFPB Consumer Complaint
-          Database and cached at build time. The product-level values below are
-          synthetic seed data created to test the report interface.
+          Volume metrics are computed on complaint receipt date, with 7-day
+          and 30-day trailing averages used as the baseline for day-over-day
+          and week-over-week comparisons. Anomalies are flagged when a
+          product/issue/day combination exceeds a z-score of 3 relative to
+          its trailing baseline; the same threshold is applied to
+          state-level geographic volume.
         </p>
 
         <p className="leading-7 text-muted">
-          In production, the product breakdown should normalize product names,
-          remove duplicate records, and aggregate complaints by submission date
-          and category. Percentage changes should be calculated against an
-          equivalent prior-year reporting period.
+          Product mix and issue concentration are calculated monthly. The
+          Herfindahl-Hirschman Index (HHI) sums the squared percentage share
+          of each issue within a product; scores above 2,500 indicate high
+          concentration, 1,500–2,500 moderate concentration, and below 1,500
+          low concentration.
         </p>
 
         <p className="leading-7 text-muted">
-          Complaint counts reflect reports submitted to the CFPB and should not
-          be interpreted as direct measures of product prevalence, company size,
-          or confirmed misconduct.
+          All figures on this page are synthetic seed data generated to
+          match the CFPB Complaint Analytics response schema while the live
+          endpoint is unavailable, and should not be interpreted as official
+          CFPB statistics or measures of confirmed misconduct.
         </p>
       </section>
     </article>
