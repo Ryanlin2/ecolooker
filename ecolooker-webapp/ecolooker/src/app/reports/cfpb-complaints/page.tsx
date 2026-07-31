@@ -5,7 +5,6 @@ import type { Metadata } from "next";
 import { BarGraph } from "@/components/blocks/BarGraph";
 import { DataTable } from "@/components/blocks/DataTable";
 import { Heatmap } from "@/components/blocks/Heatmap";
-import { InsightCallout } from "@/components/blocks/InsightCallout";
 import { MetricCard } from "@/components/blocks/MetricCard";
 import { MultiTrendChart } from "@/components/blocks/MultiTrendChart";
 import { ReportHeader } from "@/components/blocks/ReportHeader";
@@ -66,11 +65,6 @@ export default async function CfpbComplaintsPage() {
     label: seasonalityLabel(s.dow),
     value: Math.round(s.avgComplaints),
   }));
-
-  const topAnomaly = [...volumeAnomalies].sort((a, b) => b.zScore - a.zScore)[0];
-  const topSpikeState = [...geoStateAnomalies]
-    .filter((s) => s.isSpike)
-    .sort((a, b) => b.zScore - a.zScore)[0];
 
   const heatmapCells = productIssueHeatmap.map((row) => ({
     row: row.product,
@@ -134,29 +128,6 @@ export default async function CfpbComplaintsPage() {
           { key: "avg30d", label: "30-day avg", dashed: true },
         ]}
       />
-
-      <InsightCallout title="Primary signal">
-        Daily complaint volume is running {latest.wowPctChange > 0 ? "up" : "down"}{" "}
-        {fmtNum(Math.abs(latest.wowPctChange))}% week-over-week, with{" "}
-        {latest.complaints.toLocaleString()} complaints received on{" "}
-        {formatDay(latest.dayReceived)} against a 30-day baseline of{" "}
-        {fmtNum(latest.avg30d)}.{" "}
-        {topAnomaly && (
-          <>
-            The sharpest anomaly this period is {topAnomaly.product} —{" "}
-            {topAnomaly.issue.toLowerCase()} — on{" "}
-            {formatDay(topAnomaly.dayReceived)} (z-score{" "}
-            {fmtNum(topAnomaly.zScore)}
-            ){topSpikeState && ", and "}
-          </>
-        )}
-        {topSpikeState && (
-          <>
-            {topSpikeState.state} shows the largest geographic spike at{" "}
-            {fmtNum(topSpikeState.zScore)} standard deviations above baseline.
-          </>
-        )}
-      </InsightCallout>
 
       <section aria-labelledby="anomalies-heading" className="space-y-4">
         <div>
