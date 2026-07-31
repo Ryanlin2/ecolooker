@@ -11,17 +11,7 @@ import { MultiTrendChart } from "@/components/blocks/MultiTrendChart";
 import { ReportHeader } from "@/components/blocks/ReportHeader";
 import { Badge } from "@/components/ui/badge";
 import { fmtNum } from "@/lib/utils";
-import {
-  fastestGrowingIssues,
-  geoStateAnomalies,
-  issueConcentration,
-  productIssueHeatmap,
-  productMix,
-  seasonality,
-  seasonalityLabel,
-  volumeAnomalies,
-  volumeDaily,
-} from "@/lib/cfpb-seed-data";
+import { getCfpbReport, seasonalityLabel } from "@/lib/cfpb-data";
 
 export const metadata: Metadata = {
   title: "Consumer Financial Protection Bureau",
@@ -50,7 +40,19 @@ function hhiTone(hhi: number): { label: string; tone: "up" | "down" | "neutral" 
   return { label: "Low concentration", tone: "up" };
 }
 
-export default function CfpbComplaintsPage() {
+export default async function CfpbComplaintsPage() {
+  const {
+    generatedAt,
+    volumeDaily,
+    volumeAnomalies,
+    seasonality,
+    productMix,
+    fastestGrowingIssues,
+    productIssueHeatmap,
+    issueConcentration,
+    geoStateAnomalies,
+  } = await getCfpbReport();
+
   const latest = volumeDaily.at(-1)!;
 
   const trendData = volumeDaily.map((d) => ({
@@ -82,14 +84,17 @@ export default function CfpbComplaintsPage() {
       <ReportHeader
         title="Consumer Financial Protection Bureau"
         subtitle="Daily complaint volume, seasonality, product mix shifts, and anomaly detection across CFPB consumer complaint data."
-        date="Jul 2026"
+        date={formatMonth(latest.dayReceived.slice(0, 7))}
         tags={["Complaints", "Anomaly Detection", "Consumer Finance"]}
       />
 
       <div className="rounded-lg border border-dashed px-4 py-3 text-sm text-muted">
-        The live CFPB Complaint Analytics endpoint is currently unavailable.
-        Every metric below is generated seed data that mirrors the production
-        response schema and should not be treated as official CFPB statistics.
+        Live data from the CFPB Complaint Analytics endpoint, generated{" "}
+        {new Date(generatedAt).toLocaleString("en-US", {
+          dateStyle: "medium",
+          timeStyle: "short",
+        })}
+        .
       </div>
 
       <section aria-labelledby="key-metrics-heading" className="space-y-4">
@@ -135,11 +140,22 @@ export default function CfpbComplaintsPage() {
         {fmtNum(Math.abs(latest.wowPctChange))}% week-over-week, with{" "}
         {latest.complaints.toLocaleString()} complaints received on{" "}
         {formatDay(latest.dayReceived)} against a 30-day baseline of{" "}
-        {fmtNum(latest.avg30d)}. The sharpest anomaly this period is{" "}
-        {topAnomaly.product} — {topAnomaly.issue.toLowerCase()} — on{" "}
-        {formatDay(topAnomaly.dayReceived)} (z-score {fmtNum(topAnomaly.zScore)}
-        ), and {topSpikeState?.state} shows the largest geographic spike at{" "}
-        {fmtNum(topSpikeState?.zScore ?? 0)} standard deviations above baseline.
+        {fmtNum(latest.avg30d)}.{" "}
+        {topAnomaly && (
+          <>
+            The sharpest anomaly this period is {topAnomaly.product} —{" "}
+            {topAnomaly.issue.toLowerCase()} — on{" "}
+            {formatDay(topAnomaly.dayReceived)} (z-score{" "}
+            {fmtNum(topAnomaly.zScore)}
+            ){topSpikeState && ", and "}
+          </>
+        )}
+        {topSpikeState && (
+          <>
+            {topSpikeState.state} shows the largest geographic spike at{" "}
+            {fmtNum(topSpikeState.zScore)} standard deviations above baseline.
+          </>
+        )}
       </InsightCallout>
 
       <section aria-labelledby="anomalies-heading" className="space-y-4">
@@ -198,7 +214,7 @@ export default function CfpbComplaintsPage() {
 
           <DataTable
             title="Geographic complaint spikes"
-            description={formatMonth(geoStateAnomalies[0]?.monthReceived ?? "2026-07")}
+            description={formatMonth(geoStateAnomalies[0]?.monthReceived ?? latest.dayReceived.slice(0, 7))}
             columns={[
               { key: "state", label: "State" },
               { key: "complaints", label: "Complaints", align: "right" },
@@ -231,7 +247,7 @@ export default function CfpbComplaintsPage() {
             Complaints by product
           </h2>
           <p className="mt-2 text-sm text-muted">
-            {formatMonth(productMix[0]?.monthReceived ?? "2026-07")} volume,
+            {formatMonth(productMix[0]?.monthReceived ?? latest.dayReceived.slice(0, 7))} volume,
             category share, and month-over-month share change.
           </p>
         </div>
@@ -315,7 +331,7 @@ export default function CfpbComplaintsPage() {
 
         <Heatmap
           title="Issue share by product"
-          description={formatMonth(productIssueHeatmap[0]?.monthReceived ?? "2026-07")}
+          description={formatMonth(productIssueHeatmap[0]?.monthReceived ?? latest.dayReceived.slice(0, 7))}
           data={heatmapCells}
         />
       </section>
@@ -378,10 +394,9 @@ export default function CfpbComplaintsPage() {
         </p>
 
         <p className="leading-7 text-muted">
-          All figures on this page are synthetic seed data generated to
-          match the CFPB Complaint Analytics response schema while the live
-          endpoint is unavailable, and should not be interpreted as official
-          CFPB statistics or measures of confirmed misconduct.
+          Figures on this page are sourced from the CFPB Complaint Analytics
+          endpoint and should not be interpreted as measures of confirmed
+          misconduct.
         </p>
       </section>
     </article>
