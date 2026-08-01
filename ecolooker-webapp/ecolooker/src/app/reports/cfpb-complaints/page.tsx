@@ -26,7 +26,8 @@ function formatDay(iso: string) {
 }
 
 function formatMonth(iso: string) {
-  return new Date(`${iso}-01T00:00:00Z`).toLocaleDateString("en-US", {
+  const yearMonth = iso.slice(0, 7);
+  return new Date(`${yearMonth}-01T00:00:00Z`).toLocaleDateString("en-US", {
     month: "long",
     year: "numeric",
     timeZone: "UTC",
