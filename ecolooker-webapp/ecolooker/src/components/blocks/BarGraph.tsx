@@ -61,7 +61,7 @@ export function BarGraph({
 
             <div
               className={`w-full min-w-0 rounded-t ${
-                positive ? "bg-emerald-500/70" : "bg-sky-500/70"
+                positive ? "bg-signal/70" : "bg-accent/70"
               }`}
               style={{
                 height: `${Math.max((bar.value / max) * 100, 0.5)}%`,
