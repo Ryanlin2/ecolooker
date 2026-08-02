@@ -47,7 +47,7 @@ async function fetchPayload(): Promise<CfpbPayload> {
 
   const response = await fetch(endpoint, {
     headers: { Accept: "application/json" },
-    next: { revalidate: 300 },
+    cache: "no-store",
   });
 
   if (!response.ok) {
