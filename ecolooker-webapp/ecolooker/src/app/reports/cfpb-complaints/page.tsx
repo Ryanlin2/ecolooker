@@ -105,6 +105,7 @@ export default async function CfpbComplaintsPage() {
             label="Complaints received"
             value={latest.complaints}
             change={latest.dodChange}
+            changeIsPercent={false}
           />
 
           <MetricCard label="7-day average" value={latest.avg7d} />
@@ -279,7 +280,10 @@ export default async function CfpbComplaintsPage() {
               label: "MoM growth",
               align: "right",
               format: (v) => (
-                <Badge tone="up">+{fmtNum(Number(v))}%</Badge>
+                <Badge tone={Number(v) >= 0 ? "up" : "down"}>
+                  {Number(v) >= 0 ? "+" : ""}
+                  {fmtNum(Number(v))}%
+                </Badge>
               ),
             },
           ]}
