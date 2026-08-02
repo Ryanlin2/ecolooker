@@ -13,7 +13,7 @@ import { fmtNum } from "@/lib/utils";
 import { getCfpbReport, seasonalityLabel } from "@/lib/cfpb-data";
 
 export const metadata: Metadata = {
-  title: "Consumer Financial Protection Bureau",
+  title: "Consumer Financial Protection Bureau Anomaly Dashboard",
   description: "Complaint trends and anomaly detection dashboard.",
 };
 
@@ -79,7 +79,7 @@ export default async function CfpbComplaintsPage() {
   return (
     <article className="space-y-12">
       <ReportHeader
-        title="Consumer Financial Protection Bureau"
+        title="Consumer Financial Protection Bureau Anomaly Dashboard"
         subtitle="Daily complaint volume, seasonality, product mix shifts, and anomaly detection across CFPB consumer complaint data."
         date={formatMonth(latest.dayReceived.slice(0, 7))}
         tags={["Complaints", "Anomaly Detection", "Consumer Finance"]}

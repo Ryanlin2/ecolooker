@@ -8,7 +8,7 @@ export type ReportMeta = {
 export const reports: ReportMeta[] = [
   {
     slug: "cfpb-complaints",
-    title: "Consumer Financial Protection Bureau",
+    title: "Consumer Financial Protection Bureau Anomaly Dashboard",
     subtitle: "Live dashboard of financial services complaints.",
     date: "Jul 2026",
     tags: ["Complaints", "Indicator"],
