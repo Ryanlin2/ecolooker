@@ -3,8 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight, ArrowDownRight } from "lucide-react";
 import { fmtNum } from "@/lib/utils";
 
-export function MetricCard({ label, value, unit, change, prefix }: {
-  label: string; value: number; unit?: string; change?: number; prefix?: string;
+export function MetricCard({ label, value, unit, change, prefix, changeIsPercent = true }: {
+  label: string; value: number; unit?: string; change?: number; prefix?: string; changeIsPercent?: boolean;
 }) {
   const up = (change ?? 0) >= 0;
   return (
@@ -19,7 +19,8 @@ export function MetricCard({ label, value, unit, change, prefix }: {
         {change !== undefined && (
           <Badge tone={up ? "up" : "down"} className="mt-2">
             {up ? <ArrowUpRight size={12} /> : <ArrowDownRight size={12} />}
-            {fmtNum(Math.abs(change))}%
+            {fmtNum(Math.abs(change))}
+            {changeIsPercent ? "%" : ""}
           </Badge>
         )}
       </CardContent>
