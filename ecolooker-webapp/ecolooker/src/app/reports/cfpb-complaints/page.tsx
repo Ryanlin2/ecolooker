@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   description: "Complaint trends and anomaly detection dashboard.",
 };
 
+export const dynamic = "force-dynamic";
+
 function formatDay(iso: string) {
   return new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", {
     month: "short",
