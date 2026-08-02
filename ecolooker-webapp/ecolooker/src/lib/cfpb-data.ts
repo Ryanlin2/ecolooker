@@ -1,4 +1,5 @@
 import "server-only";
+import { cache } from "react";
 
 /**
  * Live data access for the CFPB complaint trends & anomaly detection report.
@@ -46,7 +47,7 @@ async function fetchPayload(): Promise<CfpbPayload> {
 
   const response = await fetch(endpoint, {
     headers: { Accept: "application/json" },
-    cache: "no-store",
+    next: { revalidate: 300 },
   });
 
   if (!response.ok) {
@@ -191,7 +192,7 @@ function computeVolumeDaily(
   return rows.slice(-30);
 }
 
-export async function getCfpbReport(): Promise<CfpbReport> {
+export const getCfpbReport = cache(async (): Promise<CfpbReport> => {
   const payload = await fetchPayload();
   const { datasets } = payload;
 
@@ -356,4 +357,4 @@ export async function getCfpbReport(): Promise<CfpbReport> {
     issueConcentration,
     geoStateAnomalies,
   };
-}
+});
