@@ -24,3 +24,9 @@ __pycache__/
 *complaints.csv
 
 .claude/
+
+*.csv
+
+*.xml
+
+*.local
