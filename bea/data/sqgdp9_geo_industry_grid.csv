@@ -1,0 +1,1621 @@
+GeoFips,GeoName,LineCode,IndustryName
+00000,United States,1,Real GDP by state: All industry total
+00000,United States,10,Real GDP by state: Utilities (22)
+00000,United States,11,Real GDP by state: Construction (23)
+00000,United States,12,Real GDP by state: Manufacturing (31-33)
+00000,United States,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+00000,United States,2,Real GDP by state: Private industries
+00000,United States,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+00000,United States,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+00000,United States,34,Real GDP by state: Wholesale trade (42)
+00000,United States,35,Real GDP by state: Retail trade (44-45)
+00000,United States,36,Real GDP by state: Transportation and warehousing (48-49)
+00000,United States,45,Real GDP by state: Information (51)
+00000,United States,51,Real GDP by state: Finance and insurance (52)
+00000,United States,56,Real GDP by state: Real estate and rental and leasing (53)
+00000,United States,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+00000,United States,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+00000,United States,64,Real GDP by state: Management of companies and enterprises (55)
+00000,United States,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+00000,United States,69,Real GDP by state: Educational services (61)
+00000,United States,70,Real GDP by state: Health care and social assistance (62)
+00000,United States,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+00000,United States,79,Real GDP by state: Accommodation and food services (72)
+00000,United States,82,Real GDP by state: Other services (except government and government enterprises) (81)
+00000,United States,83,Real GDP by state: Government and government enterprises (92)
+00000,United States,84,Real GDP by state: Federal civilian
+00000,United States,85,Real GDP by state: Military
+00000,United States,86,Real GDP by state: State and local
+01000,Alabama,1,Real GDP by state: All industry total
+01000,Alabama,10,Real GDP by state: Utilities (22)
+01000,Alabama,11,Real GDP by state: Construction (23)
+01000,Alabama,12,Real GDP by state: Manufacturing (31-33)
+01000,Alabama,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+01000,Alabama,2,Real GDP by state: Private industries
+01000,Alabama,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+01000,Alabama,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+01000,Alabama,34,Real GDP by state: Wholesale trade (42)
+01000,Alabama,35,Real GDP by state: Retail trade (44-45)
+01000,Alabama,36,Real GDP by state: Transportation and warehousing (48-49)
+01000,Alabama,45,Real GDP by state: Information (51)
+01000,Alabama,51,Real GDP by state: Finance and insurance (52)
+01000,Alabama,56,Real GDP by state: Real estate and rental and leasing (53)
+01000,Alabama,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+01000,Alabama,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+01000,Alabama,64,Real GDP by state: Management of companies and enterprises (55)
+01000,Alabama,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+01000,Alabama,69,Real GDP by state: Educational services (61)
+01000,Alabama,70,Real GDP by state: Health care and social assistance (62)
+01000,Alabama,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+01000,Alabama,79,Real GDP by state: Accommodation and food services (72)
+01000,Alabama,82,Real GDP by state: Other services (except government and government enterprises) (81)
+01000,Alabama,83,Real GDP by state: Government and government enterprises (92)
+01000,Alabama,84,Real GDP by state: Federal civilian
+01000,Alabama,85,Real GDP by state: Military
+01000,Alabama,86,Real GDP by state: State and local
+02000,Alaska,1,Real GDP by state: All industry total
+02000,Alaska,10,Real GDP by state: Utilities (22)
+02000,Alaska,11,Real GDP by state: Construction (23)
+02000,Alaska,12,Real GDP by state: Manufacturing (31-33)
+02000,Alaska,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+02000,Alaska,2,Real GDP by state: Private industries
+02000,Alaska,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+02000,Alaska,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+02000,Alaska,34,Real GDP by state: Wholesale trade (42)
+02000,Alaska,35,Real GDP by state: Retail trade (44-45)
+02000,Alaska,36,Real GDP by state: Transportation and warehousing (48-49)
+02000,Alaska,45,Real GDP by state: Information (51)
+02000,Alaska,51,Real GDP by state: Finance and insurance (52)
+02000,Alaska,56,Real GDP by state: Real estate and rental and leasing (53)
+02000,Alaska,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+02000,Alaska,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+02000,Alaska,64,Real GDP by state: Management of companies and enterprises (55)
+02000,Alaska,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+02000,Alaska,69,Real GDP by state: Educational services (61)
+02000,Alaska,70,Real GDP by state: Health care and social assistance (62)
+02000,Alaska,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+02000,Alaska,79,Real GDP by state: Accommodation and food services (72)
+02000,Alaska,82,Real GDP by state: Other services (except government and government enterprises) (81)
+02000,Alaska,83,Real GDP by state: Government and government enterprises (92)
+02000,Alaska,84,Real GDP by state: Federal civilian
+02000,Alaska,85,Real GDP by state: Military
+02000,Alaska,86,Real GDP by state: State and local
+04000,Arizona,1,Real GDP by state: All industry total
+04000,Arizona,10,Real GDP by state: Utilities (22)
+04000,Arizona,11,Real GDP by state: Construction (23)
+04000,Arizona,12,Real GDP by state: Manufacturing (31-33)
+04000,Arizona,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+04000,Arizona,2,Real GDP by state: Private industries
+04000,Arizona,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+04000,Arizona,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+04000,Arizona,34,Real GDP by state: Wholesale trade (42)
+04000,Arizona,35,Real GDP by state: Retail trade (44-45)
+04000,Arizona,36,Real GDP by state: Transportation and warehousing (48-49)
+04000,Arizona,45,Real GDP by state: Information (51)
+04000,Arizona,51,Real GDP by state: Finance and insurance (52)
+04000,Arizona,56,Real GDP by state: Real estate and rental and leasing (53)
+04000,Arizona,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+04000,Arizona,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+04000,Arizona,64,Real GDP by state: Management of companies and enterprises (55)
+04000,Arizona,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+04000,Arizona,69,Real GDP by state: Educational services (61)
+04000,Arizona,70,Real GDP by state: Health care and social assistance (62)
+04000,Arizona,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+04000,Arizona,79,Real GDP by state: Accommodation and food services (72)
+04000,Arizona,82,Real GDP by state: Other services (except government and government enterprises) (81)
+04000,Arizona,83,Real GDP by state: Government and government enterprises (92)
+04000,Arizona,84,Real GDP by state: Federal civilian
+04000,Arizona,85,Real GDP by state: Military
+04000,Arizona,86,Real GDP by state: State and local
+05000,Arkansas,1,Real GDP by state: All industry total
+05000,Arkansas,10,Real GDP by state: Utilities (22)
+05000,Arkansas,11,Real GDP by state: Construction (23)
+05000,Arkansas,12,Real GDP by state: Manufacturing (31-33)
+05000,Arkansas,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+05000,Arkansas,2,Real GDP by state: Private industries
+05000,Arkansas,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+05000,Arkansas,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+05000,Arkansas,34,Real GDP by state: Wholesale trade (42)
+05000,Arkansas,35,Real GDP by state: Retail trade (44-45)
+05000,Arkansas,36,Real GDP by state: Transportation and warehousing (48-49)
+05000,Arkansas,45,Real GDP by state: Information (51)
+05000,Arkansas,51,Real GDP by state: Finance and insurance (52)
+05000,Arkansas,56,Real GDP by state: Real estate and rental and leasing (53)
+05000,Arkansas,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+05000,Arkansas,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+05000,Arkansas,64,Real GDP by state: Management of companies and enterprises (55)
+05000,Arkansas,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+05000,Arkansas,69,Real GDP by state: Educational services (61)
+05000,Arkansas,70,Real GDP by state: Health care and social assistance (62)
+05000,Arkansas,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+05000,Arkansas,79,Real GDP by state: Accommodation and food services (72)
+05000,Arkansas,82,Real GDP by state: Other services (except government and government enterprises) (81)
+05000,Arkansas,83,Real GDP by state: Government and government enterprises (92)
+05000,Arkansas,84,Real GDP by state: Federal civilian
+05000,Arkansas,85,Real GDP by state: Military
+05000,Arkansas,86,Real GDP by state: State and local
+06000,California,1,Real GDP by state: All industry total
+06000,California,10,Real GDP by state: Utilities (22)
+06000,California,11,Real GDP by state: Construction (23)
+06000,California,12,Real GDP by state: Manufacturing (31-33)
+06000,California,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+06000,California,2,Real GDP by state: Private industries
+06000,California,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+06000,California,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+06000,California,34,Real GDP by state: Wholesale trade (42)
+06000,California,35,Real GDP by state: Retail trade (44-45)
+06000,California,36,Real GDP by state: Transportation and warehousing (48-49)
+06000,California,45,Real GDP by state: Information (51)
+06000,California,51,Real GDP by state: Finance and insurance (52)
+06000,California,56,Real GDP by state: Real estate and rental and leasing (53)
+06000,California,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+06000,California,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+06000,California,64,Real GDP by state: Management of companies and enterprises (55)
+06000,California,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+06000,California,69,Real GDP by state: Educational services (61)
+06000,California,70,Real GDP by state: Health care and social assistance (62)
+06000,California,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+06000,California,79,Real GDP by state: Accommodation and food services (72)
+06000,California,82,Real GDP by state: Other services (except government and government enterprises) (81)
+06000,California,83,Real GDP by state: Government and government enterprises (92)
+06000,California,84,Real GDP by state: Federal civilian
+06000,California,85,Real GDP by state: Military
+06000,California,86,Real GDP by state: State and local
+08000,Colorado,1,Real GDP by state: All industry total
+08000,Colorado,10,Real GDP by state: Utilities (22)
+08000,Colorado,11,Real GDP by state: Construction (23)
+08000,Colorado,12,Real GDP by state: Manufacturing (31-33)
+08000,Colorado,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+08000,Colorado,2,Real GDP by state: Private industries
+08000,Colorado,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+08000,Colorado,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+08000,Colorado,34,Real GDP by state: Wholesale trade (42)
+08000,Colorado,35,Real GDP by state: Retail trade (44-45)
+08000,Colorado,36,Real GDP by state: Transportation and warehousing (48-49)
+08000,Colorado,45,Real GDP by state: Information (51)
+08000,Colorado,51,Real GDP by state: Finance and insurance (52)
+08000,Colorado,56,Real GDP by state: Real estate and rental and leasing (53)
+08000,Colorado,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+08000,Colorado,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+08000,Colorado,64,Real GDP by state: Management of companies and enterprises (55)
+08000,Colorado,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+08000,Colorado,69,Real GDP by state: Educational services (61)
+08000,Colorado,70,Real GDP by state: Health care and social assistance (62)
+08000,Colorado,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+08000,Colorado,79,Real GDP by state: Accommodation and food services (72)
+08000,Colorado,82,Real GDP by state: Other services (except government and government enterprises) (81)
+08000,Colorado,83,Real GDP by state: Government and government enterprises (92)
+08000,Colorado,84,Real GDP by state: Federal civilian
+08000,Colorado,85,Real GDP by state: Military
+08000,Colorado,86,Real GDP by state: State and local
+09000,Connecticut,1,Real GDP by state: All industry total
+09000,Connecticut,10,Real GDP by state: Utilities (22)
+09000,Connecticut,11,Real GDP by state: Construction (23)
+09000,Connecticut,12,Real GDP by state: Manufacturing (31-33)
+09000,Connecticut,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+09000,Connecticut,2,Real GDP by state: Private industries
+09000,Connecticut,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+09000,Connecticut,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+09000,Connecticut,34,Real GDP by state: Wholesale trade (42)
+09000,Connecticut,35,Real GDP by state: Retail trade (44-45)
+09000,Connecticut,36,Real GDP by state: Transportation and warehousing (48-49)
+09000,Connecticut,45,Real GDP by state: Information (51)
+09000,Connecticut,51,Real GDP by state: Finance and insurance (52)
+09000,Connecticut,56,Real GDP by state: Real estate and rental and leasing (53)
+09000,Connecticut,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+09000,Connecticut,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+09000,Connecticut,64,Real GDP by state: Management of companies and enterprises (55)
+09000,Connecticut,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+09000,Connecticut,69,Real GDP by state: Educational services (61)
+09000,Connecticut,70,Real GDP by state: Health care and social assistance (62)
+09000,Connecticut,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+09000,Connecticut,79,Real GDP by state: Accommodation and food services (72)
+09000,Connecticut,82,Real GDP by state: Other services (except government and government enterprises) (81)
+09000,Connecticut,83,Real GDP by state: Government and government enterprises (92)
+09000,Connecticut,84,Real GDP by state: Federal civilian
+09000,Connecticut,85,Real GDP by state: Military
+09000,Connecticut,86,Real GDP by state: State and local
+10000,Delaware,1,Real GDP by state: All industry total
+10000,Delaware,10,Real GDP by state: Utilities (22)
+10000,Delaware,11,Real GDP by state: Construction (23)
+10000,Delaware,12,Real GDP by state: Manufacturing (31-33)
+10000,Delaware,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+10000,Delaware,2,Real GDP by state: Private industries
+10000,Delaware,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+10000,Delaware,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+10000,Delaware,34,Real GDP by state: Wholesale trade (42)
+10000,Delaware,35,Real GDP by state: Retail trade (44-45)
+10000,Delaware,36,Real GDP by state: Transportation and warehousing (48-49)
+10000,Delaware,45,Real GDP by state: Information (51)
+10000,Delaware,51,Real GDP by state: Finance and insurance (52)
+10000,Delaware,56,Real GDP by state: Real estate and rental and leasing (53)
+10000,Delaware,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+10000,Delaware,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+10000,Delaware,64,Real GDP by state: Management of companies and enterprises (55)
+10000,Delaware,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+10000,Delaware,69,Real GDP by state: Educational services (61)
+10000,Delaware,70,Real GDP by state: Health care and social assistance (62)
+10000,Delaware,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+10000,Delaware,79,Real GDP by state: Accommodation and food services (72)
+10000,Delaware,82,Real GDP by state: Other services (except government and government enterprises) (81)
+10000,Delaware,83,Real GDP by state: Government and government enterprises (92)
+10000,Delaware,84,Real GDP by state: Federal civilian
+10000,Delaware,85,Real GDP by state: Military
+10000,Delaware,86,Real GDP by state: State and local
+11000,District of Columbia,1,Real GDP by state: All industry total
+11000,District of Columbia,10,Real GDP by state: Utilities (22)
+11000,District of Columbia,11,Real GDP by state: Construction (23)
+11000,District of Columbia,12,Real GDP by state: Manufacturing (31-33)
+11000,District of Columbia,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+11000,District of Columbia,2,Real GDP by state: Private industries
+11000,District of Columbia,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+11000,District of Columbia,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+11000,District of Columbia,34,Real GDP by state: Wholesale trade (42)
+11000,District of Columbia,35,Real GDP by state: Retail trade (44-45)
+11000,District of Columbia,36,Real GDP by state: Transportation and warehousing (48-49)
+11000,District of Columbia,45,Real GDP by state: Information (51)
+11000,District of Columbia,51,Real GDP by state: Finance and insurance (52)
+11000,District of Columbia,56,Real GDP by state: Real estate and rental and leasing (53)
+11000,District of Columbia,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+11000,District of Columbia,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+11000,District of Columbia,64,Real GDP by state: Management of companies and enterprises (55)
+11000,District of Columbia,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+11000,District of Columbia,69,Real GDP by state: Educational services (61)
+11000,District of Columbia,70,Real GDP by state: Health care and social assistance (62)
+11000,District of Columbia,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+11000,District of Columbia,79,Real GDP by state: Accommodation and food services (72)
+11000,District of Columbia,82,Real GDP by state: Other services (except government and government enterprises) (81)
+11000,District of Columbia,83,Real GDP by state: Government and government enterprises (92)
+11000,District of Columbia,84,Real GDP by state: Federal civilian
+11000,District of Columbia,85,Real GDP by state: Military
+11000,District of Columbia,86,Real GDP by state: State and local
+12000,Florida,1,Real GDP by state: All industry total
+12000,Florida,10,Real GDP by state: Utilities (22)
+12000,Florida,11,Real GDP by state: Construction (23)
+12000,Florida,12,Real GDP by state: Manufacturing (31-33)
+12000,Florida,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+12000,Florida,2,Real GDP by state: Private industries
+12000,Florida,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+12000,Florida,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+12000,Florida,34,Real GDP by state: Wholesale trade (42)
+12000,Florida,35,Real GDP by state: Retail trade (44-45)
+12000,Florida,36,Real GDP by state: Transportation and warehousing (48-49)
+12000,Florida,45,Real GDP by state: Information (51)
+12000,Florida,51,Real GDP by state: Finance and insurance (52)
+12000,Florida,56,Real GDP by state: Real estate and rental and leasing (53)
+12000,Florida,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+12000,Florida,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+12000,Florida,64,Real GDP by state: Management of companies and enterprises (55)
+12000,Florida,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+12000,Florida,69,Real GDP by state: Educational services (61)
+12000,Florida,70,Real GDP by state: Health care and social assistance (62)
+12000,Florida,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+12000,Florida,79,Real GDP by state: Accommodation and food services (72)
+12000,Florida,82,Real GDP by state: Other services (except government and government enterprises) (81)
+12000,Florida,83,Real GDP by state: Government and government enterprises (92)
+12000,Florida,84,Real GDP by state: Federal civilian
+12000,Florida,85,Real GDP by state: Military
+12000,Florida,86,Real GDP by state: State and local
+13000,Georgia,1,Real GDP by state: All industry total
+13000,Georgia,10,Real GDP by state: Utilities (22)
+13000,Georgia,11,Real GDP by state: Construction (23)
+13000,Georgia,12,Real GDP by state: Manufacturing (31-33)
+13000,Georgia,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+13000,Georgia,2,Real GDP by state: Private industries
+13000,Georgia,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+13000,Georgia,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+13000,Georgia,34,Real GDP by state: Wholesale trade (42)
+13000,Georgia,35,Real GDP by state: Retail trade (44-45)
+13000,Georgia,36,Real GDP by state: Transportation and warehousing (48-49)
+13000,Georgia,45,Real GDP by state: Information (51)
+13000,Georgia,51,Real GDP by state: Finance and insurance (52)
+13000,Georgia,56,Real GDP by state: Real estate and rental and leasing (53)
+13000,Georgia,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+13000,Georgia,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+13000,Georgia,64,Real GDP by state: Management of companies and enterprises (55)
+13000,Georgia,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+13000,Georgia,69,Real GDP by state: Educational services (61)
+13000,Georgia,70,Real GDP by state: Health care and social assistance (62)
+13000,Georgia,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+13000,Georgia,79,Real GDP by state: Accommodation and food services (72)
+13000,Georgia,82,Real GDP by state: Other services (except government and government enterprises) (81)
+13000,Georgia,83,Real GDP by state: Government and government enterprises (92)
+13000,Georgia,84,Real GDP by state: Federal civilian
+13000,Georgia,85,Real GDP by state: Military
+13000,Georgia,86,Real GDP by state: State and local
+15000,Hawaii,1,Real GDP by state: All industry total
+15000,Hawaii,10,Real GDP by state: Utilities (22)
+15000,Hawaii,11,Real GDP by state: Construction (23)
+15000,Hawaii,12,Real GDP by state: Manufacturing (31-33)
+15000,Hawaii,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+15000,Hawaii,2,Real GDP by state: Private industries
+15000,Hawaii,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+15000,Hawaii,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+15000,Hawaii,34,Real GDP by state: Wholesale trade (42)
+15000,Hawaii,35,Real GDP by state: Retail trade (44-45)
+15000,Hawaii,36,Real GDP by state: Transportation and warehousing (48-49)
+15000,Hawaii,45,Real GDP by state: Information (51)
+15000,Hawaii,51,Real GDP by state: Finance and insurance (52)
+15000,Hawaii,56,Real GDP by state: Real estate and rental and leasing (53)
+15000,Hawaii,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+15000,Hawaii,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+15000,Hawaii,64,Real GDP by state: Management of companies and enterprises (55)
+15000,Hawaii,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+15000,Hawaii,69,Real GDP by state: Educational services (61)
+15000,Hawaii,70,Real GDP by state: Health care and social assistance (62)
+15000,Hawaii,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+15000,Hawaii,79,Real GDP by state: Accommodation and food services (72)
+15000,Hawaii,82,Real GDP by state: Other services (except government and government enterprises) (81)
+15000,Hawaii,83,Real GDP by state: Government and government enterprises (92)
+15000,Hawaii,84,Real GDP by state: Federal civilian
+15000,Hawaii,85,Real GDP by state: Military
+15000,Hawaii,86,Real GDP by state: State and local
+16000,Idaho,1,Real GDP by state: All industry total
+16000,Idaho,10,Real GDP by state: Utilities (22)
+16000,Idaho,11,Real GDP by state: Construction (23)
+16000,Idaho,12,Real GDP by state: Manufacturing (31-33)
+16000,Idaho,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+16000,Idaho,2,Real GDP by state: Private industries
+16000,Idaho,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+16000,Idaho,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+16000,Idaho,34,Real GDP by state: Wholesale trade (42)
+16000,Idaho,35,Real GDP by state: Retail trade (44-45)
+16000,Idaho,36,Real GDP by state: Transportation and warehousing (48-49)
+16000,Idaho,45,Real GDP by state: Information (51)
+16000,Idaho,51,Real GDP by state: Finance and insurance (52)
+16000,Idaho,56,Real GDP by state: Real estate and rental and leasing (53)
+16000,Idaho,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+16000,Idaho,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+16000,Idaho,64,Real GDP by state: Management of companies and enterprises (55)
+16000,Idaho,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+16000,Idaho,69,Real GDP by state: Educational services (61)
+16000,Idaho,70,Real GDP by state: Health care and social assistance (62)
+16000,Idaho,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+16000,Idaho,79,Real GDP by state: Accommodation and food services (72)
+16000,Idaho,82,Real GDP by state: Other services (except government and government enterprises) (81)
+16000,Idaho,83,Real GDP by state: Government and government enterprises (92)
+16000,Idaho,84,Real GDP by state: Federal civilian
+16000,Idaho,85,Real GDP by state: Military
+16000,Idaho,86,Real GDP by state: State and local
+17000,Illinois,1,Real GDP by state: All industry total
+17000,Illinois,10,Real GDP by state: Utilities (22)
+17000,Illinois,11,Real GDP by state: Construction (23)
+17000,Illinois,12,Real GDP by state: Manufacturing (31-33)
+17000,Illinois,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+17000,Illinois,2,Real GDP by state: Private industries
+17000,Illinois,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+17000,Illinois,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+17000,Illinois,34,Real GDP by state: Wholesale trade (42)
+17000,Illinois,35,Real GDP by state: Retail trade (44-45)
+17000,Illinois,36,Real GDP by state: Transportation and warehousing (48-49)
+17000,Illinois,45,Real GDP by state: Information (51)
+17000,Illinois,51,Real GDP by state: Finance and insurance (52)
+17000,Illinois,56,Real GDP by state: Real estate and rental and leasing (53)
+17000,Illinois,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+17000,Illinois,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+17000,Illinois,64,Real GDP by state: Management of companies and enterprises (55)
+17000,Illinois,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+17000,Illinois,69,Real GDP by state: Educational services (61)
+17000,Illinois,70,Real GDP by state: Health care and social assistance (62)
+17000,Illinois,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+17000,Illinois,79,Real GDP by state: Accommodation and food services (72)
+17000,Illinois,82,Real GDP by state: Other services (except government and government enterprises) (81)
+17000,Illinois,83,Real GDP by state: Government and government enterprises (92)
+17000,Illinois,84,Real GDP by state: Federal civilian
+17000,Illinois,85,Real GDP by state: Military
+17000,Illinois,86,Real GDP by state: State and local
+18000,Indiana,1,Real GDP by state: All industry total
+18000,Indiana,10,Real GDP by state: Utilities (22)
+18000,Indiana,11,Real GDP by state: Construction (23)
+18000,Indiana,12,Real GDP by state: Manufacturing (31-33)
+18000,Indiana,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+18000,Indiana,2,Real GDP by state: Private industries
+18000,Indiana,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+18000,Indiana,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+18000,Indiana,34,Real GDP by state: Wholesale trade (42)
+18000,Indiana,35,Real GDP by state: Retail trade (44-45)
+18000,Indiana,36,Real GDP by state: Transportation and warehousing (48-49)
+18000,Indiana,45,Real GDP by state: Information (51)
+18000,Indiana,51,Real GDP by state: Finance and insurance (52)
+18000,Indiana,56,Real GDP by state: Real estate and rental and leasing (53)
+18000,Indiana,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+18000,Indiana,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+18000,Indiana,64,Real GDP by state: Management of companies and enterprises (55)
+18000,Indiana,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+18000,Indiana,69,Real GDP by state: Educational services (61)
+18000,Indiana,70,Real GDP by state: Health care and social assistance (62)
+18000,Indiana,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+18000,Indiana,79,Real GDP by state: Accommodation and food services (72)
+18000,Indiana,82,Real GDP by state: Other services (except government and government enterprises) (81)
+18000,Indiana,83,Real GDP by state: Government and government enterprises (92)
+18000,Indiana,84,Real GDP by state: Federal civilian
+18000,Indiana,85,Real GDP by state: Military
+18000,Indiana,86,Real GDP by state: State and local
+19000,Iowa,1,Real GDP by state: All industry total
+19000,Iowa,10,Real GDP by state: Utilities (22)
+19000,Iowa,11,Real GDP by state: Construction (23)
+19000,Iowa,12,Real GDP by state: Manufacturing (31-33)
+19000,Iowa,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+19000,Iowa,2,Real GDP by state: Private industries
+19000,Iowa,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+19000,Iowa,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+19000,Iowa,34,Real GDP by state: Wholesale trade (42)
+19000,Iowa,35,Real GDP by state: Retail trade (44-45)
+19000,Iowa,36,Real GDP by state: Transportation and warehousing (48-49)
+19000,Iowa,45,Real GDP by state: Information (51)
+19000,Iowa,51,Real GDP by state: Finance and insurance (52)
+19000,Iowa,56,Real GDP by state: Real estate and rental and leasing (53)
+19000,Iowa,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+19000,Iowa,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+19000,Iowa,64,Real GDP by state: Management of companies and enterprises (55)
+19000,Iowa,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+19000,Iowa,69,Real GDP by state: Educational services (61)
+19000,Iowa,70,Real GDP by state: Health care and social assistance (62)
+19000,Iowa,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+19000,Iowa,79,Real GDP by state: Accommodation and food services (72)
+19000,Iowa,82,Real GDP by state: Other services (except government and government enterprises) (81)
+19000,Iowa,83,Real GDP by state: Government and government enterprises (92)
+19000,Iowa,84,Real GDP by state: Federal civilian
+19000,Iowa,85,Real GDP by state: Military
+19000,Iowa,86,Real GDP by state: State and local
+20000,Kansas,1,Real GDP by state: All industry total
+20000,Kansas,10,Real GDP by state: Utilities (22)
+20000,Kansas,11,Real GDP by state: Construction (23)
+20000,Kansas,12,Real GDP by state: Manufacturing (31-33)
+20000,Kansas,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+20000,Kansas,2,Real GDP by state: Private industries
+20000,Kansas,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+20000,Kansas,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+20000,Kansas,34,Real GDP by state: Wholesale trade (42)
+20000,Kansas,35,Real GDP by state: Retail trade (44-45)
+20000,Kansas,36,Real GDP by state: Transportation and warehousing (48-49)
+20000,Kansas,45,Real GDP by state: Information (51)
+20000,Kansas,51,Real GDP by state: Finance and insurance (52)
+20000,Kansas,56,Real GDP by state: Real estate and rental and leasing (53)
+20000,Kansas,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+20000,Kansas,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+20000,Kansas,64,Real GDP by state: Management of companies and enterprises (55)
+20000,Kansas,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+20000,Kansas,69,Real GDP by state: Educational services (61)
+20000,Kansas,70,Real GDP by state: Health care and social assistance (62)
+20000,Kansas,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+20000,Kansas,79,Real GDP by state: Accommodation and food services (72)
+20000,Kansas,82,Real GDP by state: Other services (except government and government enterprises) (81)
+20000,Kansas,83,Real GDP by state: Government and government enterprises (92)
+20000,Kansas,84,Real GDP by state: Federal civilian
+20000,Kansas,85,Real GDP by state: Military
+20000,Kansas,86,Real GDP by state: State and local
+21000,Kentucky,1,Real GDP by state: All industry total
+21000,Kentucky,10,Real GDP by state: Utilities (22)
+21000,Kentucky,11,Real GDP by state: Construction (23)
+21000,Kentucky,12,Real GDP by state: Manufacturing (31-33)
+21000,Kentucky,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+21000,Kentucky,2,Real GDP by state: Private industries
+21000,Kentucky,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+21000,Kentucky,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+21000,Kentucky,34,Real GDP by state: Wholesale trade (42)
+21000,Kentucky,35,Real GDP by state: Retail trade (44-45)
+21000,Kentucky,36,Real GDP by state: Transportation and warehousing (48-49)
+21000,Kentucky,45,Real GDP by state: Information (51)
+21000,Kentucky,51,Real GDP by state: Finance and insurance (52)
+21000,Kentucky,56,Real GDP by state: Real estate and rental and leasing (53)
+21000,Kentucky,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+21000,Kentucky,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+21000,Kentucky,64,Real GDP by state: Management of companies and enterprises (55)
+21000,Kentucky,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+21000,Kentucky,69,Real GDP by state: Educational services (61)
+21000,Kentucky,70,Real GDP by state: Health care and social assistance (62)
+21000,Kentucky,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+21000,Kentucky,79,Real GDP by state: Accommodation and food services (72)
+21000,Kentucky,82,Real GDP by state: Other services (except government and government enterprises) (81)
+21000,Kentucky,83,Real GDP by state: Government and government enterprises (92)
+21000,Kentucky,84,Real GDP by state: Federal civilian
+21000,Kentucky,85,Real GDP by state: Military
+21000,Kentucky,86,Real GDP by state: State and local
+22000,Louisiana,1,Real GDP by state: All industry total
+22000,Louisiana,10,Real GDP by state: Utilities (22)
+22000,Louisiana,11,Real GDP by state: Construction (23)
+22000,Louisiana,12,Real GDP by state: Manufacturing (31-33)
+22000,Louisiana,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+22000,Louisiana,2,Real GDP by state: Private industries
+22000,Louisiana,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+22000,Louisiana,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+22000,Louisiana,34,Real GDP by state: Wholesale trade (42)
+22000,Louisiana,35,Real GDP by state: Retail trade (44-45)
+22000,Louisiana,36,Real GDP by state: Transportation and warehousing (48-49)
+22000,Louisiana,45,Real GDP by state: Information (51)
+22000,Louisiana,51,Real GDP by state: Finance and insurance (52)
+22000,Louisiana,56,Real GDP by state: Real estate and rental and leasing (53)
+22000,Louisiana,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+22000,Louisiana,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+22000,Louisiana,64,Real GDP by state: Management of companies and enterprises (55)
+22000,Louisiana,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+22000,Louisiana,69,Real GDP by state: Educational services (61)
+22000,Louisiana,70,Real GDP by state: Health care and social assistance (62)
+22000,Louisiana,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+22000,Louisiana,79,Real GDP by state: Accommodation and food services (72)
+22000,Louisiana,82,Real GDP by state: Other services (except government and government enterprises) (81)
+22000,Louisiana,83,Real GDP by state: Government and government enterprises (92)
+22000,Louisiana,84,Real GDP by state: Federal civilian
+22000,Louisiana,85,Real GDP by state: Military
+22000,Louisiana,86,Real GDP by state: State and local
+23000,Maine,1,Real GDP by state: All industry total
+23000,Maine,10,Real GDP by state: Utilities (22)
+23000,Maine,11,Real GDP by state: Construction (23)
+23000,Maine,12,Real GDP by state: Manufacturing (31-33)
+23000,Maine,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+23000,Maine,2,Real GDP by state: Private industries
+23000,Maine,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+23000,Maine,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+23000,Maine,34,Real GDP by state: Wholesale trade (42)
+23000,Maine,35,Real GDP by state: Retail trade (44-45)
+23000,Maine,36,Real GDP by state: Transportation and warehousing (48-49)
+23000,Maine,45,Real GDP by state: Information (51)
+23000,Maine,51,Real GDP by state: Finance and insurance (52)
+23000,Maine,56,Real GDP by state: Real estate and rental and leasing (53)
+23000,Maine,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+23000,Maine,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+23000,Maine,64,Real GDP by state: Management of companies and enterprises (55)
+23000,Maine,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+23000,Maine,69,Real GDP by state: Educational services (61)
+23000,Maine,70,Real GDP by state: Health care and social assistance (62)
+23000,Maine,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+23000,Maine,79,Real GDP by state: Accommodation and food services (72)
+23000,Maine,82,Real GDP by state: Other services (except government and government enterprises) (81)
+23000,Maine,83,Real GDP by state: Government and government enterprises (92)
+23000,Maine,84,Real GDP by state: Federal civilian
+23000,Maine,85,Real GDP by state: Military
+23000,Maine,86,Real GDP by state: State and local
+24000,Maryland,1,Real GDP by state: All industry total
+24000,Maryland,10,Real GDP by state: Utilities (22)
+24000,Maryland,11,Real GDP by state: Construction (23)
+24000,Maryland,12,Real GDP by state: Manufacturing (31-33)
+24000,Maryland,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+24000,Maryland,2,Real GDP by state: Private industries
+24000,Maryland,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+24000,Maryland,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+24000,Maryland,34,Real GDP by state: Wholesale trade (42)
+24000,Maryland,35,Real GDP by state: Retail trade (44-45)
+24000,Maryland,36,Real GDP by state: Transportation and warehousing (48-49)
+24000,Maryland,45,Real GDP by state: Information (51)
+24000,Maryland,51,Real GDP by state: Finance and insurance (52)
+24000,Maryland,56,Real GDP by state: Real estate and rental and leasing (53)
+24000,Maryland,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+24000,Maryland,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+24000,Maryland,64,Real GDP by state: Management of companies and enterprises (55)
+24000,Maryland,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+24000,Maryland,69,Real GDP by state: Educational services (61)
+24000,Maryland,70,Real GDP by state: Health care and social assistance (62)
+24000,Maryland,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+24000,Maryland,79,Real GDP by state: Accommodation and food services (72)
+24000,Maryland,82,Real GDP by state: Other services (except government and government enterprises) (81)
+24000,Maryland,83,Real GDP by state: Government and government enterprises (92)
+24000,Maryland,84,Real GDP by state: Federal civilian
+24000,Maryland,85,Real GDP by state: Military
+24000,Maryland,86,Real GDP by state: State and local
+25000,Massachusetts,1,Real GDP by state: All industry total
+25000,Massachusetts,10,Real GDP by state: Utilities (22)
+25000,Massachusetts,11,Real GDP by state: Construction (23)
+25000,Massachusetts,12,Real GDP by state: Manufacturing (31-33)
+25000,Massachusetts,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+25000,Massachusetts,2,Real GDP by state: Private industries
+25000,Massachusetts,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+25000,Massachusetts,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+25000,Massachusetts,34,Real GDP by state: Wholesale trade (42)
+25000,Massachusetts,35,Real GDP by state: Retail trade (44-45)
+25000,Massachusetts,36,Real GDP by state: Transportation and warehousing (48-49)
+25000,Massachusetts,45,Real GDP by state: Information (51)
+25000,Massachusetts,51,Real GDP by state: Finance and insurance (52)
+25000,Massachusetts,56,Real GDP by state: Real estate and rental and leasing (53)
+25000,Massachusetts,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+25000,Massachusetts,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+25000,Massachusetts,64,Real GDP by state: Management of companies and enterprises (55)
+25000,Massachusetts,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+25000,Massachusetts,69,Real GDP by state: Educational services (61)
+25000,Massachusetts,70,Real GDP by state: Health care and social assistance (62)
+25000,Massachusetts,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+25000,Massachusetts,79,Real GDP by state: Accommodation and food services (72)
+25000,Massachusetts,82,Real GDP by state: Other services (except government and government enterprises) (81)
+25000,Massachusetts,83,Real GDP by state: Government and government enterprises (92)
+25000,Massachusetts,84,Real GDP by state: Federal civilian
+25000,Massachusetts,85,Real GDP by state: Military
+25000,Massachusetts,86,Real GDP by state: State and local
+26000,Michigan,1,Real GDP by state: All industry total
+26000,Michigan,10,Real GDP by state: Utilities (22)
+26000,Michigan,11,Real GDP by state: Construction (23)
+26000,Michigan,12,Real GDP by state: Manufacturing (31-33)
+26000,Michigan,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+26000,Michigan,2,Real GDP by state: Private industries
+26000,Michigan,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+26000,Michigan,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+26000,Michigan,34,Real GDP by state: Wholesale trade (42)
+26000,Michigan,35,Real GDP by state: Retail trade (44-45)
+26000,Michigan,36,Real GDP by state: Transportation and warehousing (48-49)
+26000,Michigan,45,Real GDP by state: Information (51)
+26000,Michigan,51,Real GDP by state: Finance and insurance (52)
+26000,Michigan,56,Real GDP by state: Real estate and rental and leasing (53)
+26000,Michigan,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+26000,Michigan,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+26000,Michigan,64,Real GDP by state: Management of companies and enterprises (55)
+26000,Michigan,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+26000,Michigan,69,Real GDP by state: Educational services (61)
+26000,Michigan,70,Real GDP by state: Health care and social assistance (62)
+26000,Michigan,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+26000,Michigan,79,Real GDP by state: Accommodation and food services (72)
+26000,Michigan,82,Real GDP by state: Other services (except government and government enterprises) (81)
+26000,Michigan,83,Real GDP by state: Government and government enterprises (92)
+26000,Michigan,84,Real GDP by state: Federal civilian
+26000,Michigan,85,Real GDP by state: Military
+26000,Michigan,86,Real GDP by state: State and local
+27000,Minnesota,1,Real GDP by state: All industry total
+27000,Minnesota,10,Real GDP by state: Utilities (22)
+27000,Minnesota,11,Real GDP by state: Construction (23)
+27000,Minnesota,12,Real GDP by state: Manufacturing (31-33)
+27000,Minnesota,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+27000,Minnesota,2,Real GDP by state: Private industries
+27000,Minnesota,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+27000,Minnesota,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+27000,Minnesota,34,Real GDP by state: Wholesale trade (42)
+27000,Minnesota,35,Real GDP by state: Retail trade (44-45)
+27000,Minnesota,36,Real GDP by state: Transportation and warehousing (48-49)
+27000,Minnesota,45,Real GDP by state: Information (51)
+27000,Minnesota,51,Real GDP by state: Finance and insurance (52)
+27000,Minnesota,56,Real GDP by state: Real estate and rental and leasing (53)
+27000,Minnesota,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+27000,Minnesota,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+27000,Minnesota,64,Real GDP by state: Management of companies and enterprises (55)
+27000,Minnesota,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+27000,Minnesota,69,Real GDP by state: Educational services (61)
+27000,Minnesota,70,Real GDP by state: Health care and social assistance (62)
+27000,Minnesota,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+27000,Minnesota,79,Real GDP by state: Accommodation and food services (72)
+27000,Minnesota,82,Real GDP by state: Other services (except government and government enterprises) (81)
+27000,Minnesota,83,Real GDP by state: Government and government enterprises (92)
+27000,Minnesota,84,Real GDP by state: Federal civilian
+27000,Minnesota,85,Real GDP by state: Military
+27000,Minnesota,86,Real GDP by state: State and local
+28000,Mississippi,1,Real GDP by state: All industry total
+28000,Mississippi,10,Real GDP by state: Utilities (22)
+28000,Mississippi,11,Real GDP by state: Construction (23)
+28000,Mississippi,12,Real GDP by state: Manufacturing (31-33)
+28000,Mississippi,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+28000,Mississippi,2,Real GDP by state: Private industries
+28000,Mississippi,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+28000,Mississippi,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+28000,Mississippi,34,Real GDP by state: Wholesale trade (42)
+28000,Mississippi,35,Real GDP by state: Retail trade (44-45)
+28000,Mississippi,36,Real GDP by state: Transportation and warehousing (48-49)
+28000,Mississippi,45,Real GDP by state: Information (51)
+28000,Mississippi,51,Real GDP by state: Finance and insurance (52)
+28000,Mississippi,56,Real GDP by state: Real estate and rental and leasing (53)
+28000,Mississippi,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+28000,Mississippi,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+28000,Mississippi,64,Real GDP by state: Management of companies and enterprises (55)
+28000,Mississippi,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+28000,Mississippi,69,Real GDP by state: Educational services (61)
+28000,Mississippi,70,Real GDP by state: Health care and social assistance (62)
+28000,Mississippi,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+28000,Mississippi,79,Real GDP by state: Accommodation and food services (72)
+28000,Mississippi,82,Real GDP by state: Other services (except government and government enterprises) (81)
+28000,Mississippi,83,Real GDP by state: Government and government enterprises (92)
+28000,Mississippi,84,Real GDP by state: Federal civilian
+28000,Mississippi,85,Real GDP by state: Military
+28000,Mississippi,86,Real GDP by state: State and local
+29000,Missouri,1,Real GDP by state: All industry total
+29000,Missouri,10,Real GDP by state: Utilities (22)
+29000,Missouri,11,Real GDP by state: Construction (23)
+29000,Missouri,12,Real GDP by state: Manufacturing (31-33)
+29000,Missouri,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+29000,Missouri,2,Real GDP by state: Private industries
+29000,Missouri,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+29000,Missouri,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+29000,Missouri,34,Real GDP by state: Wholesale trade (42)
+29000,Missouri,35,Real GDP by state: Retail trade (44-45)
+29000,Missouri,36,Real GDP by state: Transportation and warehousing (48-49)
+29000,Missouri,45,Real GDP by state: Information (51)
+29000,Missouri,51,Real GDP by state: Finance and insurance (52)
+29000,Missouri,56,Real GDP by state: Real estate and rental and leasing (53)
+29000,Missouri,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+29000,Missouri,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+29000,Missouri,64,Real GDP by state: Management of companies and enterprises (55)
+29000,Missouri,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+29000,Missouri,69,Real GDP by state: Educational services (61)
+29000,Missouri,70,Real GDP by state: Health care and social assistance (62)
+29000,Missouri,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+29000,Missouri,79,Real GDP by state: Accommodation and food services (72)
+29000,Missouri,82,Real GDP by state: Other services (except government and government enterprises) (81)
+29000,Missouri,83,Real GDP by state: Government and government enterprises (92)
+29000,Missouri,84,Real GDP by state: Federal civilian
+29000,Missouri,85,Real GDP by state: Military
+29000,Missouri,86,Real GDP by state: State and local
+30000,Montana,1,Real GDP by state: All industry total
+30000,Montana,10,Real GDP by state: Utilities (22)
+30000,Montana,11,Real GDP by state: Construction (23)
+30000,Montana,12,Real GDP by state: Manufacturing (31-33)
+30000,Montana,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+30000,Montana,2,Real GDP by state: Private industries
+30000,Montana,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+30000,Montana,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+30000,Montana,34,Real GDP by state: Wholesale trade (42)
+30000,Montana,35,Real GDP by state: Retail trade (44-45)
+30000,Montana,36,Real GDP by state: Transportation and warehousing (48-49)
+30000,Montana,45,Real GDP by state: Information (51)
+30000,Montana,51,Real GDP by state: Finance and insurance (52)
+30000,Montana,56,Real GDP by state: Real estate and rental and leasing (53)
+30000,Montana,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+30000,Montana,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+30000,Montana,64,Real GDP by state: Management of companies and enterprises (55)
+30000,Montana,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+30000,Montana,69,Real GDP by state: Educational services (61)
+30000,Montana,70,Real GDP by state: Health care and social assistance (62)
+30000,Montana,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+30000,Montana,79,Real GDP by state: Accommodation and food services (72)
+30000,Montana,82,Real GDP by state: Other services (except government and government enterprises) (81)
+30000,Montana,83,Real GDP by state: Government and government enterprises (92)
+30000,Montana,84,Real GDP by state: Federal civilian
+30000,Montana,85,Real GDP by state: Military
+30000,Montana,86,Real GDP by state: State and local
+31000,Nebraska,1,Real GDP by state: All industry total
+31000,Nebraska,10,Real GDP by state: Utilities (22)
+31000,Nebraska,11,Real GDP by state: Construction (23)
+31000,Nebraska,12,Real GDP by state: Manufacturing (31-33)
+31000,Nebraska,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+31000,Nebraska,2,Real GDP by state: Private industries
+31000,Nebraska,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+31000,Nebraska,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+31000,Nebraska,34,Real GDP by state: Wholesale trade (42)
+31000,Nebraska,35,Real GDP by state: Retail trade (44-45)
+31000,Nebraska,36,Real GDP by state: Transportation and warehousing (48-49)
+31000,Nebraska,45,Real GDP by state: Information (51)
+31000,Nebraska,51,Real GDP by state: Finance and insurance (52)
+31000,Nebraska,56,Real GDP by state: Real estate and rental and leasing (53)
+31000,Nebraska,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+31000,Nebraska,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+31000,Nebraska,64,Real GDP by state: Management of companies and enterprises (55)
+31000,Nebraska,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+31000,Nebraska,69,Real GDP by state: Educational services (61)
+31000,Nebraska,70,Real GDP by state: Health care and social assistance (62)
+31000,Nebraska,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+31000,Nebraska,79,Real GDP by state: Accommodation and food services (72)
+31000,Nebraska,82,Real GDP by state: Other services (except government and government enterprises) (81)
+31000,Nebraska,83,Real GDP by state: Government and government enterprises (92)
+31000,Nebraska,84,Real GDP by state: Federal civilian
+31000,Nebraska,85,Real GDP by state: Military
+31000,Nebraska,86,Real GDP by state: State and local
+32000,Nevada,1,Real GDP by state: All industry total
+32000,Nevada,10,Real GDP by state: Utilities (22)
+32000,Nevada,11,Real GDP by state: Construction (23)
+32000,Nevada,12,Real GDP by state: Manufacturing (31-33)
+32000,Nevada,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+32000,Nevada,2,Real GDP by state: Private industries
+32000,Nevada,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+32000,Nevada,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+32000,Nevada,34,Real GDP by state: Wholesale trade (42)
+32000,Nevada,35,Real GDP by state: Retail trade (44-45)
+32000,Nevada,36,Real GDP by state: Transportation and warehousing (48-49)
+32000,Nevada,45,Real GDP by state: Information (51)
+32000,Nevada,51,Real GDP by state: Finance and insurance (52)
+32000,Nevada,56,Real GDP by state: Real estate and rental and leasing (53)
+32000,Nevada,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+32000,Nevada,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+32000,Nevada,64,Real GDP by state: Management of companies and enterprises (55)
+32000,Nevada,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+32000,Nevada,69,Real GDP by state: Educational services (61)
+32000,Nevada,70,Real GDP by state: Health care and social assistance (62)
+32000,Nevada,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+32000,Nevada,79,Real GDP by state: Accommodation and food services (72)
+32000,Nevada,82,Real GDP by state: Other services (except government and government enterprises) (81)
+32000,Nevada,83,Real GDP by state: Government and government enterprises (92)
+32000,Nevada,84,Real GDP by state: Federal civilian
+32000,Nevada,85,Real GDP by state: Military
+32000,Nevada,86,Real GDP by state: State and local
+33000,New Hampshire,1,Real GDP by state: All industry total
+33000,New Hampshire,10,Real GDP by state: Utilities (22)
+33000,New Hampshire,11,Real GDP by state: Construction (23)
+33000,New Hampshire,12,Real GDP by state: Manufacturing (31-33)
+33000,New Hampshire,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+33000,New Hampshire,2,Real GDP by state: Private industries
+33000,New Hampshire,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+33000,New Hampshire,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+33000,New Hampshire,34,Real GDP by state: Wholesale trade (42)
+33000,New Hampshire,35,Real GDP by state: Retail trade (44-45)
+33000,New Hampshire,36,Real GDP by state: Transportation and warehousing (48-49)
+33000,New Hampshire,45,Real GDP by state: Information (51)
+33000,New Hampshire,51,Real GDP by state: Finance and insurance (52)
+33000,New Hampshire,56,Real GDP by state: Real estate and rental and leasing (53)
+33000,New Hampshire,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+33000,New Hampshire,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+33000,New Hampshire,64,Real GDP by state: Management of companies and enterprises (55)
+33000,New Hampshire,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+33000,New Hampshire,69,Real GDP by state: Educational services (61)
+33000,New Hampshire,70,Real GDP by state: Health care and social assistance (62)
+33000,New Hampshire,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+33000,New Hampshire,79,Real GDP by state: Accommodation and food services (72)
+33000,New Hampshire,82,Real GDP by state: Other services (except government and government enterprises) (81)
+33000,New Hampshire,83,Real GDP by state: Government and government enterprises (92)
+33000,New Hampshire,84,Real GDP by state: Federal civilian
+33000,New Hampshire,85,Real GDP by state: Military
+33000,New Hampshire,86,Real GDP by state: State and local
+34000,New Jersey,1,Real GDP by state: All industry total
+34000,New Jersey,10,Real GDP by state: Utilities (22)
+34000,New Jersey,11,Real GDP by state: Construction (23)
+34000,New Jersey,12,Real GDP by state: Manufacturing (31-33)
+34000,New Jersey,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+34000,New Jersey,2,Real GDP by state: Private industries
+34000,New Jersey,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+34000,New Jersey,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+34000,New Jersey,34,Real GDP by state: Wholesale trade (42)
+34000,New Jersey,35,Real GDP by state: Retail trade (44-45)
+34000,New Jersey,36,Real GDP by state: Transportation and warehousing (48-49)
+34000,New Jersey,45,Real GDP by state: Information (51)
+34000,New Jersey,51,Real GDP by state: Finance and insurance (52)
+34000,New Jersey,56,Real GDP by state: Real estate and rental and leasing (53)
+34000,New Jersey,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+34000,New Jersey,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+34000,New Jersey,64,Real GDP by state: Management of companies and enterprises (55)
+34000,New Jersey,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+34000,New Jersey,69,Real GDP by state: Educational services (61)
+34000,New Jersey,70,Real GDP by state: Health care and social assistance (62)
+34000,New Jersey,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+34000,New Jersey,79,Real GDP by state: Accommodation and food services (72)
+34000,New Jersey,82,Real GDP by state: Other services (except government and government enterprises) (81)
+34000,New Jersey,83,Real GDP by state: Government and government enterprises (92)
+34000,New Jersey,84,Real GDP by state: Federal civilian
+34000,New Jersey,85,Real GDP by state: Military
+34000,New Jersey,86,Real GDP by state: State and local
+35000,New Mexico,1,Real GDP by state: All industry total
+35000,New Mexico,10,Real GDP by state: Utilities (22)
+35000,New Mexico,11,Real GDP by state: Construction (23)
+35000,New Mexico,12,Real GDP by state: Manufacturing (31-33)
+35000,New Mexico,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+35000,New Mexico,2,Real GDP by state: Private industries
+35000,New Mexico,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+35000,New Mexico,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+35000,New Mexico,34,Real GDP by state: Wholesale trade (42)
+35000,New Mexico,35,Real GDP by state: Retail trade (44-45)
+35000,New Mexico,36,Real GDP by state: Transportation and warehousing (48-49)
+35000,New Mexico,45,Real GDP by state: Information (51)
+35000,New Mexico,51,Real GDP by state: Finance and insurance (52)
+35000,New Mexico,56,Real GDP by state: Real estate and rental and leasing (53)
+35000,New Mexico,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+35000,New Mexico,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+35000,New Mexico,64,Real GDP by state: Management of companies and enterprises (55)
+35000,New Mexico,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+35000,New Mexico,69,Real GDP by state: Educational services (61)
+35000,New Mexico,70,Real GDP by state: Health care and social assistance (62)
+35000,New Mexico,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+35000,New Mexico,79,Real GDP by state: Accommodation and food services (72)
+35000,New Mexico,82,Real GDP by state: Other services (except government and government enterprises) (81)
+35000,New Mexico,83,Real GDP by state: Government and government enterprises (92)
+35000,New Mexico,84,Real GDP by state: Federal civilian
+35000,New Mexico,85,Real GDP by state: Military
+35000,New Mexico,86,Real GDP by state: State and local
+36000,New York,1,Real GDP by state: All industry total
+36000,New York,10,Real GDP by state: Utilities (22)
+36000,New York,11,Real GDP by state: Construction (23)
+36000,New York,12,Real GDP by state: Manufacturing (31-33)
+36000,New York,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+36000,New York,2,Real GDP by state: Private industries
+36000,New York,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+36000,New York,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+36000,New York,34,Real GDP by state: Wholesale trade (42)
+36000,New York,35,Real GDP by state: Retail trade (44-45)
+36000,New York,36,Real GDP by state: Transportation and warehousing (48-49)
+36000,New York,45,Real GDP by state: Information (51)
+36000,New York,51,Real GDP by state: Finance and insurance (52)
+36000,New York,56,Real GDP by state: Real estate and rental and leasing (53)
+36000,New York,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+36000,New York,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+36000,New York,64,Real GDP by state: Management of companies and enterprises (55)
+36000,New York,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+36000,New York,69,Real GDP by state: Educational services (61)
+36000,New York,70,Real GDP by state: Health care and social assistance (62)
+36000,New York,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+36000,New York,79,Real GDP by state: Accommodation and food services (72)
+36000,New York,82,Real GDP by state: Other services (except government and government enterprises) (81)
+36000,New York,83,Real GDP by state: Government and government enterprises (92)
+36000,New York,84,Real GDP by state: Federal civilian
+36000,New York,85,Real GDP by state: Military
+36000,New York,86,Real GDP by state: State and local
+37000,North Carolina,1,Real GDP by state: All industry total
+37000,North Carolina,10,Real GDP by state: Utilities (22)
+37000,North Carolina,11,Real GDP by state: Construction (23)
+37000,North Carolina,12,Real GDP by state: Manufacturing (31-33)
+37000,North Carolina,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+37000,North Carolina,2,Real GDP by state: Private industries
+37000,North Carolina,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+37000,North Carolina,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+37000,North Carolina,34,Real GDP by state: Wholesale trade (42)
+37000,North Carolina,35,Real GDP by state: Retail trade (44-45)
+37000,North Carolina,36,Real GDP by state: Transportation and warehousing (48-49)
+37000,North Carolina,45,Real GDP by state: Information (51)
+37000,North Carolina,51,Real GDP by state: Finance and insurance (52)
+37000,North Carolina,56,Real GDP by state: Real estate and rental and leasing (53)
+37000,North Carolina,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+37000,North Carolina,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+37000,North Carolina,64,Real GDP by state: Management of companies and enterprises (55)
+37000,North Carolina,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+37000,North Carolina,69,Real GDP by state: Educational services (61)
+37000,North Carolina,70,Real GDP by state: Health care and social assistance (62)
+37000,North Carolina,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+37000,North Carolina,79,Real GDP by state: Accommodation and food services (72)
+37000,North Carolina,82,Real GDP by state: Other services (except government and government enterprises) (81)
+37000,North Carolina,83,Real GDP by state: Government and government enterprises (92)
+37000,North Carolina,84,Real GDP by state: Federal civilian
+37000,North Carolina,85,Real GDP by state: Military
+37000,North Carolina,86,Real GDP by state: State and local
+38000,North Dakota,1,Real GDP by state: All industry total
+38000,North Dakota,10,Real GDP by state: Utilities (22)
+38000,North Dakota,11,Real GDP by state: Construction (23)
+38000,North Dakota,12,Real GDP by state: Manufacturing (31-33)
+38000,North Dakota,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+38000,North Dakota,2,Real GDP by state: Private industries
+38000,North Dakota,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+38000,North Dakota,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+38000,North Dakota,34,Real GDP by state: Wholesale trade (42)
+38000,North Dakota,35,Real GDP by state: Retail trade (44-45)
+38000,North Dakota,36,Real GDP by state: Transportation and warehousing (48-49)
+38000,North Dakota,45,Real GDP by state: Information (51)
+38000,North Dakota,51,Real GDP by state: Finance and insurance (52)
+38000,North Dakota,56,Real GDP by state: Real estate and rental and leasing (53)
+38000,North Dakota,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+38000,North Dakota,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+38000,North Dakota,64,Real GDP by state: Management of companies and enterprises (55)
+38000,North Dakota,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+38000,North Dakota,69,Real GDP by state: Educational services (61)
+38000,North Dakota,70,Real GDP by state: Health care and social assistance (62)
+38000,North Dakota,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+38000,North Dakota,79,Real GDP by state: Accommodation and food services (72)
+38000,North Dakota,82,Real GDP by state: Other services (except government and government enterprises) (81)
+38000,North Dakota,83,Real GDP by state: Government and government enterprises (92)
+38000,North Dakota,84,Real GDP by state: Federal civilian
+38000,North Dakota,85,Real GDP by state: Military
+38000,North Dakota,86,Real GDP by state: State and local
+39000,Ohio,1,Real GDP by state: All industry total
+39000,Ohio,10,Real GDP by state: Utilities (22)
+39000,Ohio,11,Real GDP by state: Construction (23)
+39000,Ohio,12,Real GDP by state: Manufacturing (31-33)
+39000,Ohio,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+39000,Ohio,2,Real GDP by state: Private industries
+39000,Ohio,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+39000,Ohio,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+39000,Ohio,34,Real GDP by state: Wholesale trade (42)
+39000,Ohio,35,Real GDP by state: Retail trade (44-45)
+39000,Ohio,36,Real GDP by state: Transportation and warehousing (48-49)
+39000,Ohio,45,Real GDP by state: Information (51)
+39000,Ohio,51,Real GDP by state: Finance and insurance (52)
+39000,Ohio,56,Real GDP by state: Real estate and rental and leasing (53)
+39000,Ohio,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+39000,Ohio,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+39000,Ohio,64,Real GDP by state: Management of companies and enterprises (55)
+39000,Ohio,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+39000,Ohio,69,Real GDP by state: Educational services (61)
+39000,Ohio,70,Real GDP by state: Health care and social assistance (62)
+39000,Ohio,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+39000,Ohio,79,Real GDP by state: Accommodation and food services (72)
+39000,Ohio,82,Real GDP by state: Other services (except government and government enterprises) (81)
+39000,Ohio,83,Real GDP by state: Government and government enterprises (92)
+39000,Ohio,84,Real GDP by state: Federal civilian
+39000,Ohio,85,Real GDP by state: Military
+39000,Ohio,86,Real GDP by state: State and local
+40000,Oklahoma,1,Real GDP by state: All industry total
+40000,Oklahoma,10,Real GDP by state: Utilities (22)
+40000,Oklahoma,11,Real GDP by state: Construction (23)
+40000,Oklahoma,12,Real GDP by state: Manufacturing (31-33)
+40000,Oklahoma,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+40000,Oklahoma,2,Real GDP by state: Private industries
+40000,Oklahoma,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+40000,Oklahoma,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+40000,Oklahoma,34,Real GDP by state: Wholesale trade (42)
+40000,Oklahoma,35,Real GDP by state: Retail trade (44-45)
+40000,Oklahoma,36,Real GDP by state: Transportation and warehousing (48-49)
+40000,Oklahoma,45,Real GDP by state: Information (51)
+40000,Oklahoma,51,Real GDP by state: Finance and insurance (52)
+40000,Oklahoma,56,Real GDP by state: Real estate and rental and leasing (53)
+40000,Oklahoma,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+40000,Oklahoma,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+40000,Oklahoma,64,Real GDP by state: Management of companies and enterprises (55)
+40000,Oklahoma,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+40000,Oklahoma,69,Real GDP by state: Educational services (61)
+40000,Oklahoma,70,Real GDP by state: Health care and social assistance (62)
+40000,Oklahoma,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+40000,Oklahoma,79,Real GDP by state: Accommodation and food services (72)
+40000,Oklahoma,82,Real GDP by state: Other services (except government and government enterprises) (81)
+40000,Oklahoma,83,Real GDP by state: Government and government enterprises (92)
+40000,Oklahoma,84,Real GDP by state: Federal civilian
+40000,Oklahoma,85,Real GDP by state: Military
+40000,Oklahoma,86,Real GDP by state: State and local
+41000,Oregon,1,Real GDP by state: All industry total
+41000,Oregon,10,Real GDP by state: Utilities (22)
+41000,Oregon,11,Real GDP by state: Construction (23)
+41000,Oregon,12,Real GDP by state: Manufacturing (31-33)
+41000,Oregon,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+41000,Oregon,2,Real GDP by state: Private industries
+41000,Oregon,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+41000,Oregon,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+41000,Oregon,34,Real GDP by state: Wholesale trade (42)
+41000,Oregon,35,Real GDP by state: Retail trade (44-45)
+41000,Oregon,36,Real GDP by state: Transportation and warehousing (48-49)
+41000,Oregon,45,Real GDP by state: Information (51)
+41000,Oregon,51,Real GDP by state: Finance and insurance (52)
+41000,Oregon,56,Real GDP by state: Real estate and rental and leasing (53)
+41000,Oregon,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+41000,Oregon,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+41000,Oregon,64,Real GDP by state: Management of companies and enterprises (55)
+41000,Oregon,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+41000,Oregon,69,Real GDP by state: Educational services (61)
+41000,Oregon,70,Real GDP by state: Health care and social assistance (62)
+41000,Oregon,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+41000,Oregon,79,Real GDP by state: Accommodation and food services (72)
+41000,Oregon,82,Real GDP by state: Other services (except government and government enterprises) (81)
+41000,Oregon,83,Real GDP by state: Government and government enterprises (92)
+41000,Oregon,84,Real GDP by state: Federal civilian
+41000,Oregon,85,Real GDP by state: Military
+41000,Oregon,86,Real GDP by state: State and local
+42000,Pennsylvania,1,Real GDP by state: All industry total
+42000,Pennsylvania,10,Real GDP by state: Utilities (22)
+42000,Pennsylvania,11,Real GDP by state: Construction (23)
+42000,Pennsylvania,12,Real GDP by state: Manufacturing (31-33)
+42000,Pennsylvania,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+42000,Pennsylvania,2,Real GDP by state: Private industries
+42000,Pennsylvania,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+42000,Pennsylvania,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+42000,Pennsylvania,34,Real GDP by state: Wholesale trade (42)
+42000,Pennsylvania,35,Real GDP by state: Retail trade (44-45)
+42000,Pennsylvania,36,Real GDP by state: Transportation and warehousing (48-49)
+42000,Pennsylvania,45,Real GDP by state: Information (51)
+42000,Pennsylvania,51,Real GDP by state: Finance and insurance (52)
+42000,Pennsylvania,56,Real GDP by state: Real estate and rental and leasing (53)
+42000,Pennsylvania,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+42000,Pennsylvania,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+42000,Pennsylvania,64,Real GDP by state: Management of companies and enterprises (55)
+42000,Pennsylvania,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+42000,Pennsylvania,69,Real GDP by state: Educational services (61)
+42000,Pennsylvania,70,Real GDP by state: Health care and social assistance (62)
+42000,Pennsylvania,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+42000,Pennsylvania,79,Real GDP by state: Accommodation and food services (72)
+42000,Pennsylvania,82,Real GDP by state: Other services (except government and government enterprises) (81)
+42000,Pennsylvania,83,Real GDP by state: Government and government enterprises (92)
+42000,Pennsylvania,84,Real GDP by state: Federal civilian
+42000,Pennsylvania,85,Real GDP by state: Military
+42000,Pennsylvania,86,Real GDP by state: State and local
+44000,Rhode Island,1,Real GDP by state: All industry total
+44000,Rhode Island,10,Real GDP by state: Utilities (22)
+44000,Rhode Island,11,Real GDP by state: Construction (23)
+44000,Rhode Island,12,Real GDP by state: Manufacturing (31-33)
+44000,Rhode Island,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+44000,Rhode Island,2,Real GDP by state: Private industries
+44000,Rhode Island,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+44000,Rhode Island,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+44000,Rhode Island,34,Real GDP by state: Wholesale trade (42)
+44000,Rhode Island,35,Real GDP by state: Retail trade (44-45)
+44000,Rhode Island,36,Real GDP by state: Transportation and warehousing (48-49)
+44000,Rhode Island,45,Real GDP by state: Information (51)
+44000,Rhode Island,51,Real GDP by state: Finance and insurance (52)
+44000,Rhode Island,56,Real GDP by state: Real estate and rental and leasing (53)
+44000,Rhode Island,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+44000,Rhode Island,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+44000,Rhode Island,64,Real GDP by state: Management of companies and enterprises (55)
+44000,Rhode Island,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+44000,Rhode Island,69,Real GDP by state: Educational services (61)
+44000,Rhode Island,70,Real GDP by state: Health care and social assistance (62)
+44000,Rhode Island,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+44000,Rhode Island,79,Real GDP by state: Accommodation and food services (72)
+44000,Rhode Island,82,Real GDP by state: Other services (except government and government enterprises) (81)
+44000,Rhode Island,83,Real GDP by state: Government and government enterprises (92)
+44000,Rhode Island,84,Real GDP by state: Federal civilian
+44000,Rhode Island,85,Real GDP by state: Military
+44000,Rhode Island,86,Real GDP by state: State and local
+45000,South Carolina,1,Real GDP by state: All industry total
+45000,South Carolina,10,Real GDP by state: Utilities (22)
+45000,South Carolina,11,Real GDP by state: Construction (23)
+45000,South Carolina,12,Real GDP by state: Manufacturing (31-33)
+45000,South Carolina,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+45000,South Carolina,2,Real GDP by state: Private industries
+45000,South Carolina,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+45000,South Carolina,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+45000,South Carolina,34,Real GDP by state: Wholesale trade (42)
+45000,South Carolina,35,Real GDP by state: Retail trade (44-45)
+45000,South Carolina,36,Real GDP by state: Transportation and warehousing (48-49)
+45000,South Carolina,45,Real GDP by state: Information (51)
+45000,South Carolina,51,Real GDP by state: Finance and insurance (52)
+45000,South Carolina,56,Real GDP by state: Real estate and rental and leasing (53)
+45000,South Carolina,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+45000,South Carolina,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+45000,South Carolina,64,Real GDP by state: Management of companies and enterprises (55)
+45000,South Carolina,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+45000,South Carolina,69,Real GDP by state: Educational services (61)
+45000,South Carolina,70,Real GDP by state: Health care and social assistance (62)
+45000,South Carolina,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+45000,South Carolina,79,Real GDP by state: Accommodation and food services (72)
+45000,South Carolina,82,Real GDP by state: Other services (except government and government enterprises) (81)
+45000,South Carolina,83,Real GDP by state: Government and government enterprises (92)
+45000,South Carolina,84,Real GDP by state: Federal civilian
+45000,South Carolina,85,Real GDP by state: Military
+45000,South Carolina,86,Real GDP by state: State and local
+46000,South Dakota,1,Real GDP by state: All industry total
+46000,South Dakota,10,Real GDP by state: Utilities (22)
+46000,South Dakota,11,Real GDP by state: Construction (23)
+46000,South Dakota,12,Real GDP by state: Manufacturing (31-33)
+46000,South Dakota,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+46000,South Dakota,2,Real GDP by state: Private industries
+46000,South Dakota,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+46000,South Dakota,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+46000,South Dakota,34,Real GDP by state: Wholesale trade (42)
+46000,South Dakota,35,Real GDP by state: Retail trade (44-45)
+46000,South Dakota,36,Real GDP by state: Transportation and warehousing (48-49)
+46000,South Dakota,45,Real GDP by state: Information (51)
+46000,South Dakota,51,Real GDP by state: Finance and insurance (52)
+46000,South Dakota,56,Real GDP by state: Real estate and rental and leasing (53)
+46000,South Dakota,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+46000,South Dakota,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+46000,South Dakota,64,Real GDP by state: Management of companies and enterprises (55)
+46000,South Dakota,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+46000,South Dakota,69,Real GDP by state: Educational services (61)
+46000,South Dakota,70,Real GDP by state: Health care and social assistance (62)
+46000,South Dakota,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+46000,South Dakota,79,Real GDP by state: Accommodation and food services (72)
+46000,South Dakota,82,Real GDP by state: Other services (except government and government enterprises) (81)
+46000,South Dakota,83,Real GDP by state: Government and government enterprises (92)
+46000,South Dakota,84,Real GDP by state: Federal civilian
+46000,South Dakota,85,Real GDP by state: Military
+46000,South Dakota,86,Real GDP by state: State and local
+47000,Tennessee,1,Real GDP by state: All industry total
+47000,Tennessee,10,Real GDP by state: Utilities (22)
+47000,Tennessee,11,Real GDP by state: Construction (23)
+47000,Tennessee,12,Real GDP by state: Manufacturing (31-33)
+47000,Tennessee,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+47000,Tennessee,2,Real GDP by state: Private industries
+47000,Tennessee,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+47000,Tennessee,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+47000,Tennessee,34,Real GDP by state: Wholesale trade (42)
+47000,Tennessee,35,Real GDP by state: Retail trade (44-45)
+47000,Tennessee,36,Real GDP by state: Transportation and warehousing (48-49)
+47000,Tennessee,45,Real GDP by state: Information (51)
+47000,Tennessee,51,Real GDP by state: Finance and insurance (52)
+47000,Tennessee,56,Real GDP by state: Real estate and rental and leasing (53)
+47000,Tennessee,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+47000,Tennessee,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+47000,Tennessee,64,Real GDP by state: Management of companies and enterprises (55)
+47000,Tennessee,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+47000,Tennessee,69,Real GDP by state: Educational services (61)
+47000,Tennessee,70,Real GDP by state: Health care and social assistance (62)
+47000,Tennessee,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+47000,Tennessee,79,Real GDP by state: Accommodation and food services (72)
+47000,Tennessee,82,Real GDP by state: Other services (except government and government enterprises) (81)
+47000,Tennessee,83,Real GDP by state: Government and government enterprises (92)
+47000,Tennessee,84,Real GDP by state: Federal civilian
+47000,Tennessee,85,Real GDP by state: Military
+47000,Tennessee,86,Real GDP by state: State and local
+48000,Texas,1,Real GDP by state: All industry total
+48000,Texas,10,Real GDP by state: Utilities (22)
+48000,Texas,11,Real GDP by state: Construction (23)
+48000,Texas,12,Real GDP by state: Manufacturing (31-33)
+48000,Texas,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+48000,Texas,2,Real GDP by state: Private industries
+48000,Texas,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+48000,Texas,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+48000,Texas,34,Real GDP by state: Wholesale trade (42)
+48000,Texas,35,Real GDP by state: Retail trade (44-45)
+48000,Texas,36,Real GDP by state: Transportation and warehousing (48-49)
+48000,Texas,45,Real GDP by state: Information (51)
+48000,Texas,51,Real GDP by state: Finance and insurance (52)
+48000,Texas,56,Real GDP by state: Real estate and rental and leasing (53)
+48000,Texas,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+48000,Texas,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+48000,Texas,64,Real GDP by state: Management of companies and enterprises (55)
+48000,Texas,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+48000,Texas,69,Real GDP by state: Educational services (61)
+48000,Texas,70,Real GDP by state: Health care and social assistance (62)
+48000,Texas,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+48000,Texas,79,Real GDP by state: Accommodation and food services (72)
+48000,Texas,82,Real GDP by state: Other services (except government and government enterprises) (81)
+48000,Texas,83,Real GDP by state: Government and government enterprises (92)
+48000,Texas,84,Real GDP by state: Federal civilian
+48000,Texas,85,Real GDP by state: Military
+48000,Texas,86,Real GDP by state: State and local
+49000,Utah,1,Real GDP by state: All industry total
+49000,Utah,10,Real GDP by state: Utilities (22)
+49000,Utah,11,Real GDP by state: Construction (23)
+49000,Utah,12,Real GDP by state: Manufacturing (31-33)
+49000,Utah,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+49000,Utah,2,Real GDP by state: Private industries
+49000,Utah,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+49000,Utah,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+49000,Utah,34,Real GDP by state: Wholesale trade (42)
+49000,Utah,35,Real GDP by state: Retail trade (44-45)
+49000,Utah,36,Real GDP by state: Transportation and warehousing (48-49)
+49000,Utah,45,Real GDP by state: Information (51)
+49000,Utah,51,Real GDP by state: Finance and insurance (52)
+49000,Utah,56,Real GDP by state: Real estate and rental and leasing (53)
+49000,Utah,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+49000,Utah,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+49000,Utah,64,Real GDP by state: Management of companies and enterprises (55)
+49000,Utah,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+49000,Utah,69,Real GDP by state: Educational services (61)
+49000,Utah,70,Real GDP by state: Health care and social assistance (62)
+49000,Utah,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+49000,Utah,79,Real GDP by state: Accommodation and food services (72)
+49000,Utah,82,Real GDP by state: Other services (except government and government enterprises) (81)
+49000,Utah,83,Real GDP by state: Government and government enterprises (92)
+49000,Utah,84,Real GDP by state: Federal civilian
+49000,Utah,85,Real GDP by state: Military
+49000,Utah,86,Real GDP by state: State and local
+50000,Vermont,1,Real GDP by state: All industry total
+50000,Vermont,10,Real GDP by state: Utilities (22)
+50000,Vermont,11,Real GDP by state: Construction (23)
+50000,Vermont,12,Real GDP by state: Manufacturing (31-33)
+50000,Vermont,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+50000,Vermont,2,Real GDP by state: Private industries
+50000,Vermont,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+50000,Vermont,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+50000,Vermont,34,Real GDP by state: Wholesale trade (42)
+50000,Vermont,35,Real GDP by state: Retail trade (44-45)
+50000,Vermont,36,Real GDP by state: Transportation and warehousing (48-49)
+50000,Vermont,45,Real GDP by state: Information (51)
+50000,Vermont,51,Real GDP by state: Finance and insurance (52)
+50000,Vermont,56,Real GDP by state: Real estate and rental and leasing (53)
+50000,Vermont,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+50000,Vermont,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+50000,Vermont,64,Real GDP by state: Management of companies and enterprises (55)
+50000,Vermont,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+50000,Vermont,69,Real GDP by state: Educational services (61)
+50000,Vermont,70,Real GDP by state: Health care and social assistance (62)
+50000,Vermont,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+50000,Vermont,79,Real GDP by state: Accommodation and food services (72)
+50000,Vermont,82,Real GDP by state: Other services (except government and government enterprises) (81)
+50000,Vermont,83,Real GDP by state: Government and government enterprises (92)
+50000,Vermont,84,Real GDP by state: Federal civilian
+50000,Vermont,85,Real GDP by state: Military
+50000,Vermont,86,Real GDP by state: State and local
+51000,Virginia,1,Real GDP by state: All industry total
+51000,Virginia,10,Real GDP by state: Utilities (22)
+51000,Virginia,11,Real GDP by state: Construction (23)
+51000,Virginia,12,Real GDP by state: Manufacturing (31-33)
+51000,Virginia,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+51000,Virginia,2,Real GDP by state: Private industries
+51000,Virginia,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+51000,Virginia,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+51000,Virginia,34,Real GDP by state: Wholesale trade (42)
+51000,Virginia,35,Real GDP by state: Retail trade (44-45)
+51000,Virginia,36,Real GDP by state: Transportation and warehousing (48-49)
+51000,Virginia,45,Real GDP by state: Information (51)
+51000,Virginia,51,Real GDP by state: Finance and insurance (52)
+51000,Virginia,56,Real GDP by state: Real estate and rental and leasing (53)
+51000,Virginia,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+51000,Virginia,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+51000,Virginia,64,Real GDP by state: Management of companies and enterprises (55)
+51000,Virginia,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+51000,Virginia,69,Real GDP by state: Educational services (61)
+51000,Virginia,70,Real GDP by state: Health care and social assistance (62)
+51000,Virginia,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+51000,Virginia,79,Real GDP by state: Accommodation and food services (72)
+51000,Virginia,82,Real GDP by state: Other services (except government and government enterprises) (81)
+51000,Virginia,83,Real GDP by state: Government and government enterprises (92)
+51000,Virginia,84,Real GDP by state: Federal civilian
+51000,Virginia,85,Real GDP by state: Military
+51000,Virginia,86,Real GDP by state: State and local
+53000,Washington,1,Real GDP by state: All industry total
+53000,Washington,10,Real GDP by state: Utilities (22)
+53000,Washington,11,Real GDP by state: Construction (23)
+53000,Washington,12,Real GDP by state: Manufacturing (31-33)
+53000,Washington,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+53000,Washington,2,Real GDP by state: Private industries
+53000,Washington,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+53000,Washington,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+53000,Washington,34,Real GDP by state: Wholesale trade (42)
+53000,Washington,35,Real GDP by state: Retail trade (44-45)
+53000,Washington,36,Real GDP by state: Transportation and warehousing (48-49)
+53000,Washington,45,Real GDP by state: Information (51)
+53000,Washington,51,Real GDP by state: Finance and insurance (52)
+53000,Washington,56,Real GDP by state: Real estate and rental and leasing (53)
+53000,Washington,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+53000,Washington,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+53000,Washington,64,Real GDP by state: Management of companies and enterprises (55)
+53000,Washington,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+53000,Washington,69,Real GDP by state: Educational services (61)
+53000,Washington,70,Real GDP by state: Health care and social assistance (62)
+53000,Washington,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+53000,Washington,79,Real GDP by state: Accommodation and food services (72)
+53000,Washington,82,Real GDP by state: Other services (except government and government enterprises) (81)
+53000,Washington,83,Real GDP by state: Government and government enterprises (92)
+53000,Washington,84,Real GDP by state: Federal civilian
+53000,Washington,85,Real GDP by state: Military
+53000,Washington,86,Real GDP by state: State and local
+54000,West Virginia,1,Real GDP by state: All industry total
+54000,West Virginia,10,Real GDP by state: Utilities (22)
+54000,West Virginia,11,Real GDP by state: Construction (23)
+54000,West Virginia,12,Real GDP by state: Manufacturing (31-33)
+54000,West Virginia,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+54000,West Virginia,2,Real GDP by state: Private industries
+54000,West Virginia,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+54000,West Virginia,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+54000,West Virginia,34,Real GDP by state: Wholesale trade (42)
+54000,West Virginia,35,Real GDP by state: Retail trade (44-45)
+54000,West Virginia,36,Real GDP by state: Transportation and warehousing (48-49)
+54000,West Virginia,45,Real GDP by state: Information (51)
+54000,West Virginia,51,Real GDP by state: Finance and insurance (52)
+54000,West Virginia,56,Real GDP by state: Real estate and rental and leasing (53)
+54000,West Virginia,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+54000,West Virginia,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+54000,West Virginia,64,Real GDP by state: Management of companies and enterprises (55)
+54000,West Virginia,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+54000,West Virginia,69,Real GDP by state: Educational services (61)
+54000,West Virginia,70,Real GDP by state: Health care and social assistance (62)
+54000,West Virginia,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+54000,West Virginia,79,Real GDP by state: Accommodation and food services (72)
+54000,West Virginia,82,Real GDP by state: Other services (except government and government enterprises) (81)
+54000,West Virginia,83,Real GDP by state: Government and government enterprises (92)
+54000,West Virginia,84,Real GDP by state: Federal civilian
+54000,West Virginia,85,Real GDP by state: Military
+54000,West Virginia,86,Real GDP by state: State and local
+55000,Wisconsin,1,Real GDP by state: All industry total
+55000,Wisconsin,10,Real GDP by state: Utilities (22)
+55000,Wisconsin,11,Real GDP by state: Construction (23)
+55000,Wisconsin,12,Real GDP by state: Manufacturing (31-33)
+55000,Wisconsin,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+55000,Wisconsin,2,Real GDP by state: Private industries
+55000,Wisconsin,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+55000,Wisconsin,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+55000,Wisconsin,34,Real GDP by state: Wholesale trade (42)
+55000,Wisconsin,35,Real GDP by state: Retail trade (44-45)
+55000,Wisconsin,36,Real GDP by state: Transportation and warehousing (48-49)
+55000,Wisconsin,45,Real GDP by state: Information (51)
+55000,Wisconsin,51,Real GDP by state: Finance and insurance (52)
+55000,Wisconsin,56,Real GDP by state: Real estate and rental and leasing (53)
+55000,Wisconsin,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+55000,Wisconsin,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+55000,Wisconsin,64,Real GDP by state: Management of companies and enterprises (55)
+55000,Wisconsin,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+55000,Wisconsin,69,Real GDP by state: Educational services (61)
+55000,Wisconsin,70,Real GDP by state: Health care and social assistance (62)
+55000,Wisconsin,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+55000,Wisconsin,79,Real GDP by state: Accommodation and food services (72)
+55000,Wisconsin,82,Real GDP by state: Other services (except government and government enterprises) (81)
+55000,Wisconsin,83,Real GDP by state: Government and government enterprises (92)
+55000,Wisconsin,84,Real GDP by state: Federal civilian
+55000,Wisconsin,85,Real GDP by state: Military
+55000,Wisconsin,86,Real GDP by state: State and local
+56000,Wyoming,1,Real GDP by state: All industry total
+56000,Wyoming,10,Real GDP by state: Utilities (22)
+56000,Wyoming,11,Real GDP by state: Construction (23)
+56000,Wyoming,12,Real GDP by state: Manufacturing (31-33)
+56000,Wyoming,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+56000,Wyoming,2,Real GDP by state: Private industries
+56000,Wyoming,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+56000,Wyoming,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+56000,Wyoming,34,Real GDP by state: Wholesale trade (42)
+56000,Wyoming,35,Real GDP by state: Retail trade (44-45)
+56000,Wyoming,36,Real GDP by state: Transportation and warehousing (48-49)
+56000,Wyoming,45,Real GDP by state: Information (51)
+56000,Wyoming,51,Real GDP by state: Finance and insurance (52)
+56000,Wyoming,56,Real GDP by state: Real estate and rental and leasing (53)
+56000,Wyoming,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+56000,Wyoming,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+56000,Wyoming,64,Real GDP by state: Management of companies and enterprises (55)
+56000,Wyoming,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+56000,Wyoming,69,Real GDP by state: Educational services (61)
+56000,Wyoming,70,Real GDP by state: Health care and social assistance (62)
+56000,Wyoming,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+56000,Wyoming,79,Real GDP by state: Accommodation and food services (72)
+56000,Wyoming,82,Real GDP by state: Other services (except government and government enterprises) (81)
+56000,Wyoming,83,Real GDP by state: Government and government enterprises (92)
+56000,Wyoming,84,Real GDP by state: Federal civilian
+56000,Wyoming,85,Real GDP by state: Military
+56000,Wyoming,86,Real GDP by state: State and local
+91000,New England,1,Real GDP by state: All industry total
+91000,New England,10,Real GDP by state: Utilities (22)
+91000,New England,11,Real GDP by state: Construction (23)
+91000,New England,12,Real GDP by state: Manufacturing (31-33)
+91000,New England,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+91000,New England,2,Real GDP by state: Private industries
+91000,New England,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+91000,New England,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+91000,New England,34,Real GDP by state: Wholesale trade (42)
+91000,New England,35,Real GDP by state: Retail trade (44-45)
+91000,New England,36,Real GDP by state: Transportation and warehousing (48-49)
+91000,New England,45,Real GDP by state: Information (51)
+91000,New England,51,Real GDP by state: Finance and insurance (52)
+91000,New England,56,Real GDP by state: Real estate and rental and leasing (53)
+91000,New England,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+91000,New England,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+91000,New England,64,Real GDP by state: Management of companies and enterprises (55)
+91000,New England,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+91000,New England,69,Real GDP by state: Educational services (61)
+91000,New England,70,Real GDP by state: Health care and social assistance (62)
+91000,New England,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+91000,New England,79,Real GDP by state: Accommodation and food services (72)
+91000,New England,82,Real GDP by state: Other services (except government and government enterprises) (81)
+91000,New England,83,Real GDP by state: Government and government enterprises (92)
+91000,New England,84,Real GDP by state: Federal civilian
+91000,New England,85,Real GDP by state: Military
+91000,New England,86,Real GDP by state: State and local
+92000,Mideast,1,Real GDP by state: All industry total
+92000,Mideast,10,Real GDP by state: Utilities (22)
+92000,Mideast,11,Real GDP by state: Construction (23)
+92000,Mideast,12,Real GDP by state: Manufacturing (31-33)
+92000,Mideast,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+92000,Mideast,2,Real GDP by state: Private industries
+92000,Mideast,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+92000,Mideast,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+92000,Mideast,34,Real GDP by state: Wholesale trade (42)
+92000,Mideast,35,Real GDP by state: Retail trade (44-45)
+92000,Mideast,36,Real GDP by state: Transportation and warehousing (48-49)
+92000,Mideast,45,Real GDP by state: Information (51)
+92000,Mideast,51,Real GDP by state: Finance and insurance (52)
+92000,Mideast,56,Real GDP by state: Real estate and rental and leasing (53)
+92000,Mideast,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+92000,Mideast,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+92000,Mideast,64,Real GDP by state: Management of companies and enterprises (55)
+92000,Mideast,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+92000,Mideast,69,Real GDP by state: Educational services (61)
+92000,Mideast,70,Real GDP by state: Health care and social assistance (62)
+92000,Mideast,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+92000,Mideast,79,Real GDP by state: Accommodation and food services (72)
+92000,Mideast,82,Real GDP by state: Other services (except government and government enterprises) (81)
+92000,Mideast,83,Real GDP by state: Government and government enterprises (92)
+92000,Mideast,84,Real GDP by state: Federal civilian
+92000,Mideast,85,Real GDP by state: Military
+92000,Mideast,86,Real GDP by state: State and local
+93000,Great Lakes,1,Real GDP by state: All industry total
+93000,Great Lakes,10,Real GDP by state: Utilities (22)
+93000,Great Lakes,11,Real GDP by state: Construction (23)
+93000,Great Lakes,12,Real GDP by state: Manufacturing (31-33)
+93000,Great Lakes,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+93000,Great Lakes,2,Real GDP by state: Private industries
+93000,Great Lakes,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+93000,Great Lakes,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+93000,Great Lakes,34,Real GDP by state: Wholesale trade (42)
+93000,Great Lakes,35,Real GDP by state: Retail trade (44-45)
+93000,Great Lakes,36,Real GDP by state: Transportation and warehousing (48-49)
+93000,Great Lakes,45,Real GDP by state: Information (51)
+93000,Great Lakes,51,Real GDP by state: Finance and insurance (52)
+93000,Great Lakes,56,Real GDP by state: Real estate and rental and leasing (53)
+93000,Great Lakes,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+93000,Great Lakes,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+93000,Great Lakes,64,Real GDP by state: Management of companies and enterprises (55)
+93000,Great Lakes,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+93000,Great Lakes,69,Real GDP by state: Educational services (61)
+93000,Great Lakes,70,Real GDP by state: Health care and social assistance (62)
+93000,Great Lakes,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+93000,Great Lakes,79,Real GDP by state: Accommodation and food services (72)
+93000,Great Lakes,82,Real GDP by state: Other services (except government and government enterprises) (81)
+93000,Great Lakes,83,Real GDP by state: Government and government enterprises (92)
+93000,Great Lakes,84,Real GDP by state: Federal civilian
+93000,Great Lakes,85,Real GDP by state: Military
+93000,Great Lakes,86,Real GDP by state: State and local
+94000,Plains,1,Real GDP by state: All industry total
+94000,Plains,10,Real GDP by state: Utilities (22)
+94000,Plains,11,Real GDP by state: Construction (23)
+94000,Plains,12,Real GDP by state: Manufacturing (31-33)
+94000,Plains,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+94000,Plains,2,Real GDP by state: Private industries
+94000,Plains,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+94000,Plains,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+94000,Plains,34,Real GDP by state: Wholesale trade (42)
+94000,Plains,35,Real GDP by state: Retail trade (44-45)
+94000,Plains,36,Real GDP by state: Transportation and warehousing (48-49)
+94000,Plains,45,Real GDP by state: Information (51)
+94000,Plains,51,Real GDP by state: Finance and insurance (52)
+94000,Plains,56,Real GDP by state: Real estate and rental and leasing (53)
+94000,Plains,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+94000,Plains,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+94000,Plains,64,Real GDP by state: Management of companies and enterprises (55)
+94000,Plains,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+94000,Plains,69,Real GDP by state: Educational services (61)
+94000,Plains,70,Real GDP by state: Health care and social assistance (62)
+94000,Plains,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+94000,Plains,79,Real GDP by state: Accommodation and food services (72)
+94000,Plains,82,Real GDP by state: Other services (except government and government enterprises) (81)
+94000,Plains,83,Real GDP by state: Government and government enterprises (92)
+94000,Plains,84,Real GDP by state: Federal civilian
+94000,Plains,85,Real GDP by state: Military
+94000,Plains,86,Real GDP by state: State and local
+95000,Southeast,1,Real GDP by state: All industry total
+95000,Southeast,10,Real GDP by state: Utilities (22)
+95000,Southeast,11,Real GDP by state: Construction (23)
+95000,Southeast,12,Real GDP by state: Manufacturing (31-33)
+95000,Southeast,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+95000,Southeast,2,Real GDP by state: Private industries
+95000,Southeast,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+95000,Southeast,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+95000,Southeast,34,Real GDP by state: Wholesale trade (42)
+95000,Southeast,35,Real GDP by state: Retail trade (44-45)
+95000,Southeast,36,Real GDP by state: Transportation and warehousing (48-49)
+95000,Southeast,45,Real GDP by state: Information (51)
+95000,Southeast,51,Real GDP by state: Finance and insurance (52)
+95000,Southeast,56,Real GDP by state: Real estate and rental and leasing (53)
+95000,Southeast,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+95000,Southeast,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+95000,Southeast,64,Real GDP by state: Management of companies and enterprises (55)
+95000,Southeast,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+95000,Southeast,69,Real GDP by state: Educational services (61)
+95000,Southeast,70,Real GDP by state: Health care and social assistance (62)
+95000,Southeast,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+95000,Southeast,79,Real GDP by state: Accommodation and food services (72)
+95000,Southeast,82,Real GDP by state: Other services (except government and government enterprises) (81)
+95000,Southeast,83,Real GDP by state: Government and government enterprises (92)
+95000,Southeast,84,Real GDP by state: Federal civilian
+95000,Southeast,85,Real GDP by state: Military
+95000,Southeast,86,Real GDP by state: State and local
+96000,Southwest,1,Real GDP by state: All industry total
+96000,Southwest,10,Real GDP by state: Utilities (22)
+96000,Southwest,11,Real GDP by state: Construction (23)
+96000,Southwest,12,Real GDP by state: Manufacturing (31-33)
+96000,Southwest,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+96000,Southwest,2,Real GDP by state: Private industries
+96000,Southwest,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+96000,Southwest,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+96000,Southwest,34,Real GDP by state: Wholesale trade (42)
+96000,Southwest,35,Real GDP by state: Retail trade (44-45)
+96000,Southwest,36,Real GDP by state: Transportation and warehousing (48-49)
+96000,Southwest,45,Real GDP by state: Information (51)
+96000,Southwest,51,Real GDP by state: Finance and insurance (52)
+96000,Southwest,56,Real GDP by state: Real estate and rental and leasing (53)
+96000,Southwest,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+96000,Southwest,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+96000,Southwest,64,Real GDP by state: Management of companies and enterprises (55)
+96000,Southwest,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+96000,Southwest,69,Real GDP by state: Educational services (61)
+96000,Southwest,70,Real GDP by state: Health care and social assistance (62)
+96000,Southwest,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+96000,Southwest,79,Real GDP by state: Accommodation and food services (72)
+96000,Southwest,82,Real GDP by state: Other services (except government and government enterprises) (81)
+96000,Southwest,83,Real GDP by state: Government and government enterprises (92)
+96000,Southwest,84,Real GDP by state: Federal civilian
+96000,Southwest,85,Real GDP by state: Military
+96000,Southwest,86,Real GDP by state: State and local
+97000,Rocky Mountain,1,Real GDP by state: All industry total
+97000,Rocky Mountain,10,Real GDP by state: Utilities (22)
+97000,Rocky Mountain,11,Real GDP by state: Construction (23)
+97000,Rocky Mountain,12,Real GDP by state: Manufacturing (31-33)
+97000,Rocky Mountain,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+97000,Rocky Mountain,2,Real GDP by state: Private industries
+97000,Rocky Mountain,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+97000,Rocky Mountain,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+97000,Rocky Mountain,34,Real GDP by state: Wholesale trade (42)
+97000,Rocky Mountain,35,Real GDP by state: Retail trade (44-45)
+97000,Rocky Mountain,36,Real GDP by state: Transportation and warehousing (48-49)
+97000,Rocky Mountain,45,Real GDP by state: Information (51)
+97000,Rocky Mountain,51,Real GDP by state: Finance and insurance (52)
+97000,Rocky Mountain,56,Real GDP by state: Real estate and rental and leasing (53)
+97000,Rocky Mountain,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+97000,Rocky Mountain,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+97000,Rocky Mountain,64,Real GDP by state: Management of companies and enterprises (55)
+97000,Rocky Mountain,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+97000,Rocky Mountain,69,Real GDP by state: Educational services (61)
+97000,Rocky Mountain,70,Real GDP by state: Health care and social assistance (62)
+97000,Rocky Mountain,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+97000,Rocky Mountain,79,Real GDP by state: Accommodation and food services (72)
+97000,Rocky Mountain,82,Real GDP by state: Other services (except government and government enterprises) (81)
+97000,Rocky Mountain,83,Real GDP by state: Government and government enterprises (92)
+97000,Rocky Mountain,84,Real GDP by state: Federal civilian
+97000,Rocky Mountain,85,Real GDP by state: Military
+97000,Rocky Mountain,86,Real GDP by state: State and local
+98000,Far West,1,Real GDP by state: All industry total
+98000,Far West,10,Real GDP by state: Utilities (22)
+98000,Far West,11,Real GDP by state: Construction (23)
+98000,Far West,12,Real GDP by state: Manufacturing (31-33)
+98000,Far West,13,"Real GDP by state: Durable goods manufacturing (321,327-339)"
+98000,Far West,2,Real GDP by state: Private industries
+98000,Far West,25,"Real GDP by state: Nondurable goods manufacturing (311-316,322-326)"
+98000,Far West,3,"Real GDP by state: Agriculture, forestry, fishing and hunting (11)"
+98000,Far West,34,Real GDP by state: Wholesale trade (42)
+98000,Far West,35,Real GDP by state: Retail trade (44-45)
+98000,Far West,36,Real GDP by state: Transportation and warehousing (48-49)
+98000,Far West,45,Real GDP by state: Information (51)
+98000,Far West,51,Real GDP by state: Finance and insurance (52)
+98000,Far West,56,Real GDP by state: Real estate and rental and leasing (53)
+98000,Far West,6,"Real GDP by state: Mining, quarrying, and oil and gas extraction (21)"
+98000,Far West,60,"Real GDP by state: Professional, scientific, and technical services (54)"
+98000,Far West,64,Real GDP by state: Management of companies and enterprises (55)
+98000,Far West,65,Real GDP by state: Administrative and support and waste management and remediation services (56)
+98000,Far West,69,Real GDP by state: Educational services (61)
+98000,Far West,70,Real GDP by state: Health care and social assistance (62)
+98000,Far West,76,"Real GDP by state: Arts, entertainment, and recreation (71)"
+98000,Far West,79,Real GDP by state: Accommodation and food services (72)
+98000,Far West,82,Real GDP by state: Other services (except government and government enterprises) (81)
+98000,Far West,83,Real GDP by state: Government and government enterprises (92)
+98000,Far West,84,Real GDP by state: Federal civilian
+98000,Far West,85,Real GDP by state: Military
+98000,Far West,86,Real GDP by state: State and local

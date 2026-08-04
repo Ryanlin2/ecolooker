@@ -16,7 +16,19 @@
       "Bash(pkill -f \"next dev\")",
       "Bash(node -e ' *)",
       "Bash(aws --version)",
-      "Bash(aws sts *)"
+      "Bash(aws sts *)",
+      "WebFetch(domain:apps.bea.gov)",
+      "Read(//tmp/**)",
+      "WebFetch(domain:www.bea.gov)",
+      "Bash(brew install *)",
+      "Bash(pdftotext -layout \"/Users/ryan/.claude/projects/-Users-ryan-Documents-GitHub-ecolooker/83898822-4e6a-447f-8629-12201a009e9e/tool-results/webfetch-1785806364519-315y8t.pdf\" /private/tmp/claude-501/-Users-ryan-Documents-GitHub-ecolooker/83898822-4e6a-447f-8629-12201a009e9e/scratchpad/bea_api_guide.txt)",
+      "Bash(pip3 show *)",
+      "Bash(jupyter kernelspec *)",
+      "Read(//Users/ryan/Library/Jupyter/kernels/py313/**)",
+      "Read(//Users/ryan/.local/share/jupyter/kernels/python3/**)",
+      "Bash(/Users/ryan/venvs/py313/bin/python -m pip list)",
+      "Bash(/Users/ryan/venvs/py313/bin/python *)",
+      "Bash(pip install *)"
     ]
   }
 }
