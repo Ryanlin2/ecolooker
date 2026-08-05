@@ -24,3 +24,7 @@ __pycache__/
 *complaints.csv
 
 .claude/
+
+*.env
+
+*.csv

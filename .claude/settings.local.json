@@ -16,7 +16,8 @@
       "Bash(pkill -f \"next dev\")",
       "Bash(node -e ' *)",
       "Bash(aws --version)",
-      "Bash(aws sts *)"
+      "Bash(aws sts *)",
+      "Bash(sed -E 's/^\\(SQGDP[0-9]+\\)_.*/\\\\1/')"
     ]
   }
 }
