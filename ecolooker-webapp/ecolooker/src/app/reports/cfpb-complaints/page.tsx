@@ -90,8 +90,9 @@ export default async function CfpbComplaintsPage() {
         {new Date(generatedAt).toLocaleString("en-US", {
           dateStyle: "medium",
           timeStyle: "short",
-        })}
-        .
+          timeZone: "America/New_York",
+        })}{" "}
+        ET.
       </div>
 
       <section aria-labelledby="key-metrics-heading" className="space-y-4">
