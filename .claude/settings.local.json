@@ -28,7 +28,8 @@
       "Read(//Users/ryan/.local/share/jupyter/kernels/python3/**)",
       "Bash(/Users/ryan/venvs/py313/bin/python -m pip list)",
       "Bash(/Users/ryan/venvs/py313/bin/python *)",
-      "Bash(pip install *)"
+      "Bash(pip install *)",
+      "Bash(sed -E 's/^\\(SQGDP[0-9]+\\)_.*/\\\\1/')"
     ]
   }
 }
