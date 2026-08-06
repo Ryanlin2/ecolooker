@@ -6,6 +6,7 @@ import { BarGraph } from "@/components/blocks/BarGraph";
 import { DataTable } from "@/components/blocks/DataTable";
 import { Heatmap } from "@/components/blocks/Heatmap";
 import { MetricCard } from "@/components/blocks/MetricCard";
+import { InsightCallout } from "@/components/blocks/InsightCallout";
 import { MultiTrendChart } from "@/components/blocks/MultiTrendChart";
 import { ReportHeader } from "@/components/blocks/ReportHeader";
 import { Badge } from "@/components/ui/badge";
@@ -270,6 +271,24 @@ export default async function CfpbComplaintsPage() {
           </p>
         </div>
 
+        <InsightCallout title="How MoM growth is calculated">
+          <span className="block">
+            For each issue / sub-issue, complaints are counted per month, then
+            compared to the prior month for that same issue / sub-issue:
+          </span>
+          <code className="mt-2 block overflow-x-auto rounded-lg border bg-surface-2 px-3 py-2 font-mono text-xs text-foreground/90">
+            MoM growth % = ((complaints − prior month complaints) ÷ prior
+            month complaints) × 100
+          </code>
+          <span className="mt-2 block">
+            Rank is assigned within each month by that growth rate, highest
+            first. Only issue / sub-issue pairs with at least 10 complaints
+            in the prior month are included, to avoid small-sample spikes
+            (e.g. 1 → 3 complaints reading as +200%) crowding out real
+            movers.
+          </span>
+        </InsightCallout>
+
         <DataTable
           title="Top movers"
           columns={[
@@ -362,6 +381,15 @@ export default async function CfpbComplaintsPage() {
           product/issue/day combination exceeds a z-score of 3 relative to
           its trailing baseline; the same threshold is applied to
           state-level geographic volume.
+        </p>
+
+        <p className="leading-7 text-muted">
+          Fastest-growing issues compares each issue / sub-issue&apos;s
+          complaint count in the current month to its own count in the prior
+          month: <span className="font-mono text-xs">MoM growth % = ((complaints − prior month complaints) ÷ prior month complaints) × 100</span>.
+          Pairs are ranked within each month by that growth rate, and pairs
+          with fewer than 10 complaints in the prior month are excluded so
+          low-volume noise doesn&apos;t dominate the rankings.
         </p>
 
         <p className="leading-7 text-muted">
