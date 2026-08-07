@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 import { BarGraph } from "@/components/blocks/BarGraph";
 import { DataTable } from "@/components/blocks/DataTable";
+import { PaginatedDataTable } from "@/components/blocks/PaginatedDataTable";
 import { Heatmap } from "@/components/blocks/Heatmap";
 import { MetricCard } from "@/components/blocks/MetricCard";
 import { InsightCallout } from "@/components/blocks/InsightCallout";
@@ -190,16 +191,22 @@ export default async function CfpbComplaintsPage() {
               State-level anomalies
             </h2>
             <p className="mt-2 text-sm text-muted">
-              States with confirmed complaint spikes in the trailing 30
-              days &mdash; at least 3 standard deviations above their own
-              6-month baseline.
+              States with confirmed complaint spikes year to date &mdash;
+              at least 3 standard deviations above their own 6-month
+              baseline.
             </p>
           </div>
 
-          <DataTable
+          <PaginatedDataTable
             title="Geographic complaint spikes"
-            description={formatMonth(geoStateAnomalies[0]?.monthReceived ?? latest.dayReceived.slice(0, 7))}
+            description={`Year to date, ${new Date().getUTCFullYear()}`}
+            pageSize={10}
             columns={[
+              {
+                key: "monthReceived",
+                label: "Month",
+                format: (v) => formatMonth(String(v)),
+              },
               { key: "state", label: "State" },
               { key: "complaints", label: "Complaints", align: "right" },
               { key: "expectedComplaints", label: "Expected (to date)", align: "right" },
@@ -402,8 +409,8 @@ export default async function CfpbComplaintsPage() {
           as a spike when it exceeds a z-score of 3 above that expectation
           and has at least 10 complaints in the period, to avoid low-volume
           states registering large swings from a handful of complaints. The
-          table above shows only flagged spikes from the trailing 30 days,
-          filtered server-side before the report is generated.
+          table above shows only flagged spikes year to date, filtered
+          server-side before the report is generated and paginated here.
         </p>
 
         <p className="leading-7 text-muted">

@@ -336,11 +336,14 @@ export const getCfpbReport = cache(async (): Promise<CfpbReport> => {
     z_score: number | null;
     is_spike: boolean | null;
   }>(datasets.geo_state_anomaly);
-  const geoMonth = latestMonth(geoRaw);
   const geoStateAnomalies = geoRaw
-    .filter((r) => r.month_received === geoMonth)
-    .sort((a, b) => b.complaints - a.complaints)
-    .slice(0, 10)
+    .slice()
+    .sort((a, b) => {
+      if (a.month_received !== b.month_received) {
+        return b.month_received.localeCompare(a.month_received);
+      }
+      return (b.z_score ?? 0) - (a.z_score ?? 0);
+    })
     .map((r) => ({
       monthReceived: r.month_received,
       state: r.state,
