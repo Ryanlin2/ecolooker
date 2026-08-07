@@ -151,7 +151,7 @@ positive_growth AS (
 
         ROUND(
             expected_complaints_to_date,
-            0
+            1
         ) AS expected_complaints_to_date,
 
         ROUND(
