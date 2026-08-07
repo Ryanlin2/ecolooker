@@ -195,7 +195,7 @@ export default async function CfpbComplaintsPage() {
             columns={[
               { key: "state", label: "State" },
               { key: "complaints", label: "Complaints", align: "right" },
-              { key: "baselineAvg", label: "Baseline avg", align: "right" },
+              { key: "expectedComplaints", label: "Expected (to date)", align: "right" },
               {
                 key: "zScore",
                 label: "Z-score",
