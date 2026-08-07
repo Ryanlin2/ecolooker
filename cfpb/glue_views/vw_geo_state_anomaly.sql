@@ -79,7 +79,7 @@ SELECT
 , (CASE WHEN (expected_std > 0) THEN ROUND(((complaints - expected_complaints_to_date) / expected_std), 2) END) z_score
 , ((expected_std > 0)
     AND (complaints >= 10)
-    AND ((ABS((complaints - expected_complaints_to_date)) / expected_std) >= 3)
+    AND (((complaints - expected_complaints_to_date) / expected_std) >= 3)
   ) is_spike
 FROM
   scoped

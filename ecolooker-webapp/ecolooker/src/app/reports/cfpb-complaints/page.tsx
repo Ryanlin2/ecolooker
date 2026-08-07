@@ -190,7 +190,7 @@ export default async function CfpbComplaintsPage() {
           </h2>
 
           <DataTable
-            title="Geographic complaint anomalies"
+            title="Geographic complaint spikes"
             description={formatMonth(geoStateAnomalies[0]?.monthReceived ?? latest.dayReceived.slice(0, 7))}
             columns={[
               { key: "state", label: "State" },
@@ -392,9 +392,9 @@ export default async function CfpbComplaintsPage() {
           onto the same elapsed-day window as the current row &mdash; so an
           in-progress month is compared against an equally partial
           expectation rather than a full prior month. A state is flagged
-          when it exceeds a z-score of 3 in either direction and has at
-          least 10 complaints in the period, to avoid low-volume states
-          registering large swings from a handful of complaints.
+          as a spike when it exceeds a z-score of 3 above that expectation
+          and has at least 10 complaints in the period, to avoid low-volume
+          states registering large swings from a handful of complaints.
         </p>
 
         <p className="leading-7 text-muted">
