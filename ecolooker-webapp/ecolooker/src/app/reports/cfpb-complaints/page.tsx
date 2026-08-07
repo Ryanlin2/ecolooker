@@ -299,8 +299,8 @@ export default async function CfpbComplaintsPage() {
             { key: "growthRank", label: "Rank", align: "center" },
             { key: "issue", label: "Issue" },
             { key: "subIssue", label: "Sub-issue" },
-            { key: "complaints", label: "Complaints", align: "right" },
-            { key: "prevComplaints", label: "Prior month", align: "right" },
+            { key: "complaints", label: "Complaints (to date)", align: "right" },
+            { key: "expectedComplaints", label: "Expected (to date)", align: "right" },
             {
               key: "momGrowthPct",
               label: "Growth vs. expected",
