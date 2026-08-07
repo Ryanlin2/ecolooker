@@ -185,9 +185,16 @@ export default async function CfpbComplaintsPage() {
         />
 
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold tracking-tight">
-            State-level anomalies
-          </h2>
+          <div>
+            <h2 className="text-lg font-semibold tracking-tight">
+              State-level anomalies
+            </h2>
+            <p className="mt-2 text-sm text-muted">
+              States with confirmed complaint spikes in the trailing 30
+              days &mdash; at least 3 standard deviations above their own
+              6-month baseline.
+            </p>
+          </div>
 
           <DataTable
             title="Geographic complaint spikes"
@@ -394,7 +401,9 @@ export default async function CfpbComplaintsPage() {
           expectation rather than a full prior month. A state is flagged
           as a spike when it exceeds a z-score of 3 above that expectation
           and has at least 10 complaints in the period, to avoid low-volume
-          states registering large swings from a handful of complaints.
+          states registering large swings from a handful of complaints. The
+          table above shows only flagged spikes from the trailing 30 days,
+          filtered server-side before the report is generated.
         </p>
 
         <p className="leading-7 text-muted">
