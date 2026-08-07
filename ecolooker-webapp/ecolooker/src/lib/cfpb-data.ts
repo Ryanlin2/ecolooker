@@ -101,6 +101,7 @@ export type FastestGrowingIssueRow = {
   subIssue: string;
   complaints: number;
   prevComplaints: number;
+  expectedComplaints: number;
   momGrowthPct: number;
   growthRank: number;
 };
@@ -272,6 +273,7 @@ export const getCfpbReport = cache(async (): Promise<CfpbReport> => {
     sub_issue: string;
     complaints_to_date: number;
     prev_complaints: number;
+    expected_complaints_to_date: number;
     growth_vs_expected_pct: number;
     growth_rank: number;
   }>(datasets.fastest_growing_issues);
@@ -286,6 +288,7 @@ export const getCfpbReport = cache(async (): Promise<CfpbReport> => {
       subIssue: r.sub_issue,
       complaints: r.complaints_to_date,
       prevComplaints: r.prev_complaints,
+      expectedComplaints: r.expected_complaints_to_date,
       momGrowthPct: r.growth_vs_expected_pct,
       growthRank: r.growth_rank,
     }));
