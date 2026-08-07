@@ -270,7 +270,7 @@ export const getCfpbReport = cache(async (): Promise<CfpbReport> => {
     month_received: string;
     issue: string;
     sub_issue: string;
-    complaints: number;
+    complaints_to_date: number;
     prev_complaints: number;
     growth_vs_expected_pct: number;
     growth_rank: number;
@@ -284,7 +284,7 @@ export const getCfpbReport = cache(async (): Promise<CfpbReport> => {
       monthReceived: r.month_received,
       issue: r.issue,
       subIssue: r.sub_issue,
-      complaints: r.complaints,
+      complaints: r.complaints_to_date,
       prevComplaints: r.prev_complaints,
       momGrowthPct: r.growth_vs_expected_pct,
       growthRank: r.growth_rank,
