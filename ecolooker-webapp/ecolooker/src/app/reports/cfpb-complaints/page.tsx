@@ -266,19 +266,23 @@ export default async function CfpbComplaintsPage() {
             Fastest-growing issues
           </h2>
           <p className="mt-2 text-sm text-muted">
-            Sub-issues with the largest month-over-month growth in complaint
-            volume, ranked by growth rate.
+            Sub-issues running hottest relative to their own expected pace,
+            ranked by growth rate.
           </p>
         </div>
 
-        <InsightCallout title="How MoM growth is calculated">
+        <InsightCallout title="How growth vs. expected is calculated">
           <span className="block">
-            For each issue / sub-issue, complaints are counted per month, then
-            compared to the prior month for that same issue / sub-issue:
+            For each issue / sub-issue, the prior month&apos;s daily complaint
+            rate is projected forward across the elapsed days of the current
+            month to get an expected count, then compared to what actually
+            came in:
           </span>
           <code className="mt-2 block overflow-x-auto rounded-lg border bg-surface-2 px-3 py-2 font-mono text-xs text-foreground/90">
-            MoM growth % = ((complaints − prior month complaints) ÷ prior
-            month complaints) × 100
+            expected = prior month avg daily complaints × days elapsed this
+            month
+            <br />
+            growth % = ((complaints − expected) ÷ expected) × 100
           </code>
           <span className="mt-2 block">
             Rank is assigned within each month by that growth rate, highest
@@ -299,7 +303,7 @@ export default async function CfpbComplaintsPage() {
             { key: "prevComplaints", label: "Prior month", align: "right" },
             {
               key: "momGrowthPct",
-              label: "MoM growth",
+              label: "Growth vs. expected",
               align: "right",
               format: (v) => (
                 <Badge tone={Number(v) >= 0 ? "up" : "down"}>
@@ -385,8 +389,10 @@ export default async function CfpbComplaintsPage() {
 
         <p className="leading-7 text-muted">
           Fastest-growing issues compares each issue / sub-issue&apos;s
-          complaint count in the current month to its own count in the prior
-          month: <span className="font-mono text-xs">MoM growth % = ((complaints − prior month complaints) ÷ prior month complaints) × 100</span>.
+          complaint count so far this month to an expected count projected
+          from the prior month&apos;s daily rate:{" "}
+          <span className="font-mono text-xs">growth % = ((complaints − expected) ÷ expected) × 100</span>,
+          where <span className="font-mono text-xs">expected = prior month avg daily complaints × days elapsed this month</span>.
           Pairs are ranked within each month by that growth rate, and pairs
           with fewer than 10 complaints in the prior month are excluded so
           low-volume noise doesn&apos;t dominate the rankings.
