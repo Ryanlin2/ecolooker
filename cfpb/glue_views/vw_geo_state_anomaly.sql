@@ -56,15 +56,17 @@ WITH
    WINDOW trail AS (PARTITION BY state ORDER BY month_received ASC ROWS BETWEEN 6 PRECEDING AND 1 PRECEDING)
 )
 , scoped AS (
-   -- Baseline avg/std projected onto this row's own elapsed-day window, so
-   -- a partial current month is compared against an equally partial
-   -- expectation rather than a full trailing month.
+   -- Expected complaints "to date": the trailing daily-rate baseline
+   -- projected onto this row's own elapsed-day window, so a partial
+   -- current month is compared against an equally partial expectation
+   -- rather than a full trailing month.
    SELECT
      month_received
    , state
    , complaints
-   , (baseline_avg_daily * days_elapsed) baseline_avg
-   , (baseline_std_daily * SQRT(days_elapsed)) baseline_std
+   , days_elapsed
+   , (baseline_avg_daily * days_elapsed) expected_complaints_to_date
+   , (baseline_std_daily * SQRT(days_elapsed)) expected_std
    FROM
      stats
 )
@@ -72,11 +74,12 @@ SELECT
   month_received
 , state
 , complaints
-, ROUND(baseline_avg, 1) baseline_avg
-, (CASE WHEN (baseline_std > 0) THEN ROUND(((complaints - baseline_avg) / baseline_std), 2) END) z_score
-, ((baseline_std > 0)
+, days_elapsed
+, ROUND(expected_complaints_to_date, 1) expected_complaints_to_date
+, (CASE WHEN (expected_std > 0) THEN ROUND(((complaints - expected_complaints_to_date) / expected_std), 2) END) z_score
+, ((expected_std > 0)
     AND (complaints >= 10)
-    AND ((ABS((complaints - baseline_avg)) / baseline_std) >= 3)
+    AND ((ABS((complaints - expected_complaints_to_date)) / expected_std) >= 3)
   ) is_spike
 FROM
   scoped

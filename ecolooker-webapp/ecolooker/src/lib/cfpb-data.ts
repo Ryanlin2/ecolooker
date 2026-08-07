@@ -124,7 +124,8 @@ export type GeoStateAnomalyRow = {
   monthReceived: string;
   state: string;
   complaints: number;
-  baselineAvg: number;
+  daysElapsed: number;
+  expectedComplaints: number;
   zScore: number;
   isSpike: boolean;
 };
@@ -330,7 +331,8 @@ export const getCfpbReport = cache(async (): Promise<CfpbReport> => {
     month_received: string;
     state: string;
     complaints: number;
-    baseline_avg: number | null;
+    days_elapsed: number;
+    expected_complaints_to_date: number | null;
     z_score: number | null;
     is_spike: boolean | null;
   }>(datasets.geo_state_anomaly);
@@ -343,7 +345,8 @@ export const getCfpbReport = cache(async (): Promise<CfpbReport> => {
       monthReceived: r.month_received,
       state: r.state,
       complaints: r.complaints,
-      baselineAvg: r.baseline_avg ?? 0,
+      daysElapsed: r.days_elapsed,
+      expectedComplaints: r.expected_complaints_to_date ?? 0,
       zScore: r.z_score ?? 0,
       isSpike: r.is_spike === true,
     }));
