@@ -1,6 +1,4 @@
-"use client";
-
-import { useState } from "react";
+import Link from "next/link";
 
 import { DataTable, type DataTableColumn } from "./DataTable";
 import { cn } from "@/lib/utils";
@@ -12,21 +10,29 @@ type PaginatedDataTableProps<Row extends Record<string, TableValue>> = {
   description?: string;
   columns: DataTableColumn<Row>[];
   rows: Row[];
+  page: number;
   pageSize?: number;
+  pageParam?: string;
   emptyMessage?: string;
 };
 
+/**
+ * Server-rendered pagination: page state lives in the URL (?<pageParam>=N)
+ * rather than client state, so `columns[].format` render functions can stay
+ * plain functions instead of crossing a client-component boundary.
+ */
 export function PaginatedDataTable<Row extends Record<string, TableValue>>({
   title,
   description,
   columns,
   rows,
+  page,
   pageSize = 25,
+  pageParam = "page",
   emptyMessage,
 }: PaginatedDataTableProps<Row>) {
   const pageCount = Math.max(1, Math.ceil(rows.length / pageSize));
-  const [page, setPage] = useState(1);
-  const currentPage = Math.min(page, pageCount);
+  const currentPage = Math.min(Math.max(1, page), pageCount);
 
   const start = (currentPage - 1) * pageSize;
   const pageRows = rows.slice(start, start + pageSize);
@@ -51,7 +57,7 @@ export function PaginatedDataTable<Row extends Record<string, TableValue>>({
           <Pager
             page={currentPage}
             pageCount={pageCount}
-            onChange={setPage}
+            pageParam={pageParam}
           />
         </div>
       )}
@@ -62,20 +68,21 @@ export function PaginatedDataTable<Row extends Record<string, TableValue>>({
 function Pager({
   page,
   pageCount,
-  onChange,
+  pageParam,
 }: {
   page: number;
   pageCount: number;
-  onChange: (page: number) => void;
+  pageParam: string;
 }) {
   const pages = pageNumbers(page, pageCount);
 
   return (
     <nav className="flex items-center gap-1" aria-label="Pagination">
-      <PagerButton
+      <PagerLink
         label="Prev"
+        targetPage={page - 1}
         disabled={page <= 1}
-        onClick={() => onChange(page - 1)}
+        pageParam={pageParam}
       />
 
       {pages.map((entry, i) =>
@@ -84,51 +91,64 @@ function Pager({
             &hellip;
           </span>
         ) : (
-          <PagerButton
+          <PagerLink
             key={entry}
             label={String(entry)}
+            targetPage={entry}
             active={entry === page}
-            onClick={() => onChange(entry)}
+            pageParam={pageParam}
           />
         )
       )}
 
-      <PagerButton
+      <PagerLink
         label="Next"
+        targetPage={page + 1}
         disabled={page >= pageCount}
-        onClick={() => onChange(page + 1)}
+        pageParam={pageParam}
       />
     </nav>
   );
 }
 
-function PagerButton({
+function PagerLink({
   label,
+  targetPage,
   active,
   disabled,
-  onClick,
+  pageParam,
 }: {
   label: string;
+  targetPage: number;
   active?: boolean;
   disabled?: boolean;
-  onClick: () => void;
+  pageParam: string;
 }) {
+  const className = cn(
+    "min-w-8 rounded-lg border px-2 py-1 text-center text-xs font-medium transition-colors",
+    active
+      ? "border-foreground/20 bg-surface-2 text-foreground"
+      : "border-transparent text-muted hover:bg-surface-2",
+    disabled && "cursor-not-allowed opacity-40 hover:bg-transparent"
+  );
+
+  if (disabled) {
+    return (
+      <span className={className} aria-disabled="true">
+        {label}
+      </span>
+    );
+  }
+
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      disabled={disabled}
+    <Link
+      href={`?${pageParam}=${targetPage}`}
+      scroll={false}
       aria-current={active ? "page" : undefined}
-      className={cn(
-        "min-w-8 rounded-lg border px-2 py-1 text-xs font-medium transition-colors",
-        active
-          ? "border-foreground/20 bg-surface-2 text-foreground"
-          : "border-transparent text-muted hover:bg-surface-2",
-        disabled && "cursor-not-allowed opacity-40 hover:bg-transparent"
-      )}
+      className={className}
     >
       {label}
-    </button>
+    </Link>
   );
 }
 

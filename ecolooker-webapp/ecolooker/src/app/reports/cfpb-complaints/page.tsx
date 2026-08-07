@@ -44,7 +44,11 @@ function hhiTone(hhi: number): { label: string; tone: "up" | "down" | "neutral" 
   return { label: "Low concentration", tone: "up" };
 }
 
-export default async function CfpbComplaintsPage() {
+export default async function CfpbComplaintsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
   const {
     generatedAt,
     volumeDaily,
@@ -56,6 +60,9 @@ export default async function CfpbComplaintsPage() {
     issueConcentration,
     geoStateAnomalies,
   } = await getCfpbReport();
+
+  const resolvedSearchParams = await searchParams;
+  const geoPage = Number(resolvedSearchParams.page) || 1;
 
   const latest = volumeDaily.at(-1)!;
 
@@ -200,6 +207,7 @@ export default async function CfpbComplaintsPage() {
           <PaginatedDataTable
             title="Geographic complaint spikes"
             description={`Year to date, ${new Date().getUTCFullYear()}`}
+            page={geoPage}
             pageSize={10}
             columns={[
               {

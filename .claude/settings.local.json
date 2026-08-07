@@ -29,7 +29,9 @@
       "Bash(/Users/ryan/venvs/py313/bin/python -m pip list)",
       "Bash(/Users/ryan/venvs/py313/bin/python *)",
       "Bash(pip install *)",
-      "Bash(sed -E 's/^\\(SQGDP[0-9]+\\)_.*/\\\\1/')"
+      "Bash(sed -E 's/^\\(SQGDP[0-9]+\\)_.*/\\\\1/')",
+      "Bash(mkdir -p /c/Users/Ryanl/AppData/Local/Temp/claude/C--Users-Ryanl-Documents-ecolooker/f350f3fe-f169-4de7-a241-6b27f3d95ff8/scratchpad)",
+      "Read(//c/Users/Ryanl/AppData/Local/Temp/claude/C--Users-Ryanl-Documents-ecolooker/f350f3fe-f169-4de7-a241-6b27f3d95ff8/scratchpad/**)"
     ]
   }
 }
