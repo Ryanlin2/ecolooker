@@ -190,7 +190,7 @@ export default async function CfpbComplaintsPage() {
           </h2>
 
           <DataTable
-            title="Geographic complaint spikes"
+            title="Geographic complaint anomalies"
             description={formatMonth(geoStateAnomalies[0]?.monthReceived ?? latest.dayReceived.slice(0, 7))}
             columns={[
               { key: "state", label: "State" },
@@ -382,9 +382,19 @@ export default async function CfpbComplaintsPage() {
           Volume metrics are computed on complaint receipt date, with 7-day
           and 30-day trailing averages used as the baseline for day-over-day
           and week-over-week comparisons. Anomalies are flagged when a
-          product/issue/day combination exceeds a z-score of 3 relative to
-          its trailing baseline; the same threshold is applied to
-          state-level geographic volume.
+          product/issue/day combination exceeds a z-score of 3 (either
+          direction) relative to its trailing baseline.
+        </p>
+
+        <p className="leading-7 text-muted">
+          State-level anomalies compare each state&apos;s complaint count to
+          a trailing 6-month daily-rate baseline for that state, projected
+          onto the same elapsed-day window as the current row &mdash; so an
+          in-progress month is compared against an equally partial
+          expectation rather than a full prior month. A state is flagged
+          when it exceeds a z-score of 3 in either direction and has at
+          least 10 complaints in the period, to avoid low-volume states
+          registering large swings from a handful of complaints.
         </p>
 
         <p className="leading-7 text-muted">
