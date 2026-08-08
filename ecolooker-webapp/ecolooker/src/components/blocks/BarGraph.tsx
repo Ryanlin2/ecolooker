@@ -8,7 +8,6 @@ type BarGraphProps = {
   description?: string;
   data: Bar[];
   unit?: string;
-  positive?: boolean;
 };
 
 export function BarGraph({
@@ -16,7 +15,6 @@ export function BarGraph({
   description,
   data,
   unit = "",
-  positive,
 }: BarGraphProps) {
   const max = Math.max(...data.map((d) => d.value), 1);
 
@@ -60,9 +58,7 @@ export function BarGraph({
             </span>
 
             <div
-              className={`w-full min-w-0 rounded-t ${
-                positive ? "bg-signal/70" : "bg-accent/70"
-              }`}
+              className="w-full min-w-0 rounded-t bg-signal/70"
               style={{
                 height: `${Math.max((bar.value / max) * 100, 0.5)}%`,
               }}
