@@ -61,6 +61,7 @@ export default async function CfpbComplaintsPage({
 
   const resolvedSearchParams = await searchParams;
   const geoPage = Number(resolvedSearchParams.page) || 1;
+  const anomalyPage = Number(resolvedSearchParams.anomalyPage) || 1;
 
   const latest = volumeDaily.at(-1)!;
 
@@ -146,13 +147,18 @@ export default async function CfpbComplaintsPage({
               Anomaly detection
             </h2>
             <p className="mt-2 text-sm text-muted">
-              Product/issue-day combinations where complaint volume exceeded 3
-              standard deviations above its trailing baseline.
+              Product/issue-day combinations with confirmed complaint spikes
+              year to date &mdash; at least 3 standard deviations above their
+              own trailing 28-day baseline.
             </p>
           </div>
 
-          <DataTable
+          <PaginatedDataTable
             title="Anomalous complaint spikes"
+            description={`Year to date, ${new Date().getUTCFullYear()}`}
+            page={anomalyPage}
+            pageSize={10}
+            pageParam="anomalyPage"
             columns={[
               { key: "dayReceived", label: "Day", format: (v) => formatDay(String(v)) },
               { key: "product", label: "Product" },
@@ -410,9 +416,12 @@ export default async function CfpbComplaintsPage({
         <p className="leading-7 text-muted">
           Volume metrics are computed on complaint receipt date, with 7-day
           and 30-day trailing averages used as the baseline for day-over-day
-          and week-over-week comparisons. Anomalies are flagged when a
-          product/issue/day combination exceeds a z-score of 3 (either
-          direction) relative to its trailing baseline.
+          and week-over-week comparisons. Product/issue-day anomalies are
+          flagged when a combination exceeds a z-score of 3 (either
+          direction) relative to its own trailing 28-day baseline. The
+          anomaly detection table above shows only flagged spikes year to
+          date, filtered server-side before the report is generated and
+          paginated here.
         </p>
 
         <p className="leading-7 text-muted">

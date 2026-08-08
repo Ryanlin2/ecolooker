@@ -56,6 +56,7 @@ DATASETS = {
     },
     "volume_anomaly_product_issue": {
         "view": "vw_volume_anomaly_product_issue",
+        "where": "is_anomaly AND day_received >= DATE_TRUNC('year', CURRENT_DATE)",
         "order_by": "day_received DESC, ABS(z_score) DESC",
         "order": "desc",
     },

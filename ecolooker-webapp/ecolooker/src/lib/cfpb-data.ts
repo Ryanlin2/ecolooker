@@ -212,9 +212,13 @@ export const getCfpbReport = cache(async (): Promise<CfpbReport> => {
     z_score: number | null;
     is_anomaly: boolean | null;
   }>(datasets.volume_anomaly_product_issue)
-    .filter((r) => r.is_anomaly === true)
-    .sort((a, b) => b.day_received.localeCompare(a.day_received))
-    .slice(0, 8)
+    .slice()
+    .sort((a, b) => {
+      if (a.day_received !== b.day_received) {
+        return b.day_received.localeCompare(a.day_received);
+      }
+      return (b.z_score ?? 0) - (a.z_score ?? 0);
+    })
     .map((r) => ({
       dayReceived: r.day_received,
       product: r.product,
