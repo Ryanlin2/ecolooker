@@ -33,7 +33,10 @@
       "Bash(mkdir -p /c/Users/Ryanl/AppData/Local/Temp/claude/C--Users-Ryanl-Documents-ecolooker/f350f3fe-f169-4de7-a241-6b27f3d95ff8/scratchpad)",
       "Read(//c/Users/Ryanl/AppData/Local/Temp/claude/C--Users-Ryanl-Documents-ecolooker/f350f3fe-f169-4de7-a241-6b27f3d95ff8/scratchpad/**)",
       "Bash(xargs -I{} echo {})",
-      "Bash(grep -o \"Geographic complaint spikes.\\\\{0,600\\\\}\" /tmp/check.html)"
+      "Bash(grep -o \"Geographic complaint spikes.\\\\{0,600\\\\}\" /tmp/check.html)",
+      "Bash(python -c ' *)",
+      "Bash(python query.py)",
+      "Bash(python *)"
     ]
   }
 }
