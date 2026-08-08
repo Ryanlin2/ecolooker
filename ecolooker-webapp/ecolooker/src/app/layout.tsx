@@ -7,7 +7,7 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ecolooker — Environmental Data Intelligence",
+  title: "Ecolooker — Economic Data Intelligence",
   description: "Analysis reports, insights, and live dashboards.",
 };
 
