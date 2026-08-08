@@ -142,7 +142,7 @@ export default async function CfpbComplaintsPage({
         ]}
       />
 
-      <section aria-labelledby="anomalies-heading" className="grid gap-8 lg:grid-cols-2">
+      <section aria-labelledby="anomalies-heading" className="grid gap-8">
         <div className="space-y-4">
           <div>
             <h2
