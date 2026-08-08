@@ -22,7 +22,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Link>
             <div className="flex gap-5 text-sm text-muted">
               <Link href="/" className="hover:text-foreground">Reports</Link>
-              <Link href="/dashboards/live" className="hover:text-foreground">Live</Link>
             </div>
           </div>
         </nav>
