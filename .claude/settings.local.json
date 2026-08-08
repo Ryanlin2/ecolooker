@@ -36,7 +36,9 @@
       "Bash(grep -o \"Geographic complaint spikes.\\\\{0,600\\\\}\" /tmp/check.html)",
       "Bash(python -c ' *)",
       "Bash(python query.py)",
-      "Bash(python *)"
+      "Bash(python *)",
+      "Bash(git *)",
+      "Bash(npx next *)"
     ]
   }
 }

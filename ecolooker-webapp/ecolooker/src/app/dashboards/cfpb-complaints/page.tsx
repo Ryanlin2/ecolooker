@@ -1,4 +1,4 @@
-// src/app/reports/cfpb-complaints/page.tsx
+// src/app/dashboards/cfpb-complaints/page.tsx
 
 import type { Metadata } from "next";
 

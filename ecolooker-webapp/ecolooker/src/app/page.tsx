@@ -34,7 +34,7 @@ export default function Home() {
           const up = report.hero.change >= 0;
 
           return (
-            <Link key={report.slug} href={`/reports/${report.slug}`}>
+            <Link key={report.slug} href={`/dashboards/${report.slug}`}>
               <Card className="transition hover:border-accent">
                 <CardContent className="pt-5">
                   <div className="flex flex-wrap gap-2">
