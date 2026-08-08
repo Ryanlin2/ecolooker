@@ -124,6 +124,11 @@ export default async function CfpbComplaintsPage({
             change={latest.wowPctChange}
           />
         </div>
+
+        <p className="text-xs text-muted">
+          Note: datasets are not live — CFPB complaint data may take up to
+          15 days to be posted.
+        </p>
       </section>
 
       <MultiTrendChart
