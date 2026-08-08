@@ -38,7 +38,12 @@
       "Bash(python query.py)",
       "Bash(python *)",
       "Bash(git *)",
-      "Bash(npx next *)"
+      "Bash(npx next *)",
+      "Bash(npm view *)",
+      "Bash(npm install *)",
+      "Bash(powershell -Command 'Get-Process -Name node -ErrorAction SilentlyContinue | Where-Object {$_.MainWindowTitle -eq '\\\\'''\\\\''} | Select-Object Id')",
+      "Bash(netstat -ano)",
+      "Bash(powershell -Command \"Stop-Process -Id 4260 -Force\" 2>&1)"
     ]
   }
 }
