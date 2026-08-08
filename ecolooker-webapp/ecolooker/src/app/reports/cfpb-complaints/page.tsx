@@ -2,7 +2,6 @@
 
 import type { Metadata } from "next";
 
-import { BarGraph } from "@/components/blocks/BarGraph";
 import { DataTable } from "@/components/blocks/DataTable";
 import { PaginatedDataTable } from "@/components/blocks/PaginatedDataTable";
 import { Heatmap } from "@/components/blocks/Heatmap";
@@ -12,7 +11,7 @@ import { MultiTrendChart } from "@/components/blocks/MultiTrendChart";
 import { ReportHeader } from "@/components/blocks/ReportHeader";
 import { Badge } from "@/components/ui/badge";
 import { fmtNum } from "@/lib/utils";
-import { getCfpbReport, seasonalityLabel } from "@/lib/cfpb-data";
+import { getCfpbReport } from "@/lib/cfpb-data";
 
 export const metadata: Metadata = {
   title: "Consumer Financial Protection Bureau Anomaly Dashboard",
@@ -53,7 +52,6 @@ export default async function CfpbComplaintsPage({
     generatedAt,
     volumeDaily,
     volumeAnomalies,
-    seasonality,
     productMix,
     fastestGrowingIssues,
     productIssueHeatmap,
@@ -73,11 +71,6 @@ export default async function CfpbComplaintsPage({
     avg30d: d.avg30d,
   }));
 
-  const seasonalityChart = seasonality.map((s) => ({
-    label: seasonalityLabel(s.dow),
-    value: Math.round(s.avgComplaints),
-  }));
-
   const heatmapCells = productIssueHeatmap.map((row) => ({
     row: row.product,
     column: row.issue,
@@ -89,7 +82,7 @@ export default async function CfpbComplaintsPage({
     <article className="space-y-12">
       <ReportHeader
         title="Consumer Financial Protection Bureau Anomaly Dashboard"
-        subtitle="Daily complaint volume, seasonality, product mix shifts, and anomaly detection across CFPB consumer complaint data."
+        subtitle="Daily complaint volume, product mix shifts, and anomaly detection across CFPB consumer complaint data."
         date={formatMonth(latest.dayReceived.slice(0, 7))}
         tags={["Complaints", "Anomaly Detection", "Consumer Finance"]}
       />
@@ -143,54 +136,48 @@ export default async function CfpbComplaintsPage({
         ]}
       />
 
-      <section aria-labelledby="anomalies-heading" className="space-y-4">
-        <div>
-          <h2
-            id="anomalies-heading"
-            className="text-2xl font-semibold tracking-tight"
-          >
-            Detected volume anomalies
-          </h2>
-          <p className="mt-2 text-sm text-muted">
-            Product/issue-day combinations where complaint volume exceeded 3
-            standard deviations above its trailing baseline.
-          </p>
+      <section aria-labelledby="anomalies-heading" className="grid gap-8 lg:grid-cols-2">
+        <div className="space-y-4">
+          <div>
+            <h2
+              id="anomalies-heading"
+              className="text-lg font-semibold tracking-tight"
+            >
+              Anomaly detection
+            </h2>
+            <p className="mt-2 text-sm text-muted">
+              Product/issue-day combinations where complaint volume exceeded 3
+              standard deviations above its trailing baseline.
+            </p>
+          </div>
+
+          <DataTable
+            title="Anomalous complaint spikes"
+            columns={[
+              { key: "dayReceived", label: "Day", format: (v) => formatDay(String(v)) },
+              { key: "product", label: "Product" },
+              { key: "issue", label: "Issue" },
+              { key: "complaints", label: "Complaints", align: "right" },
+              { key: "baselineAvg", label: "Baseline avg", align: "right" },
+              {
+                key: "zScore",
+                label: "Z-score",
+                align: "right",
+                format: (v) => (
+                  <Badge tone="down">{fmtNum(Number(v))}σ</Badge>
+                ),
+              },
+            ]}
+            rows={volumeAnomalies.map((row) => ({
+              dayReceived: row.dayReceived,
+              product: row.product,
+              issue: row.issue,
+              complaints: row.complaints,
+              baselineAvg: row.baselineAvg,
+              zScore: row.zScore,
+            }))}
+          />
         </div>
-
-        <DataTable
-          title="Anomalous complaint spikes"
-          columns={[
-            { key: "dayReceived", label: "Day", format: (v) => formatDay(String(v)) },
-            { key: "product", label: "Product" },
-            { key: "issue", label: "Issue" },
-            { key: "complaints", label: "Complaints", align: "right" },
-            { key: "baselineAvg", label: "Baseline avg", align: "right" },
-            {
-              key: "zScore",
-              label: "Z-score",
-              align: "right",
-              format: (v) => (
-                <Badge tone="down">{fmtNum(Number(v))}σ</Badge>
-              ),
-            },
-          ]}
-          rows={volumeAnomalies.map((row) => ({
-            dayReceived: row.dayReceived,
-            product: row.product,
-            issue: row.issue,
-            complaints: row.complaints,
-            baselineAvg: row.baselineAvg,
-            zScore: row.zScore,
-          }))}
-        />
-      </section>
-
-      <section className="grid gap-8 lg:grid-cols-2">
-        <BarGraph
-          title="Average complaints by day of week"
-          description={`Trailing seasonality for month ${seasonality[0]?.monthOfYear} (${seasonality[0]?.daysObserved} days observed).`}
-          data={seasonalityChart}
-        />
 
         <div className="space-y-4">
           <div>
