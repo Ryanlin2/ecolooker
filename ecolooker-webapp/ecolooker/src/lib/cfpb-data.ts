@@ -121,10 +121,9 @@ export type IssueConcentrationRow = {
 };
 
 export type GeoStateAnomalyRow = {
-  monthReceived: string;
+  dayReceived: string;
   state: string;
   complaints: number;
-  daysElapsed: number;
   expectedComplaints: number;
   zScore: number;
   isSpike: boolean;
@@ -328,28 +327,26 @@ export const getCfpbReport = cache(async (): Promise<CfpbReport> => {
     }));
 
   const geoRaw = decodeRows<{
-    month_received: string;
+    day_received: string;
     state: string;
     complaints: number;
-    days_elapsed: number;
-    expected_complaints_to_date: number | null;
+    expected_complaints: number | null;
     z_score: number | null;
     is_spike: boolean | null;
   }>(datasets.geo_state_anomaly);
   const geoStateAnomalies = geoRaw
     .slice()
     .sort((a, b) => {
-      if (a.month_received !== b.month_received) {
-        return b.month_received.localeCompare(a.month_received);
+      if (a.day_received !== b.day_received) {
+        return b.day_received.localeCompare(a.day_received);
       }
       return (b.z_score ?? 0) - (a.z_score ?? 0);
     })
     .map((r) => ({
-      monthReceived: r.month_received,
+      dayReceived: r.day_received,
       state: r.state,
       complaints: r.complaints,
-      daysElapsed: r.days_elapsed,
-      expectedComplaints: r.expected_complaints_to_date ?? 0,
+      expectedComplaints: r.expected_complaints ?? 0,
       zScore: r.z_score ?? 0,
       isSpike: r.is_spike === true,
     }));

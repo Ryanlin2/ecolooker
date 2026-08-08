@@ -199,10 +199,30 @@ export default async function CfpbComplaintsPage({
             </h2>
             <p className="mt-2 text-sm text-muted">
               States with confirmed complaint spikes year to date &mdash;
-              at least 3 standard deviations above their own 6-month
-              baseline.
+              at least 3 standard deviations above their own trailing
+              180-day baseline.
             </p>
           </div>
+
+          <InsightCallout title="How expected complaints is calculated">
+            <span className="block">
+              For each state and day, the state&apos;s own trailing 180-day
+              (~6 month) daily complaint history is used to establish what a
+              normal day looks like:
+            </span>
+            <code className="mt-2 block overflow-x-auto rounded-lg border bg-surface-2 px-3 py-2 font-mono text-xs text-foreground/90">
+              expected complaints = AVG(complaints) over trailing 180 days
+              <br />
+              z-score = (complaints − expected complaints) ÷ STDDEV(trailing
+              180 days)
+            </code>
+            <span className="mt-2 block">
+              A day is flagged as a spike when its z-score is at least 3
+              and it has at least 10 complaints, so low-volume states
+              don&apos;t register large swings from a handful of
+              complaints.
+            </span>
+          </InsightCallout>
 
           <PaginatedDataTable
             title="Geographic complaint spikes"
@@ -211,13 +231,13 @@ export default async function CfpbComplaintsPage({
             pageSize={10}
             columns={[
               {
-                key: "monthReceived",
-                label: "Month",
-                format: (v) => formatMonth(String(v)),
+                key: "dayReceived",
+                label: "Day",
+                format: (v) => formatDay(String(v)),
               },
               { key: "state", label: "State" },
               { key: "complaints", label: "Complaints", align: "right" },
-              { key: "expectedComplaints", label: "Expected (to date)", align: "right" },
+              { key: "expectedComplaints", label: "Expected", align: "right" },
               {
                 key: "zScore",
                 label: "Z-score",
@@ -409,16 +429,16 @@ export default async function CfpbComplaintsPage({
         </p>
 
         <p className="leading-7 text-muted">
-          State-level anomalies compare each state&apos;s complaint count to
-          a trailing 6-month daily-rate baseline for that state, projected
-          onto the same elapsed-day window as the current row &mdash; so an
-          in-progress month is compared against an equally partial
-          expectation rather than a full prior month. A state is flagged
-          as a spike when it exceeds a z-score of 3 above that expectation
-          and has at least 10 complaints in the period, to avoid low-volume
-          states registering large swings from a handful of complaints. The
-          table above shows only flagged spikes year to date, filtered
-          server-side before the report is generated and paginated here.
+          State-level anomalies compare each state&apos;s daily complaint
+          count to that state&apos;s own trailing 180-day (~6 month) daily
+          history:{" "}
+          <span className="font-mono text-xs">expected complaints = AVG(complaints) over trailing 180 days</span>,{" "}
+          <span className="font-mono text-xs">z-score = (complaints − expected complaints) ÷ STDDEV(trailing 180 days)</span>.
+          A day is flagged as a spike when it exceeds a z-score of 3 and has
+          at least 10 complaints, to avoid low-volume states registering
+          large swings from a handful of complaints. The table above shows
+          only flagged spikes year to date, filtered server-side before the
+          report is generated and paginated here.
         </p>
 
         <p className="leading-7 text-muted">

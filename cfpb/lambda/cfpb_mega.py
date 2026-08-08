@@ -86,8 +86,8 @@ DATASETS = {
     },
     "geo_state_anomaly": {
         "view": "vw_geo_state_anomaly",
-        "where": "is_spike AND month_received >= DATE_TRUNC('year', CURRENT_DATE)",
-        "order_by": "month_received DESC, z_score DESC",
+        "where": "is_spike AND day_received >= DATE_TRUNC('year', CURRENT_DATE)",
+        "order_by": "day_received DESC, z_score DESC",
         "order": "desc",
     },
 }
