@@ -1,6 +1,9 @@
 # Local Terraform directories (downloaded providers, modules, plugins)
 **/.terraform/*
 
+# Provider/plugin binaries (e.g. terraform-provider-*.exe under .terraform/providers/)
+*.exe
+
 # Local Terraform state
 *.tfstate
 *.tfstate.*
