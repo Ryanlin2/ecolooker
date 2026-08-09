@@ -1,0 +1,36 @@
+# Local Terraform directories (downloaded providers, modules, plugins)
+**/.terraform/*
+
+# Local Terraform state
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Variable files that may contain secrets
+*.tfvars
+*.tfvars.json
+
+# Ignore override files as they are usually used to override resources locally
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Plan output files
+*.tfplan
+*tfplan*
+
+# Ignore CLI configuration files that may contain credentials
+.terraformrc
+terraform.rc
+
+# Packaged Lambda artifact built by the archive_file data source
+lambda_function.zip
+
+# Editor/OS cruft
+.vscode/
+.idea/
+Thumbs.db
