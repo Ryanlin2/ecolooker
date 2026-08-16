@@ -8,25 +8,34 @@ long rows and MERGEs them into Iceberg on (table_name, geo_fips, line_code,
 period_date) -- an upsert, not an append, since BEA restates prior quarters
 on every refresh.
 
+Raw CSVs land under RAW_S3_PREFIX in their own ingestion_date=<UTC timestamp>
+partition per run (see sqgdp_download_to_s3.py). This job doesn't take that
+partition as an argument -- it lists RAW_S3_PREFIX itself, via boto3, and
+reads from whichever ingestion_date= partition sorts last (the timestamp
+format is fixed-width UTC, so lexical max == most recent).
+
 --- Job configuration (set these on the Glue job, not in this script) ---
 Glue version:        4.0+ (Iceberg support)
 Job parameters:
   --datalake-formats            iceberg
   --conf                        spark.sql.catalog.glue_catalog=org.apache.iceberg.spark.SparkCatalog
-                                 --conf spark.sql.catalog.glue_catalog.warehouse=s3://<bucket>/warehouse/
+                                 --conf spark.sql.catalog.glue_catalog.warehouse=s3://<bucket>/silver/sqgdp/
                                  --conf spark.sql.catalog.glue_catalog.catalog-impl=org.apache.iceberg.aws.glue.GlueCatalog
                                  --conf spark.sql.catalog.glue_catalog.io-impl=org.apache.iceberg.aws.s3.S3FileIO
                                  --conf spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions
-  --RAW_S3_PATH                 s3://<bucket>/bea/sqgdp_data/SQGDP/*__ALL_AREAS_*.csv
+  --RAW_S3_BUCKET                ecolooker-bea
+  --RAW_S3_PREFIX                bronze/sqgdp/
   --ICEBERG_DATABASE            bea
   --ICEBERG_TABLE               sqgdp_state_gdp
-IAM: glue:*, s3:GetObject on RAW_S3_PATH, s3:{Get,Put,List}Object on the
-     warehouse path, and glue:*Table/*Database on ICEBERG_DATABASE.
+IAM: s3:ListBucket on RAW_S3_BUCKET (scoped to RAW_S3_PREFIX), s3:GetObject
+     under RAW_S3_PREFIX, s3:{Get,Put,List}Object on the warehouse path, and
+     glue:*Table/*Database on ICEBERG_DATABASE.
 ---------------------------------------------------------------------
 """
 
 import sys
 
+import boto3
 from awsglue.context import GlueContext
 from awsglue.job import Job
 from awsglue.utils import getResolvedOptions
@@ -36,7 +45,7 @@ from pyspark.sql import types as T
 
 args = getResolvedOptions(
     sys.argv,
-    ["JOB_NAME", "RAW_S3_PATH", "ICEBERG_DATABASE", "ICEBERG_TABLE"],
+    ["JOB_NAME", "RAW_S3_BUCKET", "RAW_S3_PREFIX", "ICEBERG_DATABASE", "ICEBERG_TABLE"],
 )
 
 sc = SparkContext()
@@ -47,6 +56,38 @@ job.init(args["JOB_NAME"], args)
 
 CATALOG = "glue_catalog"
 FQ_TABLE = f"{CATALOG}.{args['ICEBERG_DATABASE']}.{args['ICEBERG_TABLE']}"
+
+
+def latest_ingestion_path(bucket: str, base_prefix: str) -> str:
+    """Find the most recent ingestion_date=<UTC timestamp> partition under
+    base_prefix and return a glob over its __ALL_AREAS CSVs.
+
+    Lists only one level deep (Delimiter="/") so this stays a handful of S3
+    API calls regardless of how much history has piled up under base_prefix.
+    """
+    base_prefix = base_prefix.rstrip("/") + "/"
+    s3 = boto3.client("s3")
+    paginator = s3.get_paginator("list_objects_v2")
+
+    partitions = []
+    for page in paginator.paginate(
+        Bucket=bucket, Prefix=base_prefix, Delimiter="/"
+    ):
+        for common_prefix in page.get("CommonPrefixes", []):
+            prefix = common_prefix["Prefix"]
+            name = prefix[len(base_prefix) :].rstrip("/")
+            if name.startswith("ingestion_date="):
+                partitions.append(prefix)
+
+    if not partitions:
+        raise RuntimeError(
+            f"No ingestion_date= partitions found under s3://{bucket}/{base_prefix}"
+        )
+
+    latest = max(partitions)
+    path = f"s3://{bucket}/{latest}*__ALL_AREAS_*.csv"
+    print(f"Reading latest partition: {path}")
+    return path
 
 ID_COLS = [
     "GeoFIPS",
@@ -165,7 +206,8 @@ def merge_into_iceberg(standardized_df):
 
 
 def main():
-    raw = read_raw(args["RAW_S3_PATH"])
+    raw_path = latest_ingestion_path(args["RAW_S3_BUCKET"], args["RAW_S3_PREFIX"])
+    raw = read_raw(raw_path)
     standardized = standardize(unpivot(raw))
 
     ensure_table_exists()
