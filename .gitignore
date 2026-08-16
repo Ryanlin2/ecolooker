@@ -36,3 +36,7 @@ __pycache__/
 *.env
 
 .claude
+
+**/SQGDP/
+
+*.terraform
