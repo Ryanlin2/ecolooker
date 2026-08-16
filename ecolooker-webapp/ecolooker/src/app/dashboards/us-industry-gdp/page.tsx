@@ -120,6 +120,9 @@ export default async function UsIndustryGdpPage({
         title="Real GDP by state"
         description={`${quarter}, chained dollars`}
         data={mapData}
+        valuePrefix="$"
+        valueSuffix="B"
+        valueDivisor={1000}
       />
 
       <section aria-labelledby="state-ranking-heading" className="space-y-4">
