@@ -1,0 +1,31 @@
+# Local Terraform directories (downloaded providers, modules, plugins)
+**/.terraform/*
+
+# Provider/plugin binaries (e.g. terraform-provider-*.exe under .terraform/providers/)
+*.exe
+
+# Local Terraform state
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Variable files that may contain secrets
+*.tfvars
+*.tfvars.json
+
+# Ignore override files as they are usually used to override resources locally
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Plan output files
+*.tfplan
+*tfplan*
+
+# Ignore CLI configuration files that may contain credentials
+.terraformrc
+terraform.rc

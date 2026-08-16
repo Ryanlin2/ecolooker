@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   description: "State-level real GDP and industry composition across the US economy.",
 };
 
+export const dynamic = "force-dynamic";
+
 function billions(millions: number) {
   return millions / 1000;
 }
@@ -70,9 +72,7 @@ export default async function UsIndustryGdpPage({
       />
 
       <div className="rounded-lg border border-dashed px-4 py-3 text-sm text-muted">
-        Seeded with illustrative figures modeled on the BEA SQGDP2 (state
-        GDP) and SQGDP9 (state GDP by industry) tables, pending a live data
-        connection. Generated{" "}
+        Live data from the BEA SQGDP main-metrics endpoint, generated{" "}
         {new Date(generatedAt).toLocaleString("en-US", {
           dateStyle: "medium",
           timeStyle: "short",
@@ -114,11 +114,6 @@ export default async function UsIndustryGdpPage({
             unit="$B"
           />
         </div>
-
-        <p className="text-xs text-muted">
-          Note: dataset is seeded for demo purposes and does not reflect
-          live BEA figures.
-        </p>
       </section>
 
       <UsStateMap
@@ -241,8 +236,8 @@ export default async function UsIndustryGdpPage({
             Quarter-over-quarter (QoQ) growth compares each industry&apos;s
             (or state&apos;s) real GDP to the prior quarter; year-over-year
             (YoY) compares it to the same quarter one year prior. National
-            totals are the GDP-weighted average of the underlying state
-            figures.
+            totals are BEA&apos;s own published U.S. total for each measure,
+            not a sum or average of the state figures.
           </span>
         </InsightCallout>
 
@@ -300,16 +295,17 @@ export default async function UsIndustryGdpPage({
 
         <p className="leading-7 text-muted">
           Industry mix is computed nationally as each supersector&apos;s
-          share of total real GDP for the quarter. Quarter-over-quarter and
-          year-over-year growth rates are computed per state and per
-          industry, and national growth rates are the GDP-weighted average
-          across states.
+          share of total real GDP for the quarter, using BEA&apos;s own
+          published U.S. total as the denominator. Quarter-over-quarter and
+          year-over-year growth rates are computed per state, per industry,
+          and for the U.S. total independently.
         </p>
 
         <p className="leading-7 text-muted">
-          This dashboard is currently backed by seed data modeled on the
-          U.S. Bureau of Economic Analysis&apos; SQGDP2 and SQGDP9 tables
-          and should not be interpreted as an official economic release.
+          Figures on this page are sourced from the BEA SQGDP main-metrics
+          endpoint (State Quarterly GDP table SQGDP9, real GDP by state and
+          industry) and should not be interpreted as an official BEA
+          release.
         </p>
       </section>
     </article>
