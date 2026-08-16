@@ -34,10 +34,13 @@
 -- -----------------------------------------------------------------------------
 -- 0. Static state FIPS -> USPS code / name lookup.
 --    geo_fips in the source is the 5-digit BEA GeoFIPS ("06000"); the 2-digit
---    state FIPS is its first two characters.
+--    state FIPS is its first two characters. '00' is the national total
+--    (geo_fips = '00000'), included here so it can be joined/summed
+--    alongside the states rather than treated as a separate case.
 -- -----------------------------------------------------------------------------
 CREATE OR REPLACE VIEW bea.v_us_state_fips AS
 SELECT * FROM (VALUES
+    ('00', 'US', 'United States'),
     ('01', 'AL', 'Alabama'),        ('02', 'AK', 'Alaska'),
     ('04', 'AZ', 'Arizona'),        ('05', 'AR', 'Arkansas'),
     ('06', 'CA', 'California'),     ('08', 'CO', 'Colorado'),
@@ -69,7 +72,8 @@ SELECT * FROM (VALUES
 
 -- -----------------------------------------------------------------------------
 -- 1. Per-state, all-industry-total real GDP by quarter, with QoQ/YoY growth.
---    One row per (state, quarter).
+--    One row per (state, quarter), plus the US national total row
+--    (geo_fips = '00000' -> state_fips = '00') for summation/comparison.
 -- -----------------------------------------------------------------------------
 CREATE OR REPLACE VIEW bea.v_sqgdp_state_totals_quarterly AS
 WITH totals AS (
@@ -83,7 +87,6 @@ WITH totals AS (
     FROM bea.sqgdp_state_gdp
     WHERE table_name = 'SQGDP9'
       AND line_code = 1
-      AND geo_fips <> '00000'  -- exclude the US national total row
 ),
 with_lags AS (
     SELECT
@@ -107,7 +110,8 @@ FROM with_lags;
 
 -- -----------------------------------------------------------------------------
 -- 2. Per-state leading industry by quarter (top real-GDP industry among the
---    20 leaf NAICS-level line codes).
+--    20 leaf NAICS-level line codes), plus the US national total row
+--    (geo_fips = '00000') for summation/comparison at the national level.
 -- -----------------------------------------------------------------------------
 CREATE OR REPLACE VIEW bea.v_sqgdp_state_leading_industry_quarterly AS
 WITH industry_rows AS (
@@ -121,7 +125,6 @@ WITH industry_rows AS (
         ) AS industry_rank
     FROM bea.sqgdp_state_gdp
     WHERE table_name = 'SQGDP9'
-      AND geo_fips <> '00000'
       AND line_code IN (3, 6, 10, 11, 12, 34, 35, 36, 45, 51, 56, 60, 64, 65, 69, 70, 76, 79, 82, 83)
 )
 SELECT
@@ -136,6 +139,10 @@ WHERE industry_rank = 1;
 -- -----------------------------------------------------------------------------
 -- 3. Combined per-state view -- feeds the state map, ranking table, and
 --    "fastest growing" table. Endpoint filters to one quarter (see examples).
+--    Includes a state_fips = '00' / state_code = 'US' row for the national
+--    total (e.g. to validate that state values sum to it) -- filter it out
+--    downstream (WHERE state_fips <> '00') for views that should be
+--    states-only, like the map or ranking table.
 -- -----------------------------------------------------------------------------
 CREATE OR REPLACE VIEW bea.v_us_state_gdp AS
 SELECT
