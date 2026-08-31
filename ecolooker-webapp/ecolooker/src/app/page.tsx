@@ -21,7 +21,7 @@ export default function Home() {
         </h1>
 
         <p className="mt-3 max-w-xl font-mono text-sm text-muted sm:text-base">
-          <TypewriterText text="Objective: Catalog and analyze heterogenous datasets detailing global economic mechanisms at different scales." />
+          <TypewriterText text="Objective: Catalog and analyze different datasets detailing global economic mechanisms at different scales." />
         </p>
       </section>
 

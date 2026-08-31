@@ -18,7 +18,7 @@ export const reports: ReportMeta[] = [
     subtitle: "Live dashboard of financial services complaints.",
     date: "Jul 2026",
     tags: ["Complaints", "Indicator"],
-    hero: { label: "Net Compalaints YTD", value: 470092, change: 8452 },
+    hero: { label: "Net Complaints YTD", value: 470092, change: 8452 },
   },
   {
     slug: "us-industry-gdp",
