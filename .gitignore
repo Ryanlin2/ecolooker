@@ -40,3 +40,6 @@ __pycache__/
 **/SQGDP/
 
 *.terraform
+*.tfstate
+*.tfstate.*
+.terraform/
