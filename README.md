@@ -17,40 +17,8 @@ dashboard frontend.
 Two of the three sources are full pipelines end to end; IMF currently stops
 at the fetch function (see [`lambda/README.md`](lambda/README.md)).
 
-```
-      ┌─────────────┐        ┌─────────────┐        ┌─────────────┐
-      │    CFPB     │        │     BEA     │        │     IMF     │
-      │ complaints  │        │  state GDP  │        │ macro data  │
-      │  bulk CSV   │        │ Regional API│        │ DataMapper  │
-      └──────┬──────┘        └──────┬──────┘        └──────┬──────┘
-             ▼                      ▼                      ▼
-   ┌──────────────────┐   ┌──────────────────┐   ┌───────────────────┐
-   │ AWS Glue (Spark)  │   │ AWS Glue: Python  │   │  AWS Lambda        │
-   │ clean → Iceberg   │   │ Shell download →  │   │  (packaged `imf`)  │
-   │ MERGE upsert      │   │ Spark → Iceberg   │   │                    │
-   │ cfpb/glue_jobs    │   │ bea/glue          │   │  lambda/imf        │
-   └─────────┬─────────┘   └─────────┬─────────┘   └─────────┬──────────┘
-             ▼                      ▼                        ┊
-   ┌───────────────────┐  ┌───────────────────┐    not yet wired further —
-   │ Athena SQL views   │  │ Athena SQL views   │    no landing job, view,
-   │ anomaly detection,  │  │ (bea/athena) — GDP │    or dashboard consumes
-   │ seasonality, HHI    │  │ growth/contribution│    it yet
-   │ (cfpb/glue_views)   │  │ views              │
-   └─────────┬───────────┘  └─────────┬──────────┘
-             ▼                        ▼
-   ┌───────────────────┐  ┌────────────────────┐
-   │ Lambda API layer   │  │ Lambda API layer    │
-   │ (cfpb/lambda)       │  │ (bea/lambda)         │
-   └─────────┬───────────┘  └─────────┬────────────┘
-             └────────────┬───────────┘
-                           ▼
-              ┌────────────────────────┐
-              │  ecolooker-webapp        │
-              │  Next.js dashboards      │
-              │  (cfpb-complaints,        │
-              │   us-industry-gdp)        │
-              └────────────────────────┘
-```
+<img width="1062" height="1098" alt="dia" src="https://github.com/user-attachments/assets/8eec666b-7ed0-47a4-86f4-b9dc5325c2dc" />
+
 
 `glue/rollback.py` is a standalone safety utility: it rolls any Iceberg table
 in the warehouse back to a prior snapshot if a bad upsert lands corrupt data.
