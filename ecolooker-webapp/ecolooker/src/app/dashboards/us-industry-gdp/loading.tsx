@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
-export default function Loading() {
+export function UsIndustryGdpSkeleton() {
   return (
     <article className="space-y-12">
       <header className="mb-8 border-b pb-6">
@@ -50,3 +50,5 @@ export default function Loading() {
     </article>
   );
 }
+
+export default UsIndustryGdpSkeleton;
