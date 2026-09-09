@@ -7,8 +7,42 @@ import { Badge } from "@/components/ui/badge";
 import { TypewriterText } from "@/components/ui/typewriter-text";
 import { ArrowUpRight, ArrowDownRight } from "lucide-react";
 import { fmtNum } from "@/lib/utils";
+import { getCfpbReport } from "@/lib/cfpb-data";
+import { getUsIndustryGdpReport } from "@/lib/gdp-data";
 
-export default function Home() {
+type Hero = { label: string; value: number; change: number } | null;
+
+async function getHeroBySlug(): Promise<Record<string, Hero>> {
+  const [cfpb, gdp] = await Promise.allSettled([
+    getCfpbReport(),
+    getUsIndustryGdpReport(),
+  ]);
+
+  const latestCfpbDay =
+    cfpb.status === "fulfilled" ? cfpb.value.volumeDaily.at(-1) : undefined;
+
+  return {
+    "cfpb-complaints": latestCfpbDay
+      ? {
+          label: "Complaints received",
+          value: latestCfpbDay.complaints,
+          change: latestCfpbDay.dodChange,
+        }
+      : null,
+    "us-industry-gdp":
+      gdp.status === "fulfilled"
+        ? {
+            label: "National Real GDP",
+            value: Math.round(gdp.value.nationalGdpMillions / 1000),
+            change: gdp.value.nationalQoqPctChange,
+          }
+        : null,
+  };
+}
+
+export default async function Home() {
+  const heroBySlug = await getHeroBySlug();
+
   return (
     <div>
       <section className="mb-10">
@@ -31,7 +65,8 @@ export default function Home() {
 
       <div className="grid gap-4 md:grid-cols-2">
         {reports.map((report) => {
-          const up = report.hero.change >= 0;
+          const hero = heroBySlug[report.slug];
+          const up = (hero?.change ?? 0) >= 0;
 
           return (
             <Link key={report.slug} href={`/dashboards/${report.slug}`}>
@@ -51,22 +86,24 @@ export default function Home() {
 
                   <div className="mt-4 flex items-end justify-between">
                     <div>
-                      <p className="text-xs text-muted">{report.hero.label}</p>
+                      <p className="text-xs text-muted">{hero?.label ?? "—"}</p>
 
                       <p className="tnum text-2xl font-semibold">
-                        {fmtNum(report.hero.value)}
+                        {hero ? fmtNum(hero.value) : "—"}
                       </p>
                     </div>
 
-                    <Badge tone={up ? "up" : "down"}>
-                      {up ? (
-                        <ArrowUpRight size={12} />
-                      ) : (
-                        <ArrowDownRight size={12} />
-                      )}
+                    {hero && (
+                      <Badge tone={up ? "up" : "down"}>
+                        {up ? (
+                          <ArrowUpRight size={12} />
+                        ) : (
+                          <ArrowDownRight size={12} />
+                        )}
 
-                      {fmtNum(Math.abs(report.hero.change))}
-                    </Badge>
+                        {fmtNum(Math.abs(hero.change))}
+                      </Badge>
+                    )}
                   </div>
                 </CardContent>
               </Card>
