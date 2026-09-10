@@ -21,6 +21,7 @@ type StateProperties = { name: string };
 type UsStateMapProps = {
   title?: string;
   description?: string;
+  methodology?: React.ReactNode;
   data: UsStateMapDatum[];
   valuePrefix?: string;
   valueSuffix?: string;
@@ -55,6 +56,7 @@ type HoverInfo = {
 export function UsStateMap({
   title,
   description,
+  methodology,
   data,
   valuePrefix = "",
   valueSuffix = "",
@@ -104,7 +106,12 @@ export function UsStateMap({
     >
       {(title || description) && (
         <div className="mb-4">
-          {title && <h3 className="font-semibold">{title}</h3>}
+          {title && (
+            <div className="flex items-center gap-2">
+              <h3 className="font-semibold">{title}</h3>
+              {methodology}
+            </div>
+          )}
           {description && (
             <p className="mt-1 text-sm text-muted">{description}</p>
           )}

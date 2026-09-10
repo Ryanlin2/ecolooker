@@ -8,6 +8,7 @@ import { MetricCard } from "@/components/blocks/MetricCard";
 import { InsightCallout } from "@/components/blocks/InsightCallout";
 import { UsStateMap } from "@/components/blocks/UsStateMap";
 import { ReportHeader } from "@/components/blocks/ReportHeader";
+import { MethodologyTag } from "@/components/blocks/MethodologyTag";
 import { Badge } from "@/components/ui/badge";
 import { fmtNum } from "@/lib/utils";
 import { getUsIndustryGdpReport } from "@/lib/gdp-data";
@@ -82,12 +83,15 @@ export default async function UsIndustryGdpPage({
       </div>
 
       <section aria-labelledby="key-metrics-heading" className="space-y-4">
-        <h2
-          id="key-metrics-heading"
-          className="text-sm uppercase tracking-wide text-muted"
-        >
-          Key metrics — {quarter}
-        </h2>
+        <div className="flex items-center gap-2">
+          <h2
+            id="key-metrics-heading"
+            className="text-sm uppercase tracking-wide text-muted"
+          >
+            Key metrics — {quarter}
+          </h2>
+          <MethodologyTag title="Key metrics" />
+        </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <MetricCard
@@ -119,6 +123,7 @@ export default async function UsIndustryGdpPage({
       <UsStateMap
         title="Real GDP by state"
         description={`${quarter}, chained dollars`}
+        methodology={<MethodologyTag title="Real GDP by state" />}
         data={mapData}
         valuePrefix="$"
         valueSuffix="B"
@@ -127,12 +132,15 @@ export default async function UsIndustryGdpPage({
 
       <section aria-labelledby="state-ranking-heading" className="space-y-4">
         <div>
-          <h2
-            id="state-ranking-heading"
-            className="text-2xl font-semibold tracking-tight"
-          >
-            State GDP ranking
-          </h2>
+          <div className="flex items-center gap-2">
+            <h2
+              id="state-ranking-heading"
+              className="text-2xl font-semibold tracking-tight"
+            >
+              State GDP ranking
+            </h2>
+            <MethodologyTag title="State GDP ranking" />
+          </div>
           <p className="mt-2 text-sm text-muted">
             All 50 states plus DC, ranked by real GDP, with each state&apos;s
             leading industry by output.
@@ -183,12 +191,15 @@ export default async function UsIndustryGdpPage({
 
       <section aria-labelledby="growth-heading" className="space-y-4">
         <div>
-          <h2
-            id="growth-heading"
-            className="text-2xl font-semibold tracking-tight"
-          >
-            Fastest-growing state economies
-          </h2>
+          <div className="flex items-center gap-2">
+            <h2
+              id="growth-heading"
+              className="text-2xl font-semibold tracking-tight"
+            >
+              Fastest-growing state economies
+            </h2>
+            <MethodologyTag title="Fastest-growing state economies" />
+          </div>
           <p className="mt-2 text-sm text-muted">
             States with the strongest quarter-over-quarter real GDP growth.
           </p>
@@ -223,12 +234,15 @@ export default async function UsIndustryGdpPage({
 
       <section aria-labelledby="industry-heading" className="space-y-4">
         <div>
-          <h2
-            id="industry-heading"
-            className="text-2xl font-semibold tracking-tight"
-          >
-            GDP by industry
-          </h2>
+          <div className="flex items-center gap-2">
+            <h2
+              id="industry-heading"
+              className="text-2xl font-semibold tracking-tight"
+            >
+              GDP by industry
+            </h2>
+            <MethodologyTag title="GDP by industry" />
+          </div>
           <p className="mt-2 text-sm text-muted">
             National output share and growth for each industry supersector.
           </p>

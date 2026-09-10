@@ -9,6 +9,7 @@ import { MetricCard } from "@/components/blocks/MetricCard";
 import { InsightCallout } from "@/components/blocks/InsightCallout";
 import { MultiTrendChart } from "@/components/blocks/MultiTrendChart";
 import { ReportHeader } from "@/components/blocks/ReportHeader";
+import { MethodologyTag } from "@/components/blocks/MethodologyTag";
 import { Badge } from "@/components/ui/badge";
 import { fmtNum } from "@/lib/utils";
 import { getCfpbReport } from "@/lib/cfpb-data";
@@ -99,12 +100,15 @@ export default async function CfpbComplaintsPage({
       </div>
 
       <section aria-labelledby="key-metrics-heading" className="space-y-4">
-        <h2
-          id="key-metrics-heading"
-          className="text-sm uppercase tracking-wide text-muted"
-        >
-          Key metrics — {formatDay(latest.dayReceived)}
-        </h2>
+        <div className="flex items-center gap-2">
+          <h2
+            id="key-metrics-heading"
+            className="text-sm uppercase tracking-wide text-muted"
+          >
+            Key metrics — {formatDay(latest.dayReceived)}
+          </h2>
+          <MethodologyTag title="Key metrics" />
+        </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <MetricCard
@@ -134,6 +138,7 @@ export default async function CfpbComplaintsPage({
       <MultiTrendChart
         title="Daily complaint volume vs. rolling averages"
         description="Complaints received per day against trailing 7-day and 30-day baselines."
+        methodology={<MethodologyTag title="Daily complaint volume" />}
         data={trendData}
         series={[
           { key: "complaints", label: "Daily complaints" },
@@ -145,12 +150,15 @@ export default async function CfpbComplaintsPage({
       <section aria-labelledby="anomalies-heading" className="grid gap-8">
         <div className="space-y-4">
           <div>
-            <h2
-              id="anomalies-heading"
-              className="text-lg font-semibold tracking-tight"
-            >
-              Anomaly detection
-            </h2>
+            <div className="flex items-center gap-2">
+              <h2
+                id="anomalies-heading"
+                className="text-lg font-semibold tracking-tight"
+              >
+                Anomaly detection
+              </h2>
+              <MethodologyTag title="Anomaly detection" />
+            </div>
             <p className="mt-2 text-sm text-muted">
               Product/issue-day combinations with confirmed complaint spikes
               year to date &mdash; at least 3 standard deviations above their
@@ -192,9 +200,12 @@ export default async function CfpbComplaintsPage({
 
         <div className="space-y-4">
           <div>
-            <h2 className="text-lg font-semibold tracking-tight">
-              State-level anomalies
-            </h2>
+            <div className="flex items-center gap-2">
+              <h2 className="text-lg font-semibold tracking-tight">
+                State-level anomalies
+              </h2>
+              <MethodologyTag title="State-level anomalies" />
+            </div>
             <p className="mt-2 text-sm text-muted">
               States with confirmed complaint spikes year to date &mdash;
               at least 3 standard deviations above their own trailing
@@ -257,12 +268,15 @@ export default async function CfpbComplaintsPage({
 
       <section aria-labelledby="product-mix-heading" className="space-y-4">
         <div>
-          <h2
-            id="product-mix-heading"
-            className="text-2xl font-semibold tracking-tight"
-          >
-            Complaints by product
-          </h2>
+          <div className="flex items-center gap-2">
+            <h2
+              id="product-mix-heading"
+              className="text-2xl font-semibold tracking-tight"
+            >
+              Complaints by product
+            </h2>
+            <MethodologyTag title="Complaints by product" />
+          </div>
           <p className="mt-2 text-sm text-muted">
             {formatMonth(productMix[0]?.monthReceived ?? latest.dayReceived.slice(0, 7))} volume,
             category share, and month-over-month share change.
@@ -299,12 +313,15 @@ export default async function CfpbComplaintsPage({
 
       <section aria-labelledby="growth-heading" className="space-y-4">
         <div>
-          <h2
-            id="growth-heading"
-            className="text-2xl font-semibold tracking-tight"
-          >
-            Fastest-growing issues
-          </h2>
+          <div className="flex items-center gap-2">
+            <h2
+              id="growth-heading"
+              className="text-2xl font-semibold tracking-tight"
+            >
+              Fastest-growing issues
+            </h2>
+            <MethodologyTag title="Fastest-growing issues" />
+          </div>
           <p className="mt-2 text-sm text-muted">
             Sub-issues running hottest relative to their own expected pace,
             ranked by growth rate.
@@ -359,12 +376,15 @@ export default async function CfpbComplaintsPage({
 
       <section aria-labelledby="heatmap-heading" className="space-y-4">
         <div>
-          <h2
-            id="heatmap-heading"
-            className="text-2xl font-semibold tracking-tight"
-          >
-            Product × issue breakdown
-          </h2>
+          <div className="flex items-center gap-2">
+            <h2
+              id="heatmap-heading"
+              className="text-2xl font-semibold tracking-tight"
+            >
+              Product × issue breakdown
+            </h2>
+            <MethodologyTag title="Product × issue breakdown" />
+          </div>
           <p className="mt-2 text-sm text-muted">
             Share of each product&apos;s complaints attributable to its
             leading issues this month.
@@ -380,12 +400,15 @@ export default async function CfpbComplaintsPage({
 
       <section aria-labelledby="concentration-heading" className="space-y-4">
         <div>
-          <h2
-            id="concentration-heading"
-            className="text-2xl font-semibold tracking-tight"
-          >
-            Issue concentration (HHI)
-          </h2>
+          <div className="flex items-center gap-2">
+            <h2
+              id="concentration-heading"
+              className="text-2xl font-semibold tracking-tight"
+            >
+              Issue concentration (HHI)
+            </h2>
+            <MethodologyTag title="Issue concentration (HHI)" />
+          </div>
           <p className="mt-2 text-sm text-muted">
             Herfindahl-Hirschman Index of issue concentration within each
             product. Higher values indicate complaints are concentrated in

@@ -24,6 +24,7 @@ export type MultiTrendSeries = {
 type MultiTrendChartProps = {
   title?: string;
   description?: string;
+  methodology?: React.ReactNode;
   data: Record<string, string | number>[];
   series: MultiTrendSeries[];
   height?: number;
@@ -42,6 +43,7 @@ const defaultColors = ["var(--signal)", "var(--accent)", "var(--danger)"];
 export function MultiTrendChart({
   title,
   description,
+  methodology,
   data,
   series,
   height = 260,
@@ -54,7 +56,10 @@ export function MultiTrendChart({
       {(title || description) && (
         <CardHeader>
           {title && (
-            <h3 className="text-sm font-medium text-foreground">{title}</h3>
+            <div className="flex items-center gap-2">
+              <h3 className="text-sm font-medium text-foreground">{title}</h3>
+              {methodology}
+            </div>
           )}
 
           {description && (
